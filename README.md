@@ -110,11 +110,85 @@ I created six Epics which will be turned into User Stories
 
 #### User Stories list
 
+1. User Profiles
 
+* UserStory [[[#12](https://github.com/mattthughes/souls-like-gallery-app/issues/12)]]
+
+* UserStory [[[#10](https://github.com/mattthughes/souls-like-gallery-app/issues/10)]]
+
+* UserStory [[[#25](https://github.com/mattthughes/souls-like-gallery-app/issues/25)]]
+
+* UserStory [[[#24](https://github.com/mattthughes/souls-like-gallery-app/issues/24)]]
+
+2. Authentication
+
+* UserStory [[[#9](https://github.com/mattthughes/souls-like-gallery-app/issues/9)]]
+
+* UserStory [[[#31](https://github.com/mattthughes/souls-like-gallery-app/issues/31)]]
+
+* UserStory [[[#32](https://github.com/mattthughes/souls-like-gallery-app/issues/32)]]
+
+* UserStory [[[#29](https://github.com/mattthughes/souls-like-gallery-app/issues/29)]]
+
+3. Navigation
+
+* UserStory [[[#26](https://github.com/mattthughes/souls-like-gallery-app/issues/26)]]
+
+* User Story [[[#28](https://github.com/mattthughes/souls-like-gallery-app/issues/28)]]
+
+* UserStory [[[#27](https://github.com/mattthughes/souls-like-gallery-app/issues/27)]]
+
+* UserStory [[[#8](https://github.com/mattthughes/souls-like-gallery-app/issues/8)]]
+
+
+
+4. Post Interaction
+
+* UserStory [[[#21](https://github.com/mattthughes/souls-like-gallery-app/issues/21)]]
+
+* UserStory [[[#11](https://github.com/mattthughes/souls-like-gallery-app/issues/11)]]
+
+* UserStory [[[#22](https://github.com/mattthughes/souls-like-gallery-app/issues/22)]]
+
+
+* UserStory [[[#23](https://github.com/mattthughes/souls-like-gallery-app/issues/23)]]
+
+
+
+5. Comment Interaction
+
+* UserStory [[[#18](https://github.com/mattthughes/souls-like-gallery-app/issues/18)]]
+
+* UserStory [[[#16](https://github.com/mattthughes/souls-like-gallery-app/issues/16)]]
+
+* UserStory [[[#20](https://github.com/mattthughes/souls-like-gallery-app/issues/20)]]
+
+* UserStory [[[#17](https://github.com/mattthughes/souls-like-gallery-app/issues/17)]]
+
+* UserStory [[[#19](https://github.com/mattthughes/souls-like-gallery-app/issues/19)]]
+
+
+6. Post Feedback
+
+* UserStory [[[#15](https://github.com/mattthughes/souls-like-gallery-app/issues/15)]]
+
+* UserStory [[[#14](https://github.com/mattthughes/souls-like-gallery-app/issues/14)]]
+
+* UserStory [[[#7](https://github.com/mattthughes/souls-like-gallery-app/issues/7)]]
+
+
+7. Trending Posts
+
+* UserStory [[[#13](https://github.com/mattthughes/souls-like-gallery-app/issues/13)]]
 
 ### The Scope Plane
 
 #### Features List
+
+* Posts - Users can search for posts by the users name content of the post or the game title, users can also create, read update and delete there own posts
+* Profile - Users can search for any user and view there posts and attachments such as linkedin link, they can also create, read, update and delete there own profile
+* Likes and Comments - Users can leave likes and comments on posts they find useful providing they are logged in, users can create,read update, delete there own likes and comments
+* Log in and Out - Users can logout of there account to keep there information secure, users can change passwords,
 
 ### The Skeleton Plane
 
