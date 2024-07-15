@@ -80,9 +80,37 @@ Souls Like Gallery is a content sharing application built using a frontend libar
 
 #### Site Goals
 
+This site allows users to post there greatest moments from the popular niche genre souls like where they can help inspire others.
+
+* To allow users to join an evergrowing community
+
+* Allowing users to create, read update and delete there own posts and comments
+
+* Allowing users to search for any post by username game title, post content
+
+* Users can give feedback to posts they find useful
+
+
 #### Epics
 
+I created six Epics which will be turned into User Stories
+
+* Rate Posts interaction [[[#1](https://github.com/mattthughes/souls-like-gallery-app/issues/1)]]
+
+* User Posts [[[#2](https://github.com/mattthughes/souls-like-gallery-app/issues/2)]]
+
+* Post Searching [[[#3](https://github.com/mattthughes/souls-like-gallery-app/issues/3)]]
+
+* User sign in or sign out [[[#4](https://github.com/mattthughes/souls-like-gallery-app/issues/4)]]
+
+* User Profile [[[#5](https://github.com/mattthughes/souls-like-gallery-app/issues/5)]]
+
+* React Project setup [[[#6](https://github.com/mattthughes/souls-like-gallery-app/issues/6)]]
+
+
 #### User Stories list
+
+
 
 ### The Scope Plane
 
