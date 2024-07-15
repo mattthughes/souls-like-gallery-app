@@ -112,7 +112,7 @@ I created six Epics which will be turned into User Stories
 
 1. User Profiles
 
-* UserStory [[[#12](https://github.com/mattthughes/souls-like-gallery-app/issues/12)]]
+* UserStory [[#12](https://github.com/mattthughes/souls-like-gallery-app/issues/12)]
 
 * UserStory [[[#10](https://github.com/mattthughes/souls-like-gallery-app/issues/10)]]
 
@@ -144,7 +144,7 @@ I created six Epics which will be turned into User Stories
 
 4. Post Interaction
 
-* UserStory [[[#21](https://github.com/mattthughes/souls-like-gallery-app/issues/21)]]
+* UserStory [[#21](https://github.com/mattthughes/souls-like-gallery-app/issues/21)]
 
 * UserStory [[[#11](https://github.com/mattthughes/souls-like-gallery-app/issues/11)]]
 
@@ -157,7 +157,7 @@ I created six Epics which will be turned into User Stories
 
 5. Comment Interaction
 
-* UserStory [[[#18](https://github.com/mattthughes/souls-like-gallery-app/issues/18)]]
+* UserStory [[[#18](https://github.com/mattthughes/souls-like-gallery-app/issues/18)]] - As a **logged in user **I can read comments on posts so that I can what other users think of posts When the post is clicked comments to load Comments to show on specific post
 
 * UserStory [[[#16](https://github.com/mattthughes/souls-like-gallery-app/issues/16)]]
 
@@ -170,7 +170,7 @@ I created six Epics which will be turned into User Stories
 
 6. Post Feedback
 
-* UserStory [[[#15](https://github.com/mattthughes/souls-like-gallery-app/issues/15)]]
+* UserStory [[[#15](https://github.com/mattthughes/souls-like-gallery-app/issues/15)]] - 
 
 * UserStory [[[#14](https://github.com/mattthughes/souls-like-gallery-app/issues/14)]]
 
