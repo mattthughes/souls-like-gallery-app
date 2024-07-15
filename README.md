@@ -13,10 +13,11 @@ Souls Like Gallery is a content sharing application built using a frontend libar
             - [Features list](#features-list)
         - [Skeleton Plane](#the-skeleton-plane)
             - [Wireframes](#wireframes)
-                - [Home Wireframe](#games-list-wireframe)
-                - [Post Wireframe](#sign-up-wireframe)
-                - [Profile Wireframe](#login-wireframe)
-                - [Navigation Bar wireframe](#user-guides-wireframe)
+                - [Post Wireframe](#post-wireframe)
+                - [Profile Wireframe](#profile-wireframe)
+                - [Navigation Bar Wireframe](#navigation-wireframe)
+                - [Login Wireframe](#login-wireframe)
+                - [Sign up Wireframe](#sign-up-wireframe)
         - [Design plane](#design-plane)
             - [Color Palette](#color-palette)
             - [Typography](#typography)
@@ -72,6 +73,41 @@ Souls Like Gallery is a content sharing application built using a frontend libar
         - [Code](#code)
     - [Acknowledgements](#acknowledgements)
 
+## Wireframes
+
+### Post Wireframe
+
+![Post Mobile](docs/wireframes/post-detail-mobile.png)
+
+![Post Desktop](docs/wireframes/post-detail-desktop.png)
+
+### Profile Wireframe
+
+![Profile Mobile](docs/wireframes/profile-mobile.png)
+
+![Profile Desktop](docs/wireframes/profile-desktop.png)
+
+### Navigation Wireframe
+
+![Navigation bar not logged in mobile](docs/wireframes/nav-bar-not-logged-in-mobile.png)
+
+![Navigation bar logged in mobile](docs/wireframes/nav-bar-logged-in-mobile.png)
+
+![Navigation bar not logged in desktop](docs/wireframes/navbar-desktop-not-logged-in.png)
+
+![Navigation bar logged in desktop](docs/wireframes/nav-bar-logged-in-desktop.png)
+
+### Login Wireframe
+
+![Login Mobile](docs/wireframes/login-mobile.png)
+
+![Login Desktop](docs/wireframes/sign-in-desktop.png)
+
+### Sign up Wireframe
+
+![Sign up Mobile](docs/wireframes/sign-up-mobile.png)
+
+![Sign up Desktop](docs/wireframes/sign-up-desktop-website.png)
 
 ## Key features
 
