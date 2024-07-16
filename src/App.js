@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import styles from './App.module.css';
 import { Container } from 'react-bootstrap';
 import './api/AxiosDefaults'
+
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
 
