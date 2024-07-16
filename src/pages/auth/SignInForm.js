@@ -11,6 +11,8 @@ import { SetCurrentUserContext } from "../../contexts/UserCurrentContext";
 
 import { Link, useHistory } from "react-router-dom";
 
+import { toast } from "react-toastify";
+
 
 import styles from '../../styles/SignUpSignIn.module.css'
 import appStyles from "../../App.module.css";
@@ -44,6 +46,7 @@ function SignInForm() {
       const {data} =await axios.post('/dj-rest-auth/login/', signInData)
       setCurrentUser(data.user);
       history.push("/")
+      toast.success("Successfully logged in")
       
     } catch (err) {
       setErrors(err.response?.data);

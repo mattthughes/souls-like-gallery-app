@@ -7,10 +7,14 @@ import './api/AxiosDefaults'
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
 
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
   return (
     <div>
+      <ToastContainer position="top-center" theme="dark"  />
       <Container className={styles.Main}>
       <Switch>
           <Route exact path="/" render={() => <h1>Home page</h1>} />
