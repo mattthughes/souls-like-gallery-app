@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from '../contexts/UserCurrentContext';
 import styles from '../styles/NavBar.module.css'
 
+
 import axios from 'axios';
 
 const NavBar = () => {
@@ -20,7 +21,6 @@ const NavBar = () => {
     }
   };
 
-
   const loggedInIcons = <>
   <NavLink className={styles.NavLink} to="/trending">
   <i class="fa-solid fa-fire"></i>Trending
@@ -32,6 +32,14 @@ const NavBar = () => {
       <i className="fas fa-sign-out-alt"></i>Sign out
     </NavLink>
   </>;
+
+  const admin = (
+    <>
+    <NavLink className={styles.NavLink} to="/games">
+      <i className="fas fa-sign-out-alt"></i>Games
+    </NavLink>
+    </>
+  )
   const loggedOutIcons = (
     <>
       <NavLink
@@ -76,6 +84,7 @@ const NavBar = () => {
             <i class="fa-solid fa-photo-film"></i>Gallery
           </NavLink>
           {currentUser ? loggedInIcons : loggedOutIcons}
+          { currentUser?.username === "admin" ? admin : <div></div> }
         </Nav>
       </Navbar.Collapse>
     </Container>

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -25,12 +24,12 @@ function SignInForm() {
 
   const [signInData, setSignInData] = useState({
     username: "",
-    password: ""
+    password: "",
   })
 
   const [errors, setErrors] = useState({});
 
-  const {username, password} = signInData
+  const { username, password } = signInData
 
   const handleChange = (event) => {
     setSignInData({
@@ -43,11 +42,11 @@ function SignInForm() {
     event.preventDefault()
 
     try {
-      const {data} =await axios.post('/dj-rest-auth/login/', signInData)
+      const { data } = await axios.post('/dj-rest-auth/login/', signInData)
       setCurrentUser(data.user);
       history.push("/")
-      toast.success("Successfully logged in")
-      
+      toast.success("Successfully logged in")  
+
     } catch (err) {
       setErrors(err.response?.data);
     }
@@ -58,7 +57,6 @@ function SignInForm() {
       <Col className="my-auto p-0 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign in</h1>
-          
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
