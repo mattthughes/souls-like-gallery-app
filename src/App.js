@@ -10,6 +10,9 @@ import SignInForm from './pages/auth/SignInForm';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
+import PrivateRoute from './components/PrivateRoute';
+import Games from './pages/games/Games';
+
 
 function App() {
   
@@ -24,7 +27,10 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>
-          <Route exact path="/games" render={() =>  <h1>Games</h1>}/>
+          <PrivateRoute>
+          <Route path="/games" render={() => <Games/>}/>
+          </PrivateRoute>
+          
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       <NavBar/>
