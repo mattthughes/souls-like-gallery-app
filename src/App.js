@@ -11,7 +11,7 @@ import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 import PrivateRoute from './components/PrivateRoute';
-import Games from './pages/games/Games';
+import GameCreateForm from './pages/games/GameCreateForm';
 
 
 function App() {
@@ -28,9 +28,8 @@ function App() {
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>
           <PrivateRoute>
-          <Route path="/games" render={() => <Games/>}/>
+          <Route exact path="/games/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>
-          
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       <NavBar/>

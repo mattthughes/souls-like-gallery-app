@@ -38,10 +38,11 @@ const NavBar = () => {
 
   const admin = (
     <>
-    <NavLink className={styles.NavLink} to="/games">
+    <NavLink className={styles.NavLink} to="/games/create">
       <i className="fas fa-sign-out-alt"></i>Games
     </NavLink>
     </>
+    
   )
   const loggedOutIcons = (
     <>
