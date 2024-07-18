@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
+import { Image } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -15,6 +16,7 @@ import { toast } from "react-toastify";
 
 import styles from '../../styles/SignUpSignIn.module.css'
 import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css"
 import axios from "axios";
 
 function SignInForm() {
@@ -45,7 +47,7 @@ function SignInForm() {
       const { data } = await axios.post('/dj-rest-auth/login/', signInData)
       setCurrentUser(data.user);
       history.push("/")
-      toast.success("Successfully logged in")  
+      toast.success("Successfully logged in")
 
     } catch (err) {
       setErrors(err.response?.data);
@@ -56,6 +58,7 @@ function SignInForm() {
     <Row className={styles.Row}>
       <Col className="my-auto p-0 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
+        
           <h1 className={styles.Header}>sign in</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
@@ -91,11 +94,15 @@ function SignInForm() {
                 {message}
               </Alert>
             ))}
-            <Button
-              type="submit"
-            >
-              Sign In
-            </Button>
+            <Col className="d-flex flex-column justify-content-center">
+              <Button
+                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                type="submit"
+              >
+                Sign In
+              </Button>
+            </Col>
+
             {errors.non_field_errors?.map((message, idx) => (
               <Alert key={idx} variant="warning" className="mt-3">
                 {message}
@@ -110,6 +117,15 @@ function SignInForm() {
             Don't have an account? <span>Sign up now!</span>
           </Link>
         </Container>
+      </Col>
+      <Col
+        md={6}
+        className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
+      >
+        <Image height="350"
+          className={`${appStyles.FillerImage}`}
+          src={"https://www.psypost.org/wp-content/uploads/2022/09/playing-video-games-on-computer.jpg"}
+        />
       </Col>
     </Row>
   );

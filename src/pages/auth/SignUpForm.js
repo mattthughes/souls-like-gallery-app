@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import styles from '../../styles/SignUpSignIn.module.css'
 import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css"
 
 import { toast } from "react-toastify";
 
@@ -14,6 +15,7 @@ import {
   Container,
   Alert,
 } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -23,7 +25,7 @@ const SignUpForm = () => {
     password2: "",
   });
   const { username, password1, password2 } = signUpData;
-  
+
 
   const [errors, setErrors] = useState({});
 
@@ -104,11 +106,14 @@ const SignUpForm = () => {
               </Alert>
             ))}
 
-            <Button
-              type="submit"
-            >
-              Sign up
-            </Button>
+            <Col className="d-flex flex-column justify-content-center">
+              <Button
+                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                type="submit"
+              >
+                Sign Up
+              </Button>
+            </Col>
             {errors.non_field_errors?.map((message, idx) => (
               <Alert key={idx} variant="warning" className="mt-3">
                 {message}
@@ -122,6 +127,16 @@ const SignUpForm = () => {
             Already have an account? <span>Sign in</span>
           </Link>
         </Container>
+      </Col>
+
+      <Col
+        md={6}
+        className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
+      >
+        <Image height="400"
+          className={`${appStyles.FillerImage}`}
+          src={"https://media.istockphoto.com/id/1313854295/vector/vector-illustration-young-gamer-sit-in-front-of-a-screen-and-playing-video-game-wearing.jpg?s=612x612&w=0&k=20&c=tGDvdD63g2nFnnmjrTtcKwi_N9e5PUKhivi__JE39hw="}
+        />
       </Col>
 
     </Row>
