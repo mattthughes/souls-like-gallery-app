@@ -6,6 +6,8 @@
 .NavLink {
     padding: 5px;
     text-decoration: none;
+    font-family: "Overpass", sans-serif;
+
   }
   
   .Active i {
