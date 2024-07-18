@@ -7,11 +7,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { Alert } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 
 import { axiosReq } from "../../api/AxiosDefaults";
 
 import styles from "../../styles/GameCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css"
+import { toast } from "react-toastify";
 
 function GameCreateForm() {
     const [errors, setErrors] = useState({});
@@ -37,10 +40,12 @@ function GameCreateForm() {
         try {
             const { data } = await axiosReq.post("/games/create/", formData);
             history.push(`/games/${data.id}`);
+            toast.success("Game Created!")
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
+                toast.warning("Invalid Data please try again")
             }
         }
     };
@@ -63,30 +68,40 @@ function GameCreateForm() {
             ))}
 
             <Button
-
+            className={`${btnStyles.Button} ${btnStyles.Blue}`}
                 onClick={() => history.goBack()}
             >
-                cancel
+                Cancel
             </Button>
-            <Button type="submit">
-                create
+            <Button
+            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+             type="submit">
+            
+                Create
             </Button>
         </div>
     );
 
     return (
         <Form onSubmit={handleSubmit}>
+            <h3>Games</h3>
             <Row>
-                <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+                <Col className="py-2 p-0 p-md-2" md={7} lg={7}>
                     <Container
                         className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
                     >
+                        <Image height="300"
+                            className={`d-none d-md-block p-md-2${appStyles.FillerImage}`}
+                            src={"https://www.gamespot.com/a/uploads/screen_kubrick/1597/15971423/3953706-1714277668-35833.jpg"}
+                        />
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
                 <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
                     <Container className={appStyles.Content}>{textFields}</Container>
                 </Col>
+
+
             </Row>
         </Form>
     );

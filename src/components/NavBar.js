@@ -24,6 +24,17 @@ const NavBar = () => {
     }
   };
 
+  const admin = (
+    <>
+    <NavLink className={styles.NavLink}
+    activeClassName={styles.Active}
+     to="/games/create">
+      <i class="fa-solid fa-gamepad"></i>Add Game
+    </NavLink>
+    </>
+    
+  )
+
   const loggedInIcons = <>
   <NavLink className={styles.NavLink} to="/trending">
   <i class="fa-solid fa-fire"></i>Trending
@@ -36,14 +47,7 @@ const NavBar = () => {
     </NavLink>
   </>;
 
-  const admin = (
-    <>
-    <NavLink className={styles.NavLink} to="/games/create">
-      <i className="fas fa-sign-out-alt"></i>Games
-    </NavLink>
-    </>
-    
-  )
+  
   const loggedOutIcons = (
     <>
       <NavLink
@@ -96,8 +100,9 @@ const NavBar = () => {
           >
             <i class="fa-solid fa-photo-film"></i>Gallery
           </NavLink>
-          {currentUser ? loggedInIcons : loggedOutIcons}
           { currentUser?.username === "admin" ? admin : <div></div> }
+          {currentUser ? loggedInIcons : loggedOutIcons}
+          
         </Nav>
       </Navbar.Collapse>
     </Container>
