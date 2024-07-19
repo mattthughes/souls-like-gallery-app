@@ -13,4 +13,5 @@ function PrivateRoute({ children }) {
     return currentUser ? children : <Redirect to="/" replace />;
 }
 
+
 export default PrivateRoute;

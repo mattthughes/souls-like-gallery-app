@@ -6,12 +6,15 @@ import './api/AxiosDefaults'
 
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
+import Home from './pages/home/Home';
+import GameCreateForm from './pages/games/GameCreateForm';
+import PrivateRoute from './components/PrivateRoute';
 
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-import PrivateRoute from './components/PrivateRoute';
-import GameCreateForm from './pages/games/GameCreateForm';
+
+
 
 
 function App() {
@@ -21,7 +24,7 @@ function App() {
       <ToastContainer position="top-center" theme="dark"  />
       <Container className={styles.Main}>
       <Switch>
-          <Route exact path="/" render={() => <h1>Home page</h1>} />
+          <Route exact path="/" render={() => <Home/>} />
           <Route exact path="/gallery" render={() => <h1>Gallery</h1>}/>
           <Route exact path="/signin" render={() => <SignInForm/>} />
           <Route exact path="/signup" render={() => <SignUpForm/>} />

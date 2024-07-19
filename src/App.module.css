@@ -7,9 +7,6 @@
 }
 
 
-
-
-
 .Headings {
   font-family: "Arsenal SC", sans-serif;
   font-weight: 400;
@@ -45,4 +42,9 @@ i:hover {
   cursor: pointer;
   transition: color ease-in-out 0.3s;
   color: #2142b2;
+}
+
+.Link {
+  color: #ff9254;
+
 }
