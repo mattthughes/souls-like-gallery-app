@@ -75,8 +75,8 @@ const NavBar = () => {
       expand="md"
       fixed="top"
     ><Container>
-      <Navbar.Brand>
-        <img src={logo} alt='logo' height='45' />
+      <Navbar.Brand className={styles.Headings}>
+        <img src={logo} alt='logo' height='45' />Souls Like Gallery
       </Navbar.Brand>
       <Navbar.Toggle
           ref={ref}

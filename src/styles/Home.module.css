@@ -1,9 +1,22 @@
 .h3 {
     text-align: center;
 }
-.ol, p {
+.ol {
     font-family: "Overpass", sans-serif;
     padding-bottom: 10px;
     margin: 5px;
     line-height: 2.5em;
+    border: solid 2px ;
+    background-color: #fcab40;
+}
+
+.li {
+    padding-right: 20px;
+    margin: 4px;
+    line-height: 2em;
+}
+
+.p {
+    font-family: "Overpass", sans-serif;
+    line-height: 2em;
 }
