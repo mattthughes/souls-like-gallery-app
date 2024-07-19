@@ -33,6 +33,11 @@ function App() {
           <PrivateRoute>
           <Route exact path="/games/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>
+
+          <PrivateRoute>
+          <Route exact path="/games/:id/" render={() => <h1>Games detail</h1>}/>
+          </PrivateRoute>
+          
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       <NavBar/>

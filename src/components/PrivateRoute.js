@@ -6,11 +6,11 @@ import Asset from "./Asset";
 function PrivateRoute({ children }) {
     const currentUser = useCurrentUser();
 
-    if (!currentUser?.username === "admin") {
-        return <Asset spinner /> ;
+    if (currentUser?.username === "admin") {
+        return currentUser ? children : <div></div> ;
     }
 
-    return currentUser ? children : <Redirect to="/" replace />;
+    return <h1>Not found</h1> ;
 }
 
 
