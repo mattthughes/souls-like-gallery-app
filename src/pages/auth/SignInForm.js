@@ -46,7 +46,7 @@ function SignInForm() {
     try {
       const { data } = await axios.post('/dj-rest-auth/login/', signInData)
       setCurrentUser(data.user);
-      history.push("/Gallery")
+      history.push("/gallery")
       toast.success("Successfully logged in")
 
     } catch (err) {
