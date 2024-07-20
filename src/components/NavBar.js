@@ -28,7 +28,7 @@ const NavBar = () => {
     <>
     <NavLink className={styles.NavLink}
     activeClassName={styles.Active}
-     to="/games/create">
+     to="/game/create">
       <i class="fa-solid fa-gamepad"></i>Add Game
     </NavLink>
     </>

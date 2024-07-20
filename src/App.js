@@ -13,6 +13,7 @@ import PrivateRoute from './components/PrivateRoute';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import GameLists from './pages/games/GameLists';
+import NotFound from './components/NotFound';
 
 
 
@@ -35,15 +36,14 @@ function App() {
           
           
           <PrivateRoute>
-          <Route exact path="/games/create" render={() => <GameCreateForm/>}/>
+          <Route exact path="/game/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>
+          <Route exact path="/liked" render={() => <h1>Likes</h1>}/>
+          <Route render={() => <NotFound/>} />
           
           
           
-
           
-          
-          <Route render={() => <p>Page not found!</p>} />
         </Switch>
       <NavBar/>
       </Container>
