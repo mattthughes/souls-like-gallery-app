@@ -31,12 +31,15 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>
+          <Route exact path="/games/:id/" render={() => <GameLists/>}/>
+          
           
           <PrivateRoute>
           <Route exact path="/games/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>
-
-          <Route exact path="/games/:id/" render={() => <GameLists/>}/>
+          
+          
+          
 
           
           
