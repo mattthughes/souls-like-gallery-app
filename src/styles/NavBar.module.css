@@ -11,8 +11,8 @@
 }
 
 
-.NavLink {
-    padding: 5px;
+.NavLink, .NavDropDown {
+    padding: 2px;
     text-decoration: none;
     font-family: "Overpass", sans-serif;
 

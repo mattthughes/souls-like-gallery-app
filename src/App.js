@@ -10,6 +10,8 @@ import Home from './pages/home/Home';
 import GameCreateForm from './pages/games/GameCreateForm';
 import PrivateRoute from './components/PrivateRoute';
 
+import GalleryCreateForm from './pages/gallery/GalleryCreateForm';
+
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import GameLists from './pages/games/GameLists';
@@ -24,6 +26,7 @@ function App() {
       <Switch>
           <Route exact path="/" render={() => <Home/>} />
           <Route exact path="/gallery" render={() => <h1>Gallery</h1>}/>
+          <Route exact path="/gallery/create" render={() => <GalleryCreateForm/>}/>
           <Route exact path="/signin" render={() => <SignInForm/>} />
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>

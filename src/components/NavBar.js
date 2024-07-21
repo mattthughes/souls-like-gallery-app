@@ -6,6 +6,8 @@ import { useCurrentUser, useSetCurrentUser } from '../contexts/UserCurrentContex
 import styles from '../styles/NavBar.module.css'
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 import axios from 'axios';
 
@@ -26,28 +28,29 @@ const NavBar = () => {
 
   const admin = (
     <>
-    <NavLink className={styles.NavLink}
-    activeClassName={styles.Active}
-     to="/game/create">
-      <i class="fa-solid fa-gamepad"></i>Add Game
-    </NavLink>
+      <NavLink className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/game/create">
+        <i class="fa-solid fa-gamepad"></i>Add Game
+      </NavLink>
     </>
-    
+
   )
 
   const loggedInIcons = <>
-  <NavLink className={styles.NavLink} to="/trending">
-  <i class="fa-solid fa-fire"></i>Trending
-    </NavLink>
-    <NavLink className={styles.NavLink} to="/liked">
-    <i class="fa-solid fa-thumbs-up"></i>Liked Posts
-    </NavLink>
+    <NavDropdown className={styles.NavDropdown} title="Posts" id="basic-nav-dropdown">
+      <NavDropdown.Item to="/posts/create"><i className="far fa-plus-square"></i>Create Post</NavDropdown.Item>
+      <NavDropdown.Item href="/liked"><i class="fa-solid fa-thumbs-up"></i>Liked Posts</NavDropdown.Item>
+      <NavDropdown.Item href="/trending"><i class="fa-solid fa-fire"></i>Trending Posts</NavDropdown.Item>
+    </NavDropdown>
+
+
     <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
       <i className="fas fa-sign-out-alt"></i>Sign out
     </NavLink>
   </>;
 
-  
+
   const loggedOutIcons = (
     <>
       <NavLink
@@ -75,39 +78,39 @@ const NavBar = () => {
       expand="md"
       fixed="top"
     ><Container>
-      <Navbar.Brand className={styles.Headings}>
-        <NavLink to="/">
-        <img src={logo} alt='logo' height='45' />Souls Like Gallery
-        </NavLink>
-      </Navbar.Brand>
-      <Navbar.Toggle
+        <Navbar.Brand className={styles.Headings}>
+          <NavLink to="/">
+            <img src={logo} alt='logo' height='45' />Souls Like Gallery
+          </NavLink>
+        </Navbar.Brand>
+        <Navbar.Toggle
           ref={ref}
           onClick={() => setExpanded(!expanded)}
           aria-controls="basic-navbar-nav"
         />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto text-left">
-          <NavLink
-            exact
-            className={styles.NavLink}
-            activeClassName={styles.Active}
-            to="/"
-          >
-            <i className="fas fa-home"></i>Home
-          </NavLink>
-          <NavLink
-            className={styles.NavLink}
-            activeClassName={styles.Active}
-            to="/gallery"
-          >
-            <i class="fa-solid fa-photo-film"></i>Gallery
-          </NavLink>
-          { currentUser?.username === "admin" ? admin : <div></div> }
-          {currentUser ? loggedInIcons : loggedOutIcons}
-          
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto text-left">
+            <NavLink
+              exact
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+              to="/"
+            >
+              <i className="fas fa-home"></i>Home
+            </NavLink>
+            <NavLink
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+              to="/gallery"
+            >
+              <i class="fa-solid fa-photo-film"></i>Gallery
+            </NavLink>
+            {currentUser?.username === "admin" ? admin : <div></div>}
+            {currentUser ? loggedInIcons : loggedOutIcons}
+
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   )
 }
