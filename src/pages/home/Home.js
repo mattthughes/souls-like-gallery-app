@@ -17,10 +17,10 @@ function Home() {
                 <ol className={styles.ol}>
                     <li className={styles.li}>Create a free account by clicking here to <Link className={appStyles.Link} to="/signup">sign up.</Link></li>
                     <li className={styles.li}>If you already have an account click here to <Link className={appStyles.Link} to="/signin">sign in.</Link></li>
-                    <li className={styles.li}>Once the account has been generated <strong>Welcome</strong> you have joined our souls like community, as part of the community you can share your own <strong>memories</strong> with others or give feedback to others.</li>
+                    <li className={styles.li}>Once the account has been generated <strong>"Welcome"</strong> you have joined our souls like community. As part of the community you can share your own <strong>memories</strong> and give feedback on others.</li>
                     <li className={styles.li}>To view your own <strong>posts</strong> or a specific user posts its very simple just click on the users <strong>avatar</strong>, which will load the users account showing all there excellent posts!</li>
-                    <li className={styles.li}>If you wish to customise your <strong>avatar</strong> or username, you can do that very easily on your profile page via a drop down menu.</li>
-                    <li className={styles.li}>As part of our community you can share your existing links with others on your posts or even your account as well such as your social media links like your LinkedIn or Facebook links.</li>
+                    <li className={styles.li}>If you wish to customise your <strong>avatar</strong> or username, you can do that on your profile page via a drop down menu.</li>
+                    <li className={styles.li}>As part of our community you can share your existing links with others on your posts or on your account as well, such as your social media links e.g LinkedIn or Facebook links.</li>
 
                 </ol>
             </Col>
