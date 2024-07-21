@@ -76,7 +76,9 @@ const NavBar = () => {
       fixed="top"
     ><Container>
       <Navbar.Brand className={styles.Headings}>
+        <NavLink to="/">
         <img src={logo} alt='logo' height='45' />Souls Like Gallery
+        </NavLink>
       </Navbar.Brand>
       <Navbar.Toggle
           ref={ref}

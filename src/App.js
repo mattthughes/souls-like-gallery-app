@@ -15,10 +15,6 @@ import "react-toastify/dist/ReactToastify.css";
 import GameLists from './pages/games/GameLists';
 import NotFound from './components/NotFound';
 
-
-
-
-
 function App() {
   
   return (
@@ -32,9 +28,7 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>
-          <Route exact path="/games/:id/" render={() => <GameLists/>}/>
-          
-          
+          <Route exact path="/games/:id" render={() => <GameLists/>}/>
           <PrivateRoute>
           <Route exact path="/game/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>
