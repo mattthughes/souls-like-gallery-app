@@ -74,6 +74,9 @@ Souls Like Gallery is a content sharing application built using a frontend libar
     - [Acknowledgements](#acknowledgements)
 
 
+[To view the deployed project click here](https://souls-like-gallery-03103574fc28.herokuapp.com/)
+
+
     
 
 
