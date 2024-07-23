@@ -27,9 +27,10 @@ function GalleryCreateForm() {
     title: "",
     content: "",
     image: "",
-    game: ""
+    game: "",
+    attachments: ""
   });
-  const { title, content, image, game } = postData;
+  const { title, content, image, game, attachments } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -59,7 +60,8 @@ function GalleryCreateForm() {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
-    formData.append("game", game)
+    formData.append("game", game);
+    formData.append("attachments", attachments)
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -121,6 +123,22 @@ function GalleryCreateForm() {
         />
       </Form.Group>
       {errors?.game?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+    
+    <Form.Group>
+        <Form.Label>Attachments</Form.Label>
+        <Form.Control
+          name="attachments"
+          type="url"
+          placeholder="https://example.com"
+          value={attachments}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.attachments?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
