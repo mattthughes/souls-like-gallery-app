@@ -15,7 +15,7 @@ function GameLists() {
     const handleMount = async () => {
       try {
         const [{ data: game }] = await Promise.all([
-          axiosReq.get(`/games/${id}`),
+          axiosReq.get(`/games/`),
         ]);
         setGame({ results: [game] });
         console.log(game)

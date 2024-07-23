@@ -74,6 +74,9 @@ Souls Like Gallery is a content sharing application built using a frontend libar
     - [Acknowledgements](#acknowledgements)
 
 
+    
+
+
 ## UX
 
 ### Strategy Plane

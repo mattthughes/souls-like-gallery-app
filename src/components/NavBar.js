@@ -39,7 +39,7 @@ const NavBar = () => {
 
   const loggedInIcons = <>
     <NavDropdown className={styles.NavDropdown} title="Posts" id="basic-nav-dropdown">
-      <NavDropdown.Item to="/posts/create"><i className="far fa-plus-square"></i>Create Post</NavDropdown.Item>
+      <NavDropdown.Item href="/posts/create"><i className="far fa-plus-square"></i>Create Post</NavDropdown.Item>
       <NavDropdown.Item href="/liked"><i class="fa-solid fa-thumbs-up"></i>Liked Posts</NavDropdown.Item>
       <NavDropdown.Item href="/trending"><i class="fa-solid fa-fire"></i>Trending Posts</NavDropdown.Item>
     </NavDropdown>

@@ -6,4 +6,4 @@ function GalleryCreateForm() {
   )
 }
 
-export default GalleryCreateForm
+export default GalleryCreateForm;
