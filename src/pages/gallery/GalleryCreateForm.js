@@ -113,7 +113,10 @@ function GalleryCreateForm() {
         <Form.Label>Game</Form.Label>
         <Form.Control
           name="game"
+          type="number"
           value={game}
+          min={0}
+          max={8}
           onChange={handleChange}
         />
       </Form.Group>
