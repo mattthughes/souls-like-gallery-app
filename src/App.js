@@ -10,12 +10,14 @@ import Home from './pages/home/Home';
 import GameCreateForm from './pages/games/GameCreateForm';
 import PrivateRoute from './components/PrivateRoute';
 
-import GalleryCreateForm from './pages/gallery/GalleryCreateForm';
+import PostCreateForm from './pages/gallery/PostCreateForm';
 
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import GameLists from './pages/games/GameLists';
 import NotFound from './components/NotFound';
+import PostPage from './pages/gallery/PostPage';
+
 
 
 
@@ -27,14 +29,13 @@ function App() {
       <Container className={styles.Main}>
       <Switch>
           <Route exact path="/" render={() => <Home/>} />
-          <Route exact path="/gallery" render={() => <h1>Gallery</h1>}/>
-          <Route exact path="/posts/create" render={() => <GalleryCreateForm/>}/>
-          <Route exact path="/posts/:id" render={() => <h1>Post Detail</h1>}/>
+          <Route exact path="/posts/create" render={() => <PostCreateForm/>}/>
+          <Route exact path="/posts/:id" render={() => <PostPage/>}/>
           <Route exact path="/signin" render={() => <SignInForm/>} />
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>
-          <Route exact path="/games/" render={() => <GameLists/>}/>
+          <Route exact path="/games/:id" render={() => <GameLists/>}/>
           <PrivateRoute>
           <Route exact path="/game/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>

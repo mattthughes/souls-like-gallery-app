@@ -19,7 +19,7 @@ import { axiosReq } from "../../api/AxiosDefaults";
 
 
 
-function GalleryCreateForm() {
+function PostCreateForm() {
   const [errors, setErrors] = useState({});
 
 
@@ -216,4 +216,4 @@ function GalleryCreateForm() {
   );
 }
 
-export default GalleryCreateForm;
+export default PostCreateForm;
