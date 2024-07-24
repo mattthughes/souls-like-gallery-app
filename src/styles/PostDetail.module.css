@@ -1,0 +1,12 @@
+
+@media screen and (min-width: 1000px) {
+    .Test {
+        border: 2px solid black;
+        padding: 5px;
+        width: 48%;
+        position: relative;
+        left: 50%;
+        bottom: 350px;
+        
+    }
+}

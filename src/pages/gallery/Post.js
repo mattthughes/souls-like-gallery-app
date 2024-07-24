@@ -1,12 +1,14 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 
-import { Card, Media } from "react-bootstrap";
+import { Card, Container, Media } from "react-bootstrap";
 
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 import { Link } from "react-router-dom";
+
+import styles from '../../styles/PostDetail.module.css'
 
 import Tooltip from "react-bootstrap/Tooltip";
 
@@ -23,6 +25,7 @@ const Post = (props) => {
     content,
     game,
     image,
+    attachments,
     updated_at,
     postPage,
     setPosts
@@ -34,23 +37,26 @@ const Post = (props) => {
 
 
   return (
-    <Card>
-      <Card.Body>
-        <Media>
-          <div>
-          {is_owner && postPage && ""}
-          </div>
-        </Media>
-      </Card.Body>
-      <Link to={`/posts/${id}`}>
-        <Card.Img src={image} alt={title} />
-      </Link>
-      <Card.Body>
+      <Card>
+        <Card.Body>
+          <Media className="align-items-center justify-content-between">
+            <div className="d-flex align-items-center">
+              {is_owner && postPage && ""}
+            </div>
+          </Media>
+        </Card.Body>
+        <Link to={`/posts/${id}`}>
+          <Card.Img className="col-lg-6" src={image} alt={title} />
+        </Link>
+        <Card.Body className={`text-center ${styles.Test}`}>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
-        {game && <Card.Text>{game}</Card.Text>}
-        <div>
+        <a target='_blank'
+            rel='noopener noreferrer' href={attachments}>{attachments}</a>
+      
         
+        <div>
+
           {is_owner ? (
             <OverlayTrigger
               placement="top"
@@ -79,15 +85,12 @@ const Post = (props) => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
-          
+
         </div>
-      </Card.Body>
-      <div>
-      Post Created {updated_at}
-      </div>
-      <span></span>
-        
-    </Card>
+        Post Created {updated_at}
+
+        </Card.Body>
+      </Card>
   );
 };
 
