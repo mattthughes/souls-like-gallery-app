@@ -265,7 +265,13 @@ already.
 
 ##### Mobile Home view
 
+![Mobile Home page 1st section](docs/wireframes/home-mobile-1st.png)
+
+![Mobile Home page 2nd section](docs/wireframes/home-mobile-2nd.png)
+
 ##### Desktop Home view
+
+![Desktop Home page](docs/wireframes/home-desktop.png)
 
 #### Navigation Bar
 
@@ -290,7 +296,11 @@ This feature will allow users to log in to an existing account to gain access to
 
 ##### Mobile Sign in view
 
+![Mobile sign in page](docs/wireframes/sign-in-mobile-souls-like-gallery.png)
+
 ##### Desktop Sign in view
+
+![Desktop sign in page](docs/wireframes/sign-in-desktop-souls-like-gallery.png)
 
 #### Sign up page
 
@@ -298,9 +308,11 @@ This feature will highlight three features username password and confirm passwor
 
 ##### Mobile Sign up page
 
+![Mobile sign up page](docs/wireframes/sign-up-mobile-souls-like-gallery.png)
+
 ##### Desktop Sign up page
 
-
+![Desktop sign up page](docs/wireframes/sign-up-desktop-souls-like-gallery.png)
 
 #### Gallery
 
@@ -346,7 +358,11 @@ This feature will allow users to click save on a specific post they find useful 
 
 #### Favicon
 
+This feature will be present alongside the title of the application I decided with a simple two swords design as the design is very simplistic and can be very memorable and also matches the theme of the application.
+
 ##### Desktop Favicon view
+
+![Favicon view](docs/wireframes/favicon-souls-like-gallery.png)
 
 ## Technology
 
