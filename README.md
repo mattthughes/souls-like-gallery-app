@@ -242,7 +242,16 @@ I created six Epics which will be turned into User Stories
 
 ### Headings
 
+I have decided to go for the Arsenal SC font heading I chose to go for this as it stands out compared to the other text on the application and makes the application look very professional.
+
+![Typography Heading font](docs/wireframes/typography-heading.png)
+
+
 ### Body
+
+I went for the OverPass font family for all other text on the application such as post content, comments and navigation font as this keeps the professional look I am going for on this application.
+
+![Typography Body font](docs/wireframes/typography-body.png)
 
 ## Surface Plane 
 

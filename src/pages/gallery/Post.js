@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 
-import { Card, Container, Media } from "react-bootstrap";
+import { Card, Media } from "react-bootstrap";
 
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
