@@ -20,7 +20,6 @@ import PostPage from './pages/gallery/PostPage';
 
 
 
-
 function App() {
   
   return (
@@ -29,6 +28,7 @@ function App() {
       <Container className={styles.Main}>
       <Switch>
           <Route exact path="/" render={() => <Home/>} />
+          <Route exact path="/gallery" render={() => <h1>Gallery</h1>}/>
           <Route exact path="/posts/create" render={() => <PostCreateForm/>}/>
           <Route exact path="/posts/:id" render={() => <PostPage/>}/>
           <Route exact path="/signin" render={() => <SignInForm/>} />

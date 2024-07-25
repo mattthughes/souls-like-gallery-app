@@ -1,0 +1,11 @@
+
+@media screen and (min-width: 1000px) {
+    .Form {
+        border: 2px solid black;
+        padding: 5px;
+        position: relative;
+        left: 50%;
+        bottom: 300px;
+        
+    }
+}
