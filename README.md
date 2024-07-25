@@ -381,6 +381,8 @@ This feature will be present alongside the title of the application I decided wi
 
 ## Testing
 
+I Tested this project extensively making sure each element worked as intended and had the desired result while also checking that there were no errors all testing documentation can be found [here](https://github.com/mattthughes/souls-like-gallery-app/blob/main/TESTING.md)
+
 ## Credits
 
 ### Content
