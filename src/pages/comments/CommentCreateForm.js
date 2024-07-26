@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+import styles from "../../styles/CommentCreateEditForm.module.css";
 import { axiosRes } from "../../api/AxiosDefaults";
 
-import styles from '../../styles/CommentCreateEditForm.module.css'
+import { toast } from "react-toastify";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profile_id } = props;
+  const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -22,10 +23,8 @@ function CommentCreateForm(props) {
       const { data } = await axiosRes.post("/comments/", {
         content,
         post,
-        
-
       });
-      
+      toast.success("Comment created")
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
@@ -40,7 +39,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      console.log(err.response.data);
+      console.log(err);
     }
   };
 
@@ -51,7 +50,7 @@ function CommentCreateForm(props) {
           <Link to={`/profiles/${profile_id}`}>
           </Link>
           <Form.Control
-          className={`col-lg-5 ${styles.Form}`}
+            className={`col-lg-5 ${styles.Form}`}
             placeholder="my comment..."
             as="textarea"
             value={content}
@@ -61,7 +60,7 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={` btn d-block ml-auto`}
+        className={`${styles.Button} btn d-block ml-auto`}
         disabled={!content.trim()}
         type="submit"
       >
