@@ -10,7 +10,7 @@ import { axiosRes } from "../../api/AxiosDefaults";
 import { toast } from "react-toastify";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
+  const { post, setPost, setComments, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -27,7 +27,7 @@ function CommentCreateForm(props) {
       toast.success("Comment created")
       setComments((prevComments) => ({
         ...prevComments,
-        results: [data, ...prevComments.results],
+        results: [data, ...prevComments],
       }));
       setPost((prevPost) => ({
         results: [

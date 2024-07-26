@@ -8,3 +8,8 @@
 * Fixed private route error originally the admin user could not access the url, as they were being redirected like normal users.To fix this I checked if the current user was the admin user if they were to return the children props otherwise render a not found page which fixed this issue.
 * Fixed private route error when trying to access the detail view the create form would not load to fix this I added the use location hook and only triggered the if statement if the user was the admin user and the path name matched otherwise return the not found component which fixed this issue.
 * Fixed game post error initally the user could enter negative numbers and random numbers which would load an error stating the id pk does not exist adding a min and max variable to the form control element fixed this issue.
+* Fixed Comments bug with a tempoary solution as the comments get request was not recieving the correct data and was being listed as undefined I removed the results array and just mapped over the length of the comments array which fixed this issue.
+
+## Known Bugs
+
+* When creating the comment the page does not update until refresh with the new comments working on bug fix

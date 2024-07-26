@@ -18,7 +18,7 @@ function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
   const currentUser = useCurrentUser();
-  const [comments, setComments] = useState({ results: [] });
+  const [comments, setComments] = useState( {results: []} );
 
   useEffect(() => {
     const handleMount = async () => {
@@ -53,11 +53,11 @@ function PostPage() {
               setPost={setPost}
               setComments={setComments}
             />
-          ) : comments.results.length ? (
+          ) : comments.length ? (
             "Comments"
           ) : null}
-          {comments.results.length ? (
-            comments.results.map((comment) => (
+          {comments.length ? (
+            comments.map((comment) => (
               <Comment key={comment.id} {...comment} />
             ))
           ) : currentUser ? (
