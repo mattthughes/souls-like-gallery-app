@@ -31,7 +31,7 @@ const NavBar = () => {
       <NavLink className={styles.NavLink}
         activeClassName={styles.Active}
         to="/game/create">
-        <i class="fa-solid fa-gamepad"></i>Add Game
+        <i className="fa-solid fa-gamepad"></i>Add Game
       </NavLink>
     </>
 
@@ -40,8 +40,8 @@ const NavBar = () => {
   const loggedInIcons = <>
     <NavDropdown className={styles.NavDropdown} title="Posts" id="basic-nav-dropdown">
       <NavDropdown.Item href="/posts/create"><i className="far fa-plus-square"></i>Create Post</NavDropdown.Item>
-      <NavDropdown.Item href="/liked"><i class="fa-solid fa-thumbs-up"></i>Liked Posts</NavDropdown.Item>
-      <NavDropdown.Item href="/trending"><i class="fa-solid fa-fire"></i>Trending Posts</NavDropdown.Item>
+      <NavDropdown.Item href="/liked"><i className="fa-solid fa-thumbs-up"></i>Liked Posts</NavDropdown.Item>
+      <NavDropdown.Item href="/trending"><i className="fa-solid fa-fire"></i>Trending Posts</NavDropdown.Item>
     </NavDropdown>
 
 
@@ -103,7 +103,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/gallery"
             >
-              <i class="fa-solid fa-photo-film"></i>Gallery
+              <i className="fa-solid fa-photo-film"></i>Gallery
             </NavLink>
             {currentUser?.username === "admin" ? admin : <div></div>}
             {currentUser ? loggedInIcons : loggedOutIcons}

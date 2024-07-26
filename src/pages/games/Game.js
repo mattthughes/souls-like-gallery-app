@@ -8,7 +8,7 @@ import { Card, Media } from "react-bootstrap";
 
 const Game = (props) => {
   const {
-    id,
+  
     owner,
     title,
     gamePage

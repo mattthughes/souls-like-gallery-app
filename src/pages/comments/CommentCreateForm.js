@@ -9,7 +9,7 @@ import { axiosRes } from "../../api/AxiosDefaults";
 import styles from '../../styles/CommentCreateEditForm.module.css'
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
+  const { post, setPost, setComments, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -22,7 +22,10 @@ function CommentCreateForm(props) {
       const { data } = await axiosRes.post("/comments/", {
         content,
         post,
+        
+
       });
+      
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
@@ -37,7 +40,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      console.log(err);
+      console.log(err.response.data);
     }
   };
 
