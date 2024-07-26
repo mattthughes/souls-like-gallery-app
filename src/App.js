@@ -18,9 +18,15 @@ import GameLists from './pages/games/GameLists';
 import NotFound from './components/NotFound';
 import PostPage from './pages/gallery/PostPage';
 
+import PostsPage from './pages/gallery/PostsPage';
+
+import { useCurrentUser } from './contexts/UserCurrentContext';
+
 
 
 function App() {
+
+  const currentUser = useCurrentUser();
   
   return (
     <div>
@@ -28,6 +34,13 @@ function App() {
       <Container className={styles.Main}>
       <Switch>
           <Route exact path="/" render={() => <Home/>} />
+          <Route
+            exact
+            path="/gallery"
+            render={() => (
+              <PostsPage message="No results found. Adjust the search keyword." />
+            )}
+          />
           <Route exact path="/gallery" render={() => <h1>Gallery</h1>}/>
           <Route exact path="/posts/create" render={() => <PostCreateForm/>}/>
           <Route exact path="/posts/:id" render={() => <PostPage/>}/>
