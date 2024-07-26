@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { Row } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 import { axiosReq } from '../../api/AxiosDefaults'
-import Post from './Post';
+import Post from './PostDetail';
 import CommentCreateForm from "../comments/CommentCreateForm"
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 
