@@ -33,7 +33,7 @@ function PostsPage({ message, filter = "" }) {
 
   return (
     <Row>
-      <Col lg={8}>
+      <Col lg={12}>
       <h2 className={appStyles.Headings}>Gallery</h2>
         {hasLoaded ? ( 
           <>
