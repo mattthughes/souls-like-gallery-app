@@ -37,7 +37,7 @@ function PostsPage({ message, filter = "" }) {
       <h2 className={appStyles.Headings}>Gallery</h2>
         {hasLoaded ? ( 
           <>
-          <div className="border">
+          <div className="border p-2">
             {posts.length ? (
               posts.map((post) => (
                 <PostDetail key={post.id} {...post} setPosts={setPosts} />
