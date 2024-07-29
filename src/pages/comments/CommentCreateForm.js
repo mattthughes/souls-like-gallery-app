@@ -24,6 +24,7 @@ function CommentCreateForm(props) {
         content,
         post,
       });
+      window.location.reload();
       toast.success("Comment created")
       setComments((prevComments) => ({
         ...prevComments,
