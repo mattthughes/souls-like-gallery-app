@@ -6,6 +6,8 @@ import { Card, Media } from "react-bootstrap";
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
+import { axiosRes } from "../../api/AxiosDefaults";
+
 import { Link } from "react-router-dom";
 
 import styles from '../../styles/PostDetail.module.css'
@@ -25,11 +27,49 @@ const PostDetail = (props) => {
     attachments,
     updated_at,
     postPage,
+    setPost,
 
   } = props
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes/", { post: id});
+      console.log(data)
+      setPost((prevPosts) => ({
+        ...prevPosts,
+        
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: post.id }
+            : post;
+            
+        }),
+        
+      }));
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setPost((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err.respone.data);
+    }
+    
+  };
 
 
   return (
@@ -61,11 +101,11 @@ const PostDetail = (props) => {
               <i className="fa-solid fa-thumbs-up" />
             </OverlayTrigger>
           ) : like_id ? (
-            <span>
+            <span onClick={handleUnlike}>
               <i className={'fa-solid fa-thumbs-up'} />
             </span>
           ) : currentUser ? (
-            <span>
+            <span onClick={handleLike}>
               <i className='fa-solid fa-thumbs-up' />
             </span>
           ) : (
