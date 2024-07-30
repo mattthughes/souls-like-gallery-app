@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import styles from '../../styles/PostDetail.module.css'
 
 import Tooltip from "react-bootstrap/Tooltip";
+import { DropDown } from "../../components/DropDown";
 
 const PostDetail = (props) => {
   const {
@@ -79,7 +80,9 @@ const PostDetail = (props) => {
         <Card.Body>
           <Media className="align-items-center justify-content-between">
             <div className="d-flex align-items-center">
-              {is_owner && postPage && ""}
+              {is_owner && postPage && (
+                <DropDown className/>
+              )}
             </div>
           </Media>
         </Card.Body>
