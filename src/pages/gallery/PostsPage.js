@@ -11,6 +11,10 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 import PostDetail from "./Post";
 
+
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
+
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState( []);
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -36,19 +40,26 @@ function PostsPage({ message, filter = "" }) {
       <Col lg={12}>
       <h2 className={appStyles.Headings}>Gallery</h2>
         {hasLoaded ? ( 
-          <>
-          <div className="border p-2">
-            {posts.length ? (
-              posts.map((post) => (
-                <PostDetail key={post.id} {...post} setPosts={setPosts} />
-              ))
-            ) : (
-              <Container className={appStyles.Content}>
-                <Asset message={message} />
-              </Container>
-            )}
-            </div>
-          </>
+           <>
+           <div className="border p-2">
+           {posts.length ? (
+             <InfiniteScroll
+               children={posts.map((post) => (
+                 <PostDetail key={post.id} {...post} setPosts={setPosts} />
+               ))}
+               dataLength={posts.length}
+               loader={<Asset spinner />}
+               hasMore={!!posts.next}
+               next={() => fetchMoreData(posts, setPosts)}
+             />
+           ) : (
+             <Container className={appStyles.Content}>
+               <Asset  message={message} />
+             </Container>
+           )}
+           </div>
+           
+         </>
           
 
         ) : (
