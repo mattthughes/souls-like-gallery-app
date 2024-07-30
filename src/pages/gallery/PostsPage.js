@@ -11,6 +11,8 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 import PostDetail from "./Post";
 
+import { Form } from "react-bootstrap";
+
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
@@ -19,11 +21,12 @@ function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState( []);
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -32,12 +35,31 @@ function PostsPage({ message, filter = "" }) {
     };
 
     setHasLoaded(false);
-    fetchPosts();
-  }, [filter, pathname]);
+    const timer = setTimeout(() => {
+      fetchPosts();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [filter, query, pathname]);
+
 
   return (
     <Row>
       <Col lg={12}>
+      <Form
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search posts"
+          />
+        </Form>
+
       <h2 className={appStyles.Headings}>Gallery</h2>
         {hasLoaded ? ( 
            <>
