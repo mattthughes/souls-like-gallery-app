@@ -3,3 +3,15 @@
     justify-content: space-around;
     
 }
+
+.Like {
+    color: #0059ff;
+  }
+  
+  .Like:hover {
+    color: #2142b2;
+  }
+  
+  .LikeOutline:hover {
+    color: #0066ff;
+  }

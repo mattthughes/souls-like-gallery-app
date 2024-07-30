@@ -11,8 +11,9 @@
 * Fixed Comments bug with a tempoary solution as the comments get request was not recieving the correct data and was being listed as undefined I removed the results array and just mapped over the length of the comments array which fixed this issue.
 * Fixed comment refresh bug by adding in window.location.reload(); which would reload the page once the comment was created not forcing the user to reload this is another temporary solution and will look for others If I have time to.
 * Fixed like increment issue by changing the setPosts prop to setpost which targeted the correct array fixing this issue.
+* Fixed like increment crash bug by adding in a temporary fix which uses window.location.reload to reload the page instead of crashing the application will look for further solutions.
 
 ## Known Bugs
 
 * When creating the comment the page refreshes with rather than keeping the user on the same page.
-* When clicking the like button more the like button multiple times the like id will show as undefined
+* When clicking the like button more the like button multiple times the like id will show as undefined and refresh the page to stop the application from crashing.

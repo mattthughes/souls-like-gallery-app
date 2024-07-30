@@ -66,7 +66,9 @@ const PostDetail = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err.respone.data);
+      if (err.response.data) {
+        window.location.reload();
+      }
     }
     
   };
@@ -102,18 +104,18 @@ const PostDetail = (props) => {
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={handleUnlike}>
-              <i className={'fa-solid fa-thumbs-up'} />
+              <i className={`fa-solid fa-thumbs-up ${styles.Like}`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleLike}>
-              <i className='fa-solid fa-thumbs-up' />
+              <i className={`fa-solid fa-thumbs-up ${styles.LikeOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to like posts!</Tooltip>}
             >
-              <i className="far fa-heart" />
+              <i className="fa-solid fa-thumbs-up" />
             </OverlayTrigger>
           )}
           {likes_count}
