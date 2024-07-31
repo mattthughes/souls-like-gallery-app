@@ -14,6 +14,7 @@ import styles from '../../styles/PostDetail.module.css'
 
 import Tooltip from "react-bootstrap/Tooltip";
 import { DropDown } from "../../components/DropDown";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const PostDetail = (props) => {
   const {
@@ -34,6 +35,20 @@ const PostDetail = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner
+  const history = useHistory()
+
+  const handleEdit = () => {
+    history.push(`/posts/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleLike = async () => {
     try {
@@ -81,7 +96,8 @@ const PostDetail = (props) => {
           <Media className="align-items-center justify-content-between">
             <div className="d-flex align-items-center">
               {is_owner && postPage && (
-                <DropDown className/>
+                <DropDown handleEdit={handleEdit}
+                handleDelete={handleDelete}/>
               )}
             </div>
           </Media>
