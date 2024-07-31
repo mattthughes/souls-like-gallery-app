@@ -1,41 +1,54 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import React, { useRef, useState } from "react";
 
-import { Row } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col';
-import { axiosReq } from '../../api/AxiosDefaults'
-import Game from './Game';
+import { axiosReq } from "../../api/AxiosDefaults";
+
+import { useCurrentUser } from "../../contexts/UserCurrentContext";
+import { useEffect } from "react";
+import GameDetail from "./GameDetail";
+
+import appStyles from '../../App.module.css'
 
 
 function GameLists() {
-  const { id } = useParams()
-  const [game, setGame] = useState({ results: [] });
+    const [games, setGames] = useState({ results: [] });
+    const currentUser = useCurrentUser();
 
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const [{ data: game }] = await Promise.all([
-          axiosReq.get(`/games/${id}`),
-        ]);
-        setGame({ results: [game] });
-        console.log(game)
+    useEffect(() => {
+        const fetchGames = async () => {
+            try {
+                const { data } = await axiosReq.get(`/games/`);
+                setGames(data);
+                console.log(data)
+            } catch (err) {
+                console.log(err);
 
-      } catch (err) {
-        console.log(err)
-      };
+            }
+        };
+
+        fetchGames()
+    }, []);
 
 
-    }
-    handleMount();
-  }, [id]);
 
-  return (
-    <Row>
-      <Col>
-        <Game {...game.results[0]} setGame={setGame} gamePage />
-      </Col>
-    </Row>
-  );
+    return (
+        <div>
+            <div className="col-12 col-lg-10 border mb-5">
+                <h3 className={`text-center ${appStyles.Headings}`}>Games List</h3>
+                {games.length ? (
+                    games.map((game) => (
+                        <GameDetail key={game.id} {...game} gamePage />
+                    ))
+                ) : currentUser ? (
+                    <span>No Games to show</span>
+                ) : (
+                    <span>No Games ... yet</span>
+                )}
+
+            </div>
+
+
+        </div>
+    );
 }
 
-export default GameLists
+export default GameLists;

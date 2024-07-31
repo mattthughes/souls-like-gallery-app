@@ -14,11 +14,12 @@ import PostCreateForm from './pages/gallery/PostCreateForm';
 
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import GameLists from './pages/games/GameLists';
 import NotFound from './components/NotFound';
 import PostPage from './pages/gallery/PostPage';
 
 import PostsPage from './pages/gallery/PostsPage';
+import GamePage from './pages/games/GamePage';
+import GameLists from './pages/games/GameLists';
 
 
 
@@ -45,7 +46,8 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/profile" render={() => <h1>Profile</h1>}/>
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>
-          <Route exact path="/games/:id" render={() => <GameLists/>}/>
+          <Route exact path="/games" render={() => <GameLists/>}/>
+          <Route exact path="/games/:id" render={() => <GamePage/>}/>
           <PrivateRoute>
           <Route exact path="/game/create" render={() => <GameCreateForm/>}/>
           </PrivateRoute>

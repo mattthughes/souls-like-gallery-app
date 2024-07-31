@@ -17,6 +17,12 @@
   box-sizing: border-box;
 }
 
+.Text {
+  padding: 2px;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+}
+
 a {
   color: #555555;
   transition: color ease-in-out 0.3s;
@@ -45,7 +51,7 @@ i:hover {
 }
 
 .Link {
-  color:#00008B;
+  color: #00008B;
   text-decoration: underline;
 
 }

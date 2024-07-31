@@ -9,15 +9,20 @@ import { axiosRes } from "../../api/AxiosDefaults";
 
 import { toast } from "react-toastify";
 
+import Image from "react-bootstrap/Image";
 
 
+import appStyles from '../../App.module.css'
 
 
-const Game = (props) => {
+const GameDetail = (props) => {
   const {
     id,
     owner,
     title,
+    description,
+    image,
+
     gamePage
   } = props
 
@@ -50,14 +55,15 @@ const Game = (props) => {
         </Media>
       </Card.Body>
       <div>
-        <ul>
-          <li className="text-center">{title}</li>
-        </ul>
+        <h3 className={`text-center ${appStyles.Headings}`}>{title}</h3>
+        <p className={`text-center ${appStyles.Text}`}>{description}</p>
+        
       </div>
+      <Image className="d-none d-md-block col-lg-4 d-flex align-self-center pb-3" src={image} alt={title} />
        
     </Card>
   );
 };
 
 
-export default Game;
+export default GameDetail;
