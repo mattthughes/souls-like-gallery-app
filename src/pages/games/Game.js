@@ -9,6 +9,8 @@ import { axiosRes } from "../../api/AxiosDefaults";
 
 import { toast } from "react-toastify";
 
+import styles from '../../styles/Game.module.css'
+
 
 
 
@@ -49,9 +51,9 @@ const Game = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <div>
+      <div className="col-4">
         <ul>
-          <li className="text-center">{title}</li>
+          <li className={`text-center ${styles.Li}`}>{title}</li>
         </ul>
       </div>
        

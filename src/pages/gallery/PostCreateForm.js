@@ -10,6 +10,8 @@ import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
+import { Dropdown } from "react-bootstrap";
+
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -226,20 +228,7 @@ function PostCreateForm() {
                 </Alert>
               ))}
 
-              
-              <div className="col-12 col-lg-8 pt-4 border">
-              <h3 className="text-center">Games List</h3>
-                {games.length ? (
-                  games.map((game) => (
-                    <Game key={game.id} {...game} />
-                  ))
-                ) : currentUser ? (
-                  <span>No Games to show</span>
-                ) : (
-                  <span>No Games ... yet</span>
-                )}
 
-              </div>
 
               <div className="d-md-none">{textFields}</div>
             </Container>
@@ -249,6 +238,26 @@ function PostCreateForm() {
           </Col>
         </Row>
       </Form>
+      <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+      <Dropdown drop="down">
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          View Games List
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item>
+            {games.length ? (
+              games.map((game) => (
+                <Game key={game.id} {...game} />
+              ))
+            ) : currentUser ? (
+              <span>No Games to show</span>
+            ) : (
+              <span>No Games ... yet</span>
+            )}
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
 
     </div>
   );
