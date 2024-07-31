@@ -19,6 +19,7 @@ import { axiosReq } from "../../api/AxiosDefaults";
 
 
 
+
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
 
@@ -26,11 +27,11 @@ function PostCreateForm() {
   const [postData, setPostData] = useState({
     title: "",
     content: "",
-    image: "",
     game: "",
+    image: "",
     attachments: ""
   });
-  const { title, content, image, game, attachments } = postData;
+  const { title, content, game, image, attachments } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -69,7 +70,8 @@ function PostCreateForm() {
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-        console.log(game)
+        console.log(game[title])
+        console.log(err.response.data)
 
       }
     }
@@ -114,13 +116,12 @@ function PostCreateForm() {
 <Form.Group>
         <Form.Label>Game</Form.Label>
         <Form.Control
+          type="text"
           name="game"
-          type="number"
           value={game}
-          min={0}
-          max={8}
           onChange={handleChange}
         />
+          
       </Form.Group>
       {errors?.game?.map((message, idx) => (
         <Alert variant="warning" key={idx}>

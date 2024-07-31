@@ -22,9 +22,9 @@ const Game = (props) => {
   } = props
 
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner
+  const is_owner = currentUser?.username === owner;
 
-  const history = useHistory()
+  const history = useHistory();
 
   const handleDelete = async () => {
     try {

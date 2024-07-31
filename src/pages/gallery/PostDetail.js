@@ -27,6 +27,7 @@ const PostDetail = (props) => {
     title,
     content,
     image,
+    game,
     attachments,
     updated_at,
     postPage,
@@ -110,6 +111,7 @@ const PostDetail = (props) => {
         <Card.Body className={`text-center ${styles.Test}`}>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
+        {game && <Card.Text>{game}</Card.Text>}
         <a target='_blank'
             rel='noopener noreferrer' href={attachments}>{attachments}</a>
       
