@@ -38,12 +38,18 @@ const NavBar = () => {
   )
 
   const loggedInIcons = <>
-    <NavDropdown className={styles.NavDropdown} title="Posts" id="basic-nav-dropdown">
-      <NavDropdown.Item href="/posts/create"><i className="far fa-plus-square"></i>Create Post</NavDropdown.Item>
-      <NavDropdown.Item href="/liked"><i className="fa-solid fa-thumbs-up"></i>Liked Posts</NavDropdown.Item>
-      <NavDropdown.Item href="/trending"><i className="fa-solid fa-fire"></i>Trending Posts</NavDropdown.Item>
-    </NavDropdown>
 
+    <NavLink className={styles.NavLink} to="/posts/create">
+    <i className="far fa-plus-square"></i>Create Post
+    </NavLink>
+
+    <NavLink className={styles.NavLink} to="/liked">
+    <i className="fa-solid fa-thumbs-up"></i>Liked Posts
+    </NavLink>
+
+    <NavLink className={styles.NavLink} to="/trending">
+    <i className="fa-solid fa-fire"></i>Trending Posts
+    </NavLink>
 
     <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
       <i className="fas fa-sign-out-alt"></i>Sign out
