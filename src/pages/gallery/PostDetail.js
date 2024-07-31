@@ -15,6 +15,7 @@ import styles from '../../styles/PostDetail.module.css'
 import Tooltip from "react-bootstrap/Tooltip";
 import { DropDown } from "../../components/DropDown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toast } from "react-toastify";
 
 const PostDetail = (props) => {
   const {
@@ -44,6 +45,7 @@ const PostDetail = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
+      toast.success("Post Deleted")
       history.goBack();
     } catch (err) {
       console.log(err);
@@ -96,8 +98,8 @@ const PostDetail = (props) => {
           <Media className="align-items-center justify-content-between">
             <div className="d-flex align-items-center">
               {is_owner && postPage && (
-                <DropDown handleEdit={handleEdit}
-                handleDelete={handleDelete}/>
+                <DropDown handleEdit={handleEdit} handleDelete={handleDelete}
+                />
               )}
             </div>
           </Media>
