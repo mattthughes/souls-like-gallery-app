@@ -15,14 +15,18 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router";
+
+import Game from "../games/Game";
 import { axiosReq } from "../../api/AxiosDefaults";
 
-
+import { useCurrentUser } from "../../contexts/UserCurrentContext";
+import { useEffect } from "react";
 
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
-
+  const [games, setGames] = useState({ results: [] });
+  const currentUser = useCurrentUser();
 
   const [postData, setPostData] = useState({
     title: "",
@@ -53,6 +57,21 @@ function PostCreateForm() {
       });
     }
   };
+
+  useEffect(() => {
+    const fetchGames = async () => {
+      try {
+        const { data } = await axiosReq.get(`/games/`);
+        setGames(data);
+        console.log(data)
+      } catch (err) {
+        console.log(err);
+
+      }
+    };
+
+    fetchGames()
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -113,7 +132,7 @@ function PostCreateForm() {
         </Alert>
       ))}
 
-<Form.Group>
+      <Form.Group>
         <Form.Label>Game</Form.Label>
         <Form.Control
           type="text"
@@ -121,15 +140,15 @@ function PostCreateForm() {
           value={game}
           onChange={handleChange}
         />
-          
+
       </Form.Group>
       {errors?.game?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
-    
-    <Form.Group>
+
+      <Form.Group>
         <Form.Label>Attachments</Form.Label>
         <Form.Control
           name="attachments"
@@ -144,9 +163,9 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-      
 
-      
+
+
 
 
       <Button
@@ -162,58 +181,76 @@ function PostCreateForm() {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-          >
-            <Form.Group className="text-center">
-              {image ? (
-                <>
-                  <figure>
-                    <Image className={appStyles.Image} src={image} rounded />
-                  </figure>
-                  <div>
-                    <Form.Label
-                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                      htmlFor="image-upload"
-                    >
-                      Change the image
-                    </Form.Label>
-                  </div>
-                </>
-              ) : (
-                <Form.Label
-                  className="d-flex justify-content-center"
-                  htmlFor="image-upload"
-                >
-                  <Asset
-                    message="Click or tap to upload an image"
-                  />
-                </Form.Label>
-              )}
+    <div>
+      <Form onSubmit={handleSubmit}>
+        <Row>
+          <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+            <Container
+            >
+              <Form.Group className="text-center">
+                {image ? (
+                  <>
+                    <figure>
+                      <Image className={appStyles.Image} src={image} rounded />
+                    </figure>
+                    <div>
+                      <Form.Label
+                        className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                        htmlFor="image-upload"
+                      >
+                        Change the image
+                      </Form.Label>
+                    </div>
+                  </>
+                ) : (
+                  <Form.Label
+                    className="d-flex justify-content-center"
+                    htmlFor="image-upload"
+                  >
+                    <Asset
+                      message="Click or tap to upload an image"
+                    />
+                  </Form.Label>
+                )}
 
-              <Form.File
-                id="image-upload"
-                accept="image/*"
-                onChange={handleChangeImage}
-                ref={imageInput}
-              />
-            </Form.Group>
-            {errors?.image?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-            ))}
+                <Form.File
+                  id="image-upload"
+                  accept="image/*"
+                  onChange={handleChangeImage}
+                  ref={imageInput}
+                />
+              </Form.Group>
+              {errors?.image?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                  {message}
+                </Alert>
+              ))}
 
-            <div className="d-md-none">{textFields}</div>
-          </Container>
-        </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
-      </Row>
-    </Form>
+              
+              <div className="col-12 col-lg-8 pt-4 border">
+              <h3 className="text-center">Games List</h3>
+                {games.length ? (
+                  games.map((game) => (
+                    <Game key={game.id} {...game} />
+                  ))
+                ) : currentUser ? (
+                  <span>No Games to show</span>
+                ) : (
+                  <span>No Games ... yet</span>
+                )}
+
+              </div>
+
+              <div className="d-md-none">{textFields}</div>
+            </Container>
+          </Col>
+          <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+            <Container className={appStyles.Content}>{textFields}</Container>
+          </Col>
+        </Row>
+      </Form>
+
+    </div>
   );
 }
 

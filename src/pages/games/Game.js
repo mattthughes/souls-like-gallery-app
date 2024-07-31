@@ -9,6 +9,8 @@ import { axiosRes } from "../../api/AxiosDefaults";
 
 import { toast } from "react-toastify";
 
+import Image from "react-bootstrap/Image";
+
 
 
 
@@ -18,6 +20,9 @@ const Game = (props) => {
     id,
     owner,
     title,
+    description,
+    image,
+
     gamePage
   } = props
 
@@ -41,7 +46,7 @@ const Game = (props) => {
     <Card>
       <Card.Body>
         <Media>
-
+        
           <div>
             {is_owner && gamePage && (
               <DropDown handleDelete={handleDelete}/>
@@ -49,9 +54,13 @@ const Game = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Card.Body>
-        {title && <Card.Title>{title}</Card.Title>}
-      </Card.Body>
+      <div>
+        <h3 className="text-center">{title}</h3>
+        <p className="text-center">{description}</p>
+        
+      </div>
+      <Image className="d-none d-md-block col-lg-12" src={image} alt={title} />
+       
     </Card>
   );
 };
