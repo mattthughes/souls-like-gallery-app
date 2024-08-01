@@ -38,6 +38,10 @@ const Game = (props) => {
     }
   };
 
+  const handleEdit = () => {
+    history.push(`/games/${id}/edit`);
+  };
+
 
   return (
     <Card>
@@ -46,7 +50,7 @@ const Game = (props) => {
         
           <div>
             {is_owner && gamePage && (
-              <DropDown handleDelete={handleDelete}/>
+              <DropDown handleDelete={handleDelete} handleEdit={handleEdit}/>
             )}
           </div>
         </Media>
