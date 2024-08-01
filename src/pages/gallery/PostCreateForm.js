@@ -24,6 +24,9 @@ import { axiosReq } from "../../api/AxiosDefaults";
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 import { useEffect } from "react";
 
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -239,7 +242,7 @@ function PostCreateForm() {
         </Row>
       </Form>
       <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-      <Dropdown>
+      <Dropdown drop="right">
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           View Games List
         </Dropdown.Toggle>
@@ -258,6 +261,12 @@ function PostCreateForm() {
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
+      <div className="pt-3 mr-3">
+      <Link to="/games">
+      <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>
+      </Link>
+      </div>
+     
 
     </div>
   );

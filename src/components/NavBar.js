@@ -109,6 +109,7 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-photo-film"></i>Gallery
             </NavLink>
+            
             {currentUser?.username === "admin" ? admin : <div></div>}
             {currentUser ? loggedInIcons : loggedOutIcons}
 

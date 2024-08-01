@@ -279,7 +279,38 @@ This page will use conditional rendering to determine which pages are displayed 
 
 ##### Mobile Navigation Bar view
 
+`Navbar logo`
+
+![Mobile Navbar logo](docs/wireframes/nav-bar-icon-mobile.png)
+
+`Navbar not logged in`
+
+![Mobile Navbar not logged in](docs/wireframes/nav-bar-mobile-not-logged-in.png)
+
+`NavBar logged in Admin`
+
+![Mobile Navbar logged in Admin](docs/wireframes/nav-bar-logged-in-admin-mobile.png)
+
+`NavBar logged in User`
+
+![Mobile Navbar logged in User](docs/wireframes/navbar-logged-in-user-mobile.png)
+
+
+
 ##### Desktop Navigation Bar view
+
+`Navbar not logged in`
+
+![Desktop Navbar not logged in](docs/wireframes/navbar-not-logged-in-desktop.png)
+
+`NavBar logged in Admin`
+
+![Desktop Navbar logged in Admin](docs/wireframes/nav-bar-logged-in-desktop-admin-feature.png)
+
+`NavBar logged in User`
+
+![Desktop Navbar logged in User](docs/wireframes/nav-bar-logged-in-user-desktop.png)
+
 
 #### Profile Page
 
