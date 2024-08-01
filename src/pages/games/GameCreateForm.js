@@ -59,8 +59,8 @@ function GameCreateForm() {
     formData.append("image", image);
     formData.append("description", description);
     try {
-      const { data } = await axiosReq.post("/games/create/", formData);
-      history.push(`/games/${data.id}`);
+      await axiosReq.post("/games/create/", formData);
+      history.push(`/games/`);
       toast.success("Game Created!")
     } catch (err) {
       console.log(err);
