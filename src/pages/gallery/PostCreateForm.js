@@ -261,7 +261,7 @@ function PostCreateForm() {
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <div className="pt-3 mr-3">
+      <div className="pt-3 pb-2 mr-3">
       <Link to="/games">
       <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>
       </Link>
