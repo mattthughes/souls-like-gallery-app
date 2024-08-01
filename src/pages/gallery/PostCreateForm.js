@@ -196,7 +196,7 @@ function PostCreateForm() {
                 {image ? (
                   <>
                     <figure>
-                      <Image className={appStyles.Image} src={image} rounded />
+                      <Image className={appStyles.Image}  src={image} rounded />
                     </figure>
                     <div>
                       <Form.Label
@@ -230,9 +230,33 @@ function PostCreateForm() {
                   {message}
                 </Alert>
               ))}
+              <div>
+                <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+                <Dropdown drop="right">
+                  <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    View Games List
+                  </Dropdown.Toggle>
 
-
-
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      {games.length ? (
+                        games.map((game) => (
+                          <Game key={game.id} {...game} />
+                        ))
+                      ) : currentUser ? (
+                        <span>No Games to show</span>
+                      ) : (
+                        <span>No Games ... yet</span>
+                      )}
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                <div className="pt-3 pb-2 mr-3">
+                  <Link to="/games">
+                    <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>
+                  </Link>
+                </div>
+              </div>
               <div className="d-md-none">{textFields}</div>
             </Container>
           </Col>
@@ -241,32 +265,6 @@ function PostCreateForm() {
           </Col>
         </Row>
       </Form>
-      <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-      <Dropdown drop="right">
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          View Games List
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu>
-          <Dropdown.Item>
-            {games.length ? (
-              games.map((game) => (
-                <Game key={game.id} {...game} />
-              ))
-            ) : currentUser ? (
-              <span>No Games to show</span>
-            ) : (
-              <span>No Games ... yet</span>
-            )}
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-      <div className="pt-3 pb-2 mr-3">
-      <Link to="/games">
-      <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>
-      </Link>
-      </div>
-     
 
     </div>
   );

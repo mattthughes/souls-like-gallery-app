@@ -197,11 +197,10 @@ function PostEditForm() {
                 <Row>
                     <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                         <Container
-                            className={`${appStyles.Content} d-flex flex-column justify-content-center`}
-                        >
+                            className={`${appStyles.Content} d-flex flex-column justify-content-center`}>
                             <Form.Group className="text-center">
                                 <figure>
-                                    <Image className={appStyles.Image} src={image} rounded />
+                                    <Image className={appStyles.Image} height={200} width={400} src={image} rounded />
                                 </figure>
                                 <div>
                                     <Form.Label
@@ -224,8 +223,31 @@ function PostEditForm() {
                                     {message}
                                 </Alert>
                             ))}
+                            <div>
+                                <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+                                <Dropdown drop="right">
+                                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                        View Games List
+                                    </Dropdown.Toggle>
 
-                            <div className="d-md-none">{textFields}</div>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item>
+                                            {games.length ? (
+                                                games.map((game) => (
+                                                    <Game key={game.id} {...game} />
+                                                ))
+                                            ) : currentUser ? (
+                                                <span>No Games to show</span>
+                                            ) : (
+                                                <span>No Games ... yet</span>
+                                            )}
+                                        </Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
+                            <div className="d-md-none">{textFields}
+
+                            </div>
                         </Container>
                     </Col>
                     <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
@@ -233,26 +255,7 @@ function PostEditForm() {
                     </Col>
                 </Row>
             </Form>
-            <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-            <Dropdown drop="right">
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    View Games List
-                </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                    <Dropdown.Item>
-                        {games.length ? (
-                            games.map((game) => (
-                                <Game key={game.id} {...game} />
-                            ))
-                        ) : currentUser ? (
-                            <span>No Games to show</span>
-                        ) : (
-                            <span>No Games ... yet</span>
-                        )}
-                    </Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
         </div>
 
     );
