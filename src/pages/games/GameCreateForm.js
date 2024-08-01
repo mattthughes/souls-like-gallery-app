@@ -56,7 +56,7 @@ function GameCreateForm() {
 
     formData.append("title", title);
     formData.append("slug", slug);
-    formData.append("image", image);
+    formData.append("image", imageInput.current.files[0]);
     formData.append("description", description);
     try {
       await axiosReq.post("/games/create/", formData);

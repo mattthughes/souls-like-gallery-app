@@ -12,6 +12,7 @@
 * Fixed comment refresh bug by adding in window.location.reload(); which would reload the page once the comment was created not forcing the user to reload this is another temporary solution and will look for others If I have time to.
 * Fixed like increment issue by changing the setPosts prop to setpost which targeted the correct array fixing this issue.
 * Fixed like increment crash bug by adding in a temporary fix which uses window.location.reload to reload the page instead of crashing the application will look for further solutions.
+* Fixed Image data bug on the game create form by changing the appended data from a string to the image input current file fixing this issue.
 
 ## Known Bugs
 
