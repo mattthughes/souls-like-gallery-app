@@ -51,9 +51,9 @@ const Game = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <div className="col-4">
+      <div className="col-6">
         <ul>
-          <li className={`text-center ${styles.Li}`}>{title}</li>
+          <li className={styles.Li}>{title}</li>
         </ul>
       </div>
        

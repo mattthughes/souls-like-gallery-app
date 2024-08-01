@@ -1,6 +1,7 @@
 .Li {
-    padding: 2px;
     text-decoration: none;
     font-family: "Overpass", sans-serif;
     list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
 }

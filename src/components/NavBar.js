@@ -6,8 +6,6 @@ import { useCurrentUser, useSetCurrentUser } from '../contexts/UserCurrentContex
 import styles from '../styles/NavBar.module.css'
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
 
 import axios from 'axios';
 
