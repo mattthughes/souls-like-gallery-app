@@ -200,7 +200,7 @@ function PostEditForm() {
                             className={`${appStyles.Content} d-flex flex-column justify-content-center`}>
                             <Form.Group className="text-center">
                                 <figure>
-                                    <Image className={appStyles.Image} height={200} width={400} src={image} rounded />
+                                    <Image className={appStyles.Image} src={image} rounded />
                                 </figure>
                                 <div>
                                     <Form.Label
