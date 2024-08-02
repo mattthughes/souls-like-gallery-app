@@ -39,6 +39,7 @@ const PostDetail = (props) => {
   const is_owner = currentUser?.username === owner
   const history = useHistory()
 
+
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
@@ -93,6 +94,7 @@ const PostDetail = (props) => {
   };
 
 
+
   return (
       <Card>
         <Card.Body>
@@ -106,9 +108,9 @@ const PostDetail = (props) => {
           </Media>
         </Card.Body>
         <Link to={`/posts/${id}`}>
-          <Card.Img className="col-lg-6" src={image} alt={title} />
+          <Card.Img className="col-lg-12" src={image} alt={title} />
         </Link>
-        <Card.Body className={`text-center ${styles.Test}`}>
+        <Card.Body className={`text-center`}>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         {game && <Card.Text>{game}</Card.Text>}

@@ -51,7 +51,7 @@ function CommentCreateForm(props) {
           <Link to={`/profiles/${profile_id}`}>
           </Link>
           <Form.Control
-            className={`col-lg-5 ${styles.Form}`}
+            className={`col-lg-12`}
             placeholder="my comment..."
             as="textarea"
             value={content}
