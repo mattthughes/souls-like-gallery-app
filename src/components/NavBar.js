@@ -42,11 +42,11 @@ const NavBar = () => {
     </NavLink>
 
     <NavLink className={styles.NavLink} to="/liked">
-    <i className="fa-solid fa-thumbs-up"></i>Liked Posts
+    <i className="fa-solid fa-thumbs-up"></i>Liked
     </NavLink>
 
     <NavLink className={styles.NavLink} to="/trending">
-    <i className="fa-solid fa-fire"></i>Trending Posts
+    <i className="fa-solid fa-fire"></i>Trending
     </NavLink>
 
     <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>

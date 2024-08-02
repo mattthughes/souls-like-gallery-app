@@ -2,6 +2,7 @@ import React from "react";
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 
 import { Card, Media } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -11,11 +12,15 @@ import { axiosRes } from "../../api/AxiosDefaults";
 import { Link } from "react-router-dom";
 
 import styles from '../../styles/PostDetail.module.css'
+import btnStyles from "../../styles/Button.module.css";
 
 import Tooltip from "react-bootstrap/Tooltip";
 import { DropDown } from "../../components/DropDown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast } from "react-toastify";
+
+
+
 
 const PostDetail = (props) => {
   const {
@@ -56,18 +61,18 @@ const PostDetail = (props) => {
 
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.post("/likes/", { post: id});
+      const { data } = await axiosRes.post("/likes/", { post: id });
       console.log(data)
       setPost((prevPosts) => ({
         ...prevPosts,
-        
+
         results: prevPosts.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count + 1, like_id: post.id }
             : post;
-            
+
         }),
-        
+
       }));
     } catch (err) {
       console.log(err.response.data);
@@ -90,34 +95,34 @@ const PostDetail = (props) => {
         window.location.reload();
       }
     }
-    
+
   };
 
 
 
   return (
-      <Card>
-        <Card.Body>
-          <Media className="align-items-center justify-content-between">
-            <div className="d-flex align-items-center">
-              {is_owner && postPage && (
-                <DropDown handleEdit={handleEdit} handleDelete={handleDelete}
-                />
-              )}
-            </div>
-          </Media>
-        </Card.Body>
-        <Link to={`/posts/${id}`}>
-          <Card.Img className="col-lg-12" src={image} alt={title} />
-        </Link>
-        <Card.Body className={`text-center`}>
+    <Card>
+      <Card.Body>
+        <Media className="align-items-center justify-content-between">
+          <div className="d-flex align-items-center">
+            {is_owner && postPage && (
+              <DropDown handleEdit={handleEdit} handleDelete={handleDelete}
+              />
+            )}
+          </div>
+        </Media>
+      </Card.Body>
+      <Link to={`/posts/${id}`}>
+        <Card.Img className="col-lg-12" src={image} alt={title} />
+      </Link>
+      <Card.Body className={`text-center`}>
         {title && <Card.Title>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         {game && <Card.Text>{game}</Card.Text>}
         <a target='_blank'
-            rel='noopener noreferrer' href={attachments}>{attachments}</a>
-      
-        
+          rel='noopener noreferrer' href={attachments}>{attachments}</a>
+
+
         <div>
 
           {is_owner ? (
@@ -148,12 +153,17 @@ const PostDetail = (props) => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
-
         </div>
         Post Created {updated_at}
+        <div className="pt-2">
+          <Link to="/gallery">
+            <Button className={`${btnStyles.Blue}`}>Back to Gallery</Button>
+          </Link>
+        </div>
 
-        </Card.Body>
-      </Card>
+
+      </Card.Body>
+    </Card>
   );
 };
 
