@@ -19,7 +19,6 @@ function PostPage() {
   const [post, setPost] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const [comments, setComments] = useState({ results: [] });
-  const [currentPostIndex, setCurrentPostIndex] = useState(0);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -42,27 +41,10 @@ function PostPage() {
     handleMount();
   }, [id]);
 
-  const handlePrevClick = () => {
-    if (currentPostIndex > 0) {
-      setCurrentPostIndex(currentPostIndex - 1);
-    }
-  };
-
-  const handleNextClick = () => {
-    if (currentPostIndex < post.results.length - 1) {
-      setCurrentPostIndex(currentPostIndex + 1);
-    }
-  };
-
   return (
     <Row>
       <Col>
         <PostDetail {...post.results[0]} setPost={setPost} postPage />
-        <div>
-          <button onClick={handlePrevClick}>Previous</button>
-          <button onClick={handleNextClick}>Next</button>
-          <img src={post.results[currentPostIndex]} alt="Current" />
-        </div>
         <Container>
           {currentUser ? (
             <CommentCreateForm
