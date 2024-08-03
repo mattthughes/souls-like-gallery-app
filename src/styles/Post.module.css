@@ -1,7 +1,6 @@
 .Image {
-    display: flex;
-    justify-content: space-around;
-    
+  height: 150px;
+  width: 200px;
 }
 
 .Like {
@@ -14,4 +13,12 @@
   
   .LikeOutline:hover {
     color: #0066ff;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .Image {
+        width: 250px;
+        height: 200px;
+        
+    }
   }

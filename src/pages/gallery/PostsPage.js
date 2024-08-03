@@ -63,7 +63,7 @@ function PostsPage({ message, filter = "" }) {
       <h2 className={appStyles.Headings}>Gallery</h2>
         {hasLoaded ? ( 
            <>
-           <div className="border p-2">
+           <div className="border">
            {posts.length ? (
              <InfiniteScroll
                children={posts.map((post) => (

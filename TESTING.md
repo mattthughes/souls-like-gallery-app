@@ -18,3 +18,4 @@
 
 * When creating the comment the page refreshes with rather than keeping the user on the same page.
 * When clicking the like button more the like button multiple times the like id will show as undefined and refresh the page to stop the application from crashing.
+* When deleting a comment the page refreshes rather than keeping the user on the same page.
