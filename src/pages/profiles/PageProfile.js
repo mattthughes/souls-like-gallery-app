@@ -63,14 +63,17 @@ function ProfilePage() {
                 </Col>
                 <Col lg={6}>
                     <h3 className={`m-2 ${appStyles.Headings}`}>{profile?.owner}</h3>
-                    <Row className="justify-content-center no-gutters">
-                        <Col xs={3} className={`my-2 ${appStyles.Text}`}>
+                    <Row className="flex-column align-items-center">
+                        <Col xs={6} className={`my-2 col-lg-12 ${appStyles.Text}`}>
                             <div>{profile?.posts_count}</div>
                             <div>posts</div>
-                            <p>Account Created {profile?.created_at}</p>
-                            <div>
+                            
+                            <div className={`pt-1 ${styles.Text}`}>
+                                <h6>Bio:</h6>
                                 <p>{profile?.bio}</p>
-                                <p>{profile?.files}</p>
+                                <a target='_blank'
+                                    rel='noopener noreferrer' href={profile?.files}>{profile?.files}</a>
+                                    <p>Account Created {profile?.created_at}</p>
                             </div>
 
                         </Col>
@@ -92,20 +95,20 @@ function ProfilePage() {
             <p className="text-center">Profile owner's posts</p>
             <hr />
             {profilePosts.length ? (
-                                <InfiniteScroll
-                                    children={profilePosts.map((post) => (
-                                        <PostDetail key={post.id} {...post} setPosts={setProfilePosts} />
-                                    ))}
-                                    dataLength={profilePosts.length}
-                                    loader={<Asset spinner />}
-                                    hasMore={!!profilePosts.next}
-                                    next={() => fetchMoreData(profilePosts, setProfilePosts)}
-                                />
-                            ) : (
-                                <Asset
-                                    message={`No results found, ${profile?.owner} hasn't posted yet.`}
-                                />
-                            )}
+                <InfiniteScroll
+                    children={profilePosts.map((post) => (
+                        <PostDetail key={post.id} {...post} setPosts={setProfilePosts} />
+                    ))}
+                    dataLength={profilePosts.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!profilePosts.next}
+                    next={() => fetchMoreData(profilePosts, setProfilePosts)}
+                />
+            ) : (
+                <Asset
+                    message={`No results found, ${profile?.owner} hasn't posted yet.`}
+                />
+            )}
         </>
     );
 
