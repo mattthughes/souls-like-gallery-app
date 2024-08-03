@@ -1,0 +1,72 @@
+import React from "react";
+
+import { Card, Media } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+
+
+import Avatar from "../../components/Avatar";
+
+import { Link } from "react-router-dom";
+
+import styles from '../../styles/PostDetail.module.css'
+import appStyles from '../../App.module.css'
+import btnStyles from "../../styles/Button.module.css";
+
+
+
+
+const Trending = (props) => {
+  const {
+    id,
+    owner,
+    profile_id,
+    profile_image,
+    likes_count,
+    title,
+    content,
+    image,
+    game,
+    attachments,
+    updated_at,
+
+  } = props
+
+
+
+  return (
+    <Card>
+      <Card.Body>
+        <Media className="align-items-center justify-content-between">
+        <Link to={`/profiles/${profile_id}`}>
+            <Avatar src={profile_image} height={55} />
+            {owner}
+          </Link>
+        </Media>
+      </Card.Body>
+      <Link to={`/posts/${id}`}>
+        <Card.Img className={`col-12 ${styles.Image}`} src={image} alt={title} />
+      </Link>
+      <Card.Body className="text-center">
+        {title && <Card.Title className={appStyles.Headings}>{title}</Card.Title>}
+        {content && <Card.Text className={appStyles.Text}>{content}</Card.Text>}
+        {game && <Card.Text className={appStyles.Text}>{game}</Card.Text>}
+        <a target='_blank'
+          rel='noopener noreferrer' href={attachments}>{attachments}</a>
+        <div>
+          <i className="fa-solid fa-thumbs-up" />{likes_count}
+        </div>
+        Post Created {updated_at}
+        <div className="pt-2">
+          <Link to={`/posts/${id}`}>
+            <Button className={`${btnStyles.Blue}`}>View Post</Button>
+          </Link>
+        </div>
+
+
+      </Card.Body>
+    </Card>
+  );
+};
+
+
+export default Trending;
