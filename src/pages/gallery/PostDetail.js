@@ -75,7 +75,9 @@ const PostDetail = (props) => {
 
       }));
     } catch (err) {
-      console.log(err.response.data);
+      if (err.response.data) {
+        window.location.reload();
+      }
     }
   };
 

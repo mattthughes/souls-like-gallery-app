@@ -24,11 +24,11 @@ function CommentCreateForm(props) {
         content,
         post,
       });
-      window.location.reload();
       toast.success("Comment created")
+      window.location.reload()
       setComments((prevComments) => ({
         ...prevComments,
-        results: [data, ...prevComments],
+        results: [data, prevComments.results],
       }));
       setPost((prevPost) => ({
         results: [
@@ -40,7 +40,9 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      console.log(err);
+      if (err.response.data) {
+        window.location.reload();
+      }
     }
   };
 
