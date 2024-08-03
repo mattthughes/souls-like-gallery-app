@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -7,10 +8,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import { axiosRes } from "../../api/AxiosDefaults";
 
-import { toast } from "react-toastify";
-
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profile_id } = props;
+  const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -24,11 +23,9 @@ function CommentCreateForm(props) {
         content,
         post,
       });
-      toast.success("Comment created")
-      window.location.reload()
       setComments((prevComments) => ({
         ...prevComments,
-        results: [data, prevComments.results],
+        results: [data, ...prevComments.results],
       }));
       setPost((prevPost) => ({
         results: [
@@ -40,9 +37,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      if (err.response.data) {
-        window.location.reload();
-      }
+      window.location.reload()
     }
   };
 
@@ -53,12 +48,12 @@ function CommentCreateForm(props) {
           <Link to={`/profiles/${profile_id}`}>
           </Link>
           <Form.Control
-            className={`col-lg-12`}
+            className={styles.Form}
             placeholder="my comment..."
             as="textarea"
             value={content}
             onChange={handleChange}
-            rows={4}
+            rows={2}
           />
         </InputGroup>
       </Form.Group>

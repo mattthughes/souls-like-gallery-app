@@ -18,7 +18,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
 function PostsPage({ message, filter = "" }) {
-  const [posts, setPosts] = useState( []);
+  const [posts, setPosts] = useState([]);
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
@@ -48,7 +48,7 @@ function PostsPage({ message, filter = "" }) {
   return (
     <Row>
       <Col lg={12}>
-      <Form
+        <Form
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
@@ -60,30 +60,28 @@ function PostsPage({ message, filter = "" }) {
           />
         </Form>
 
-      <h2 className={appStyles.Headings}>Gallery</h2>
-        {hasLoaded ? ( 
-           <>
-           <div className="border">
-           {posts.length ? (
-             <InfiniteScroll
-               children={posts.map((post) => (
-                 <PostDetail key={post.id} {...post} setPosts={setPosts} />
-               ))}
-               dataLength={posts.length}
-               loader={<Asset spinner />}
-               hasMore={!!posts.next}
-               next={() => fetchMoreData(posts, setPosts)}
-             />
-           ) : (
-             <Container className={appStyles.Content}>
-               <Asset  message={message} />
-             </Container>
-           )}
-           </div>
-           
-         </>
-          
+        <h2 className={appStyles.Headings}>Gallery</h2>
+        {hasLoaded ? (
+          <>
+            <div className="border">
+              {posts.length ? (
+                <InfiniteScroll
+                  children={posts.map((post) => (
+                    <PostDetail key={post.id} {...post} setPosts={setPosts} />
+                  ))}
+                  dataLength={posts.length}
+                  loader={<Asset spinner />}
+                  hasMore={!!posts.next}
+                  next={() => fetchMoreData(posts, setPosts)}
+                />
+              ) : (
+                <Container className={appStyles.Content}>
+                  <Asset message={message} />
+                </Container>
+              )}
+            </div>
 
+          </>
         ) : (
           <Container className={appStyles.Content}>
             <Asset spinner />
