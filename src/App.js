@@ -21,6 +21,7 @@ import GameLists from './pages/games/GameLists';
 import PostEditForm from "./pages/gallery/PostEditForm";
 import GameEditForm from './pages/games/GameEditForm';
 import ProfilePage from './pages/profiles/PageProfile';
+import ProfileEditForm from './pages/profiles/ProfileEditForm';
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Route exact path="/posts/:id" render={() => <PostPage/>}/>
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm/>}/>
           <Route exact path="/signin" render={() => <SignInForm/>} />
           <Route exact path="/signup" render={() => <SignUpForm/>} />
           <Route exact path="/trending" render={()=> <h1>Trending</h1>}/>

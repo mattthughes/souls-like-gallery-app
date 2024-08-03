@@ -13,7 +13,13 @@ import { useParams } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 import { Image } from "react-bootstrap";
 
+import { useCurrentUser } from "../../contexts/UserCurrentContext";
+
 import InfiniteScroll from "react-infinite-scroll-component";
+
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+import btnStyles from '../../styles/Button.module.css'
 
 import PostDetail from "../gallery/PostDetail";
 import {
@@ -23,7 +29,9 @@ import {
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
     const { id } = useParams();
+    const currentUser = useCurrentUser();
     const [profile, setProfileData] = useState({ results: [{}] });
+    const is_owner = currentUser?.username === profile?.owner;
     const [profilePosts, setProfilePosts] = useState({ results: [] });
 
     useEffect(() => {
@@ -60,9 +68,16 @@ function ProfilePage() {
                             <div>{profile?.posts_count}</div>
                             <div>posts</div>
                             <p>Account Created {profile?.created_at}</p>
+                            <div>
+                                <p>{profile?.bio}</p>
+                                <p>{profile?.files}</p>
+                            </div>
 
                         </Col>
                     </Row>
+                    {is_owner && (
+                        <Link to={`/profiles/${id}/edit`} className={`m-2 text-center ${btnStyles.Button}`}>edit</Link>
+                    )}
                 </Col>
                 <Col lg={3} className="text-lg-right">
                 </Col>
