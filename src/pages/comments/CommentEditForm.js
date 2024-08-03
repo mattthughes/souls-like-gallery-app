@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/AxiosDefaults";
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
+import btnStyles from '../../styles/Button.module.css'
+
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
@@ -42,7 +43,6 @@ function CommentEditForm(props) {
     <Form onSubmit={handleSubmit}>
       <Form.Group className="pr-1">
         <Form.Control
-          className={styles.Form}
           as="textarea"
           value={formContent}
           onChange={handleChange}
@@ -51,14 +51,14 @@ function CommentEditForm(props) {
       </Form.Group>
       <div className="text-right">
         <button
-          className={styles.Button}
+          className={btnStyles.FormButton}
           onClick={() => setShowEditForm(false)}
           type="button"
         >
           cancel
         </button>
         <button
-          className={styles.Button}
+          className={btnStyles.FormButton}
           disabled={!content.trim()}
           type="submit"
         >

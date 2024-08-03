@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
 import { axiosRes } from "../../api/AxiosDefaults";
+
+import btnStyles from '../../styles/Button.module.css'
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
@@ -48,7 +49,6 @@ function CommentCreateForm(props) {
           <Link to={`/profiles/${profile_id}`}>
           </Link>
           <Form.Control
-            className={styles.Form}
             placeholder="my comment..."
             as="textarea"
             value={content}
@@ -58,7 +58,7 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`${styles.Button} btn d-block ml-auto`}
+        className={`${btnStyles.FormButton} btn d-block ml-auto`}
         disabled={!content.trim()}
         type="submit"
       >

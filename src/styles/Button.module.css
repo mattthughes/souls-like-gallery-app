@@ -10,6 +10,20 @@
     background-color: #2142b2;
   }
 
+.FormButton {
+  font-size: 1em;
+    align-self: center;
+    border-radius: 100px;
+    border-color: transparent;
+    padding: 4px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 75px;
+    background-color:  #5cb85c;
+    color: white;
+    
+}
+
   
   .Button:hover {
     opacity: 0.8;
