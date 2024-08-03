@@ -8,9 +8,10 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { axiosRes } from "../../api/AxiosDefaults";
 
 import btnStyles from '../../styles/Button.module.css'
+import Avatar from "../../components/Avatar";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
+  const { post, setPost, setComments, profile_image, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -47,6 +48,7 @@ function CommentCreateForm(props) {
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
+          <Avatar src={profile_image}/>
           </Link>
           <Form.Control
             placeholder="my comment..."

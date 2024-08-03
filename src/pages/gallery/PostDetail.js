@@ -9,6 +9,8 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 import { axiosRes } from "../../api/AxiosDefaults";
 
+import Avatar from "../../components/Avatar";
+
 import { Link } from "react-router-dom";
 
 import styles from '../../styles/PostDetail.module.css'
@@ -26,6 +28,8 @@ const PostDetail = (props) => {
   const {
     id,
     owner,
+    profile_id,
+    profile_image,
     comments_count,
     likes_count,
     like_id,
@@ -106,6 +110,10 @@ const PostDetail = (props) => {
     <Card>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
+        <Link to={`/profiles/${profile_id}`}>
+            <Avatar src={profile_image} height={55} />
+            {owner}
+          </Link>
           <div className="d-flex align-items-center">
             {is_owner && postPage && (
               <DropDown handleEdit={handleEdit} handleDelete={handleDelete}
