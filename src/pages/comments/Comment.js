@@ -17,10 +17,10 @@ const Comment = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
-      window.location.reload();
       setPost((prevPost) => ({
         results: [
           {
+            
             ...prevPost.results[0],
             comments_count: prevPost.results[0].comments_count - 1,
           },
@@ -33,7 +33,9 @@ const Comment = (props) => {
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {
-      console.log(err.response.data)
+      if (err) {
+        window.location.reload()
+      }
     }
   };
 
