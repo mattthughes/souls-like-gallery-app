@@ -14,6 +14,7 @@ import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 
 import styles from '../../styles/PostDetail.module.css'
+import appStyles from '../../App.module.css'
 import btnStyles from "../../styles/Button.module.css";
 
 import Tooltip from "react-bootstrap/Tooltip";
@@ -125,10 +126,10 @@ const PostDetail = (props) => {
       <Link to={`/posts/${id}`}>
         <Card.Img className={`col-12 ${styles.Image}`} src={image} alt={title} />
       </Link>
-      <Card.Body className={`text-center`}>
-        {title && <Card.Title>{title}</Card.Title>}
-        {content && <Card.Text>{content}</Card.Text>}
-        {game && <Card.Text>{game}</Card.Text>}
+      <Card.Body className="text-center">
+        {title && <Card.Title className={appStyles.Headings}>{title}</Card.Title>}
+        {content && <Card.Text className={appStyles.Text}>{content}</Card.Text>}
+        {game && <Card.Text className={appStyles.Text}>{game}</Card.Text>}
         <a target='_blank'
           rel='noopener noreferrer' href={attachments}>{attachments}</a>
 

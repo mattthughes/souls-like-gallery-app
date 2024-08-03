@@ -54,11 +54,13 @@ function ProfilePage() {
                     />
                 </Col>
                 <Col lg={6}>
-                    <h3 className="m-2">{profile?.owner}</h3>
+                    <h3 className={`m-2 ${appStyles.Headings}`}>{profile?.owner}</h3>
                     <Row className="justify-content-center no-gutters">
-                        <Col xs={3} className="my-2">
+                        <Col xs={3} className={`my-2 ${appStyles.Text}`}>
                             <div>{profile?.posts_count}</div>
                             <div>posts</div>
+                            <p>Account Created {profile?.created_at}</p>
+
                         </Col>
                     </Row>
                 </Col>
