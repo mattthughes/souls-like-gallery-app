@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -8,10 +7,9 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { axiosRes } from "../../api/AxiosDefaults";
 
 import btnStyles from '../../styles/Button.module.css'
-import Avatar from "../../components/Avatar";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profile_image, profile_id } = props;
+  const { post, setPost, setComments } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -47,9 +45,6 @@ function CommentCreateForm(props) {
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
-          <Link to={`/profiles/${profile_id}`}>
-          <Avatar src={profile_image}/>
-          </Link>
           <Form.Control
             placeholder="my comment..."
             as="textarea"
