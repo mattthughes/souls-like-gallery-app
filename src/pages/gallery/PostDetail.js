@@ -123,8 +123,8 @@ const PostDetail = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Link to={`/posts/${id}`}>
-        <Card.Img className={`col-12 ${styles.Image}`} src={image} alt={title} />
+      <Link className={styles.Image} to={`/posts/${id}`}>
+        <Card.Img className={`col-12 col-lg-10 `} src={image} alt={title} />
       </Link>
       <Card.Body className="text-center">
         {title && <Card.Title className={appStyles.Headings}>{title}</Card.Title>}

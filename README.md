@@ -318,9 +318,39 @@ This page will showcase the users avatar image there username and also there pos
 
 ##### Mobile Profile view
 
+`Mobile profile owner`
 
+![Mobile profile owner](docs/wireframes/mobile-profile-owner.png)
+
+`Mobile not the profile owner`
+
+![Mobile not the profile owner](docs/wireframes/mobile-profile-not-the-owner.png)
+
+`Mobile Profile has posts`
+
+![Mobile Profile has posts](docs/wireframes/mobile-profile-has-posts.png)
+
+`Mobile Profile zero posts`
+
+![Mobile Profile zero posts](docs/wireframes/mobile-profile-no-posts.png)
 
 ##### Desktop Profile view
+
+`Desktop Profile owner`
+
+![Desktop profile owner](docs/wireframes/desktop-profile-owner.png)
+
+`Desktop not the profile owner`
+
+![Desktop not the profile owner](docs/wireframes/desktop-profile-page-not-the-owner.png)
+
+`Desktop profile has posts`
+
+![Desktop Profile has posts](docs/wireframes/desktop-profile-has-posts.png)
+
+`Desktop Profile zero posts`
+
+![Desktop Profile zero posts](docs/wireframes/desktop-profile-no-posts.png)
 
 
 #### Sign in Page
