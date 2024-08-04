@@ -318,6 +318,8 @@ This page will showcase the users avatar image there username and also there pos
 
 ##### Mobile Profile view
 
+
+
 ##### Desktop Profile view
 
 

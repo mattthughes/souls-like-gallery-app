@@ -73,16 +73,19 @@ function ProfilePage() {
                             <div>{profile?.posts_count}</div>
                             <div>posts</div>
                             
-                            <div className={`pt-1 ${styles.Text}`}>
+                            <div className={`p-1 ${styles.Text}`}>
                                 
                                 {profile?.bio ? (
                                     <p>Bio: {profile?.bio}</p>
                                 ) : (
                                     <div></div>
                                 )}
-                                <a target='_blank'
+                                <a className="d-none d-md-block" target='_blank'
                                     rel='noopener noreferrer' href={profile?.files}>{profile?.files}</a>
+                                    <a className="d-block d-md-none" target='_blank'
+                                    rel='noopener noreferrer' href={profile?.files}>View files</a>
                                     <p>Account Created {profile?.created_at}</p>
+                                    
                             </div>
 
                         </Col>
