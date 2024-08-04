@@ -35,8 +35,13 @@ const ProfileEditForm = () => {
     } = profileData;
 
     useEffect(() => {
+        if (currentUser?.profile_id?.toString() !== id) {
+          history.push("/");
+        }
+      }, [currentUser, history, id]);
+
+    useEffect(() => {
         const handleMount = async () => {
-            if (currentUser?.profile_id?.toString() === id) {
                 try {
                     const { data } = await axiosReq.get(`/profiles/${id}/`);
                     const { bio, image, files, is_owner
@@ -46,7 +51,6 @@ const ProfileEditForm = () => {
                 } catch (err) {
                     history.push("/gallery");
                 }
-            }
         };
 
         handleMount();
