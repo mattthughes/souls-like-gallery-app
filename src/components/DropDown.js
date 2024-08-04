@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import { useHistory } from "react-router";
 
 
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
@@ -36,5 +37,30 @@ export const DropDown = ({ handleEdit, handleDelete }) => {
                 Delete</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
+    );
+};
+
+export const ProfileEditDropdown = ({ id }) => {
+    const history = useHistory();
+    return (
+      <Dropdown className={`ml-auto px-3`} drop="left">
+        <Dropdown.Toggle as={ThreeDots} />
+        <Dropdown.Menu>
+          <Dropdown.Item
+            onClick={() => history.push(`/profiles/${id}/edit/username`)}
+            aria-label="edit-username"
+          >
+            <i className="far fa-id-card" />
+            change username
+          </Dropdown.Item>
+          <Dropdown.Item
+            onClick={() => history.push(`/profiles/${id}/edit/password`)}
+            aria-label="edit-password"
+          >
+            <i className="fas fa-key" />
+            change password
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     );
 };

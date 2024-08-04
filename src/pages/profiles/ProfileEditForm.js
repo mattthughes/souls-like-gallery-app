@@ -23,14 +23,12 @@ const ProfileEditForm = () => {
     const imageInput = useRef(null);
 
     const [profileData, setProfileData] = useState({
-        name: "",
         bio: "",
         files: "",
         image: "",
     });
 
     const {
-        name,
         bio,
         files,
         image
@@ -38,15 +36,17 @@ const ProfileEditForm = () => {
 
     useEffect(() => {
         const handleMount = async () => {
+            if (currentUser?.profile_id?.toString() === id) {
                 try {
                     const { data } = await axiosReq.get(`/profiles/${id}/`);
-                    const { name, bio, image, files, is_owner
+                    const { bio, image, files, is_owner
                     } = data;
-                    is_owner ? setProfileData({ name, bio, image, files }) : history.push("/gallery");
+                    is_owner ? setProfileData({ bio, image, files }) : history.push("/gallery");
                     
                 } catch (err) {
                     history.push("/gallery");
                 }
+            }
         };
 
         handleMount();
@@ -73,7 +73,6 @@ const ProfileEditForm = () => {
         event.preventDefault();
         setLoading(true);
         const formData = new FormData();
-        formData.append("name", name);
         formData.append("bio", bio);
         formData.append("files", files)
 
@@ -98,20 +97,6 @@ const ProfileEditForm = () => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Form.Group>
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                    type='text'
-                    value={name}
-                    name='name'
-                    onChange={handleChange}
-                />
-            </Form.Group>
-            {errors?.name?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                    {message}
-                </Alert>
-            ))}
             <Form.Group>
                 <Form.Label>Bio</Form.Label>
                 <Form.Control

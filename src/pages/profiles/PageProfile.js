@@ -15,6 +15,8 @@ import { Image } from "react-bootstrap";
 
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 
+import { ProfileEditDropdown } from "../../components/DropDown";
+
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
@@ -53,6 +55,7 @@ function ProfilePage() {
 
     const mainProfile = (
         <>
+        {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
             <Row noGutters className="px-3 text-center">
                 <Col lg={3} className="text-lg-left">
                     <Image
@@ -69,8 +72,12 @@ function ProfilePage() {
                             <div>posts</div>
                             
                             <div className={`pt-1 ${styles.Text}`}>
-                                <h6>Bio:</h6>
-                                <p>{profile?.bio}</p>
+                                
+                                {profile?.bio ? (
+                                    <p>Bio: {profile?.bio}</p>
+                                ) : (
+                                    <div></div>
+                                )}
                                 <a target='_blank'
                                     rel='noopener noreferrer' href={profile?.files}>{profile?.files}</a>
                                     <p>Account Created {profile?.created_at}</p>
