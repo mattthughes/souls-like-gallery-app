@@ -406,7 +406,7 @@ This feature will be the primary feature of the application allowing users full 
 
 ##### Mobile Delete Post view
 
-![Mobile Delete Post](docs/wireframes/post-delete-mobile.mp4)
+![Mobile Delete Post](docs/wireframes/mobile-post-delete.gif)
 
 ##### Desktop Post Detail view
 
@@ -422,7 +422,7 @@ This feature will be the primary feature of the application allowing users full 
 
 ##### Desktop Delete Post view
 
-![Desktop Delete Post](docs/wireframes/post-delete-desktop.mp4)
+![Desktop Delete Post](docs/wireframes/desktop-post-delete.gif)
 
 #### Saved Post
 
