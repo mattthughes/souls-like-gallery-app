@@ -34,8 +34,8 @@ const GameDetail = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/games/${id}/`);
+      history.push("/gallery");
       toast.success("Game Deleted")
-      history.goBack();
     } catch (err) {
       console.log(err);
     }

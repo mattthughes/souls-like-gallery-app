@@ -23,7 +23,6 @@ Souls Like Gallery is a content sharing application built using a frontend libar
             - [Typography](#typography)
                 - [Headings](#headingss)
                 - [Body](#body)
-                - [Trophy Title](#trophy-title)
         - [Surface Plane](#surface-plane)
             - [Key Features](#key-features)
                 - [Home Page](#home-page)
@@ -46,17 +45,17 @@ Souls Like Gallery is a content sharing application built using a frontend libar
                     - [Desktop Gallery view](#desktop-gallery-view)
                 - [Posts](#posts)
                     - [Mobile Post Detail view](#mobile-post-detail-view)
-                    - [Desktop Post Detail view](#desktop-post-detail-view)
                     - [Mobile Add Post view](#mobile-add-post-view)
-                    - [Desktop Add Post view](#desktop-add-post-view)
                     - [Mobile Edit Post view](#mobile-edit-post-view)
-                    - [Desktop Edit Post view](#desktop-edit-post-view)
                     - [Mobile Delete Post view](#mobile-delete-post-view)
+                    - [Desktop Post Detail view](#desktop-post-detail-view)
+                    - [Desktop Add Post view](#desktop-add-post-view)
+                    - [Desktop Edit Post view](#desktop-edit-post-view)
                     - [Desktop Delete Post view](#desktop-delete-post-view)
                 - [Saved Post](#saved-post)
                     - [Mobile Save Post Button](#mobile-save-post-button)
-                    - [Desktop Save Post Button](#desktop-save-post-button)
                     - [Mobile Saved Posts page](#mobile-saved-posts-page)
+                    - [Desktop Save Post Button](#desktop-save-post-button)
                     - [Desktop Saved Posts page](#desktop-saved-posts-page)
                 - [Favicon](#favicon)
                     [Desktop favicon view](#desktop-favicon-view)
@@ -424,6 +423,43 @@ This feature will be the primary feature of the application allowing users full 
 
 ![Desktop Delete Post](docs/wireframes/desktop-post-delete.gif)
 
+#### Game
+
+This feature will be updated by the admin user who can create,edit,delete games. These will be linked to the post as well allowing a user to search for a specific game.
+
+##### Mobile Games List
+
+![Mobile Games List](docs/wireframes/mobile-games-list.png)
+
+##### Mobile Add Game
+
+![Mobile Add Game](docs/wireframes/mobile-add-game.png)
+
+##### Mobile Edit Game
+
+![Mobile Edit Game](docs/wireframes/mobile-edit-game.png)
+
+##### Mobile Delete Game
+
+![Mobile Delete Game](docs/wireframes/mobile-game-delete.gif)
+
+##### Desktop Games List
+
+![Desktop Games List](docs/wireframes/desktop-games-list.png)
+
+##### Desktop Add Game
+
+![Desktop Add Game](docs/wireframes/desktop-add-game.png)
+
+##### Desktop Edit Game
+
+![Desktop Edit Game](docs/wireframes/desktop-edit-game.png)
+
+##### Desktop Delete Game
+
+![Desktop Delete Game](docs/wireframes/desktop-game-delete.gif)
+
+
 #### Saved Post
 
 This feature will allow users to click save on a specific post they find useful or would like to look at again in the future the button will change from save to saved using conditional rendering to change the buttons text and functionality, Once the user clicks on the saved page this page will load all the posts that a user is saved only showing them there posts and not others.
@@ -447,7 +483,7 @@ This feature will be present alongside the title of the application I decided wi
 
 ## Technology
 
-### Languags
+### Languages
 
 ### Frameworks & Tools
 

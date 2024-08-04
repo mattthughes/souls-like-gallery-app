@@ -42,7 +42,7 @@ function GameLists() {
                 {games.length ? (
                 <InfiniteScroll
                   children={games.map((game) => (
-                    <GameDetail key={game.id} {...game} setGames={setGames} />
+                    <GameDetail key={game.id} {...game} setGames={setGames} gamePage />
                   ))}
                   dataLength={games.length}
                   loader={<Asset spinner />}
