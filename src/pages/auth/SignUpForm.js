@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import styles from '../../styles/SignUpSignIn.module.css'
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css"
+import { useRedirect } from "../../hooks/useRedirect";
 
 import { toast } from "react-toastify";
 
@@ -19,6 +20,7 @@ import Image from "react-bootstrap/Image";
 import axios from "axios";
 
 const SignUpForm = () => {
+  useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",

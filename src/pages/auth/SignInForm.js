@@ -19,9 +19,12 @@ import styles from '../../styles/SignUpSignIn.module.css'
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css"
 import axios from "axios";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function SignInForm() {
   const setCurrentUser = useContext(SetCurrentUserContext);
+  useRedirect("loggedIn");
+  
 
   const history = useHistory();
 

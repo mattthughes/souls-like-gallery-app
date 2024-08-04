@@ -25,10 +25,12 @@ import { useCurrentUser } from "../../contexts/UserCurrentContext";
 import { useEffect } from "react";
 
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useRedirect } from "../../hooks/useRedirect";
 
 
 
 function PostCreateForm() {
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
   const [games, setGames] = useState({ results: [] });
   const currentUser = useCurrentUser();
