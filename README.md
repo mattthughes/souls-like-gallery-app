@@ -392,19 +392,37 @@ This feature will be the primary feature of the application allowing users full 
 
 ##### Mobile Post Detail view
 
-##### Desktop Post Detail view
+![Mobile Post Detail](docs/wireframes/mobile-post-detail.png)
 
 ##### Mobile Add Post view
 
-##### Desktop Add Post view
+![Mobile Add Post](docs/wireframes/mobile-add-post.png)
 
 ##### Mobile Edit Post view
 
-##### Desktop Edit Post view
+![Mobile Edit Post part 1](docs/wireframes/mobile-edit-post-part-1.png)
+
+![Mobile Edit Post part 2](docs/wireframes/mobile-edit-post-part-2.png)
 
 ##### Mobile Delete Post view
 
+![Mobile Delete Post](docs/wireframes/post-delete-mobile.mp4)
+
+##### Desktop Post Detail view
+
+![Desktop Post Detail](docs/wireframes/post-detail-desktop.png)
+
+##### Desktop Add Post view
+
+![Desktop Add Post](docs/wireframes/desktop-add-post.png)
+
+##### Desktop Edit Post view
+
+![Desktop Edit Post](docs/wireframes/desktop-edit-post.png)
+
 ##### Desktop Delete Post view
+
+![Desktop Delete Post](docs/wireframes/post-delete-desktop.mp4)
 
 #### Saved Post
 
