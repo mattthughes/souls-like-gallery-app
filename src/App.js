@@ -26,10 +26,14 @@ import TrendingPage from './pages/trending/TrendingPage';
 
 import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from './pages/profiles/PasswordForm';
+import { useCurrentUser } from './contexts/UserCurrentContext';
 
 
 
 function App() {
+
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
 
   return (
     <div>
@@ -42,6 +46,16 @@ function App() {
             path="/gallery"
             render={() => (
               <PostsPage message="No results found. Adjust the search keyword." />
+            )}
+          />
+          <Route
+            exact
+            path="/liked"
+            render={() => (
+              <PostsPage
+                message="No results found. Adjust the search keyword or like a post."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+              />
             )}
           />
           <Route exact path="/gallery" render={() => <PostPage />} />
@@ -68,7 +82,6 @@ function App() {
           <PrivateRoute>
             <Route exact path="/game/create" render={() => <GameCreateForm />} />
           </PrivateRoute>
-          <Route exact path="/liked" render={() => <h1>Likes</h1>} />
           
           <Route render={() => <NotFound />} />
 
