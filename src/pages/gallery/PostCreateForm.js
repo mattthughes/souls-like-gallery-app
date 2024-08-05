@@ -234,7 +234,7 @@ function PostCreateForm() {
               ))}
               <div>
                 <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-                <Dropdown drop="right">
+                <Dropdown drop="down">
                   <Dropdown.Toggle variant="success" id="dropdown-basic">
                     View Games List
                   </Dropdown.Toggle>
