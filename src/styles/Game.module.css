@@ -3,5 +3,9 @@
     font-family: "Overpass", sans-serif;
     list-style: none;
     text-align: center;
-    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    margin: 2px;
+    
 }
