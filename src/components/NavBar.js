@@ -38,15 +38,15 @@ const NavBar = () => {
 
   const loggedInIcons = <>
 
-    <NavLink className={styles.NavLink} to="/posts/create">
+    <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/posts/create">
     <i className="far fa-plus-square"></i>Create Post
     </NavLink>
 
-    <NavLink className={styles.NavLink} to="/liked">
+    <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/liked">
     <i className="fa-solid fa-thumbs-up"></i>Liked
     </NavLink>
 
-    <NavLink className={styles.NavLink} to="/trending">
+    <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/trending">
     <i className="fa-solid fa-fire"></i>Trending
     </NavLink>
 

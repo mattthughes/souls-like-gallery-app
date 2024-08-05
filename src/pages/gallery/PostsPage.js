@@ -55,12 +55,11 @@ function PostsPage({ message, filter = "" }) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             type="text"
-            className="mr-sm-2"
+            className="mr-sm-2 mb-3"
             placeholder="Search posts"
           />
         </Form>
 
-        <h2 className={appStyles.Headings}>Gallery</h2>
         {hasLoaded ? (
           <>
             <div className="border">

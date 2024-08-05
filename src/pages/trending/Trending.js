@@ -61,8 +61,6 @@ const Trending = (props) => {
             <Button className={`${btnStyles.Blue}`}>View Post</Button>
           </Link>
         </div>
-
-
       </Card.Body>
     </Card>
   );
