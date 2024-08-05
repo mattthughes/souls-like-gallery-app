@@ -52,6 +52,15 @@ Souls Like Gallery is a content sharing application built using a frontend libar
                     - [Desktop Add Post view](#desktop-add-post-view)
                     - [Desktop Edit Post view](#desktop-edit-post-view)
                     - [Desktop Delete Post view](#desktop-delete-post-view)
+                - [Games](#game)
+                    - [Mobile Games List](#mobile-games-list)
+                    - [Mobile Add Game](#mobile-add-game)
+                    - [Mobile Edit Game](#mobile-edit-game)
+                    - [Mobile Delete Game](#mobile-delete-game)
+                    - [Desktop Games List](#desktop-games-list)
+                    - [Desktop Add Game](#desktop-add-game)
+                    - [Desktop Edit Game](#desktop-edit-game)
+                    - [Desktop Delete Game](#desktop-delete-game)
                 - [Liked Post](#saved-post)
                     - [Mobile Liked Posts page](#mobile-saved-posts-page)
                     - [Desktop Liked Posts page](#desktop-saved-posts-page)
@@ -421,7 +430,7 @@ This feature will be the primary feature of the application allowing users full 
 
 ![Desktop Delete Post](docs/wireframes/desktop-post-delete.gif)
 
-#### Game
+#### Games
 
 This feature will be updated by the admin user who can create,edit,delete games. These will be linked to the post as well allowing a user to search for a specific game.
 
@@ -498,7 +507,6 @@ This feature will be present alongside the title of the application I decided wi
 - [Github](https://github.com/)
 - [Heroku](https://dashboard.heroku.com/apps)
 - [Am I Responsive](https://ui.dev/amiresponsive)
-
 
 
 ## Deployment
