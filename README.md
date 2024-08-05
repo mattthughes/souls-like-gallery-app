@@ -52,11 +52,9 @@ Souls Like Gallery is a content sharing application built using a frontend libar
                     - [Desktop Add Post view](#desktop-add-post-view)
                     - [Desktop Edit Post view](#desktop-edit-post-view)
                     - [Desktop Delete Post view](#desktop-delete-post-view)
-                - [Saved Post](#saved-post)
-                    - [Mobile Save Post Button](#mobile-save-post-button)
-                    - [Mobile Saved Posts page](#mobile-saved-posts-page)
-                    - [Desktop Save Post Button](#desktop-save-post-button)
-                    - [Desktop Saved Posts page](#desktop-saved-posts-page)
+                - [Liked Post](#saved-post)
+                    - [Mobile Liked Posts page](#mobile-saved-posts-page)
+                    - [Desktop Liked Posts page](#desktop-saved-posts-page)
                 - [Favicon](#favicon)
                     [Desktop favicon view](#desktop-favicon-view)
     - [Technology](#technology)
@@ -460,13 +458,10 @@ This feature will be updated by the admin user who can create,edit,delete games.
 ![Desktop Delete Game](docs/wireframes/desktop-game-delete.gif)
 
 
-#### Saved Post
+#### Liked Post
 
-This feature will allow users to click save on a specific post they find useful or would like to look at again in the future the button will change from save to saved using conditional rendering to change the buttons text and functionality, Once the user clicks on the saved page this page will load all the posts that a user is saved only showing them there posts and not others.
+This feature will allow users to click like on a specific post they find useful or would like to look at again in the future, Once the user clicks on the liked page this page will load all the posts that a user has liked only showing them there posts and not others.
 
-##### Mobile Save Post Button
-
-##### Desktop Save Post Button
 
 ##### Mobile Saved Posts page
 
@@ -485,7 +480,26 @@ This feature will be present alongside the title of the application I decided wi
 
 ### Languages
 
+* HTML
+* CSS
+
 ### Frameworks & Tools
+
+- [react](https://react.dev/)
+- [react-bootstap](https://react-bootstrap.netlify.app/)
+- [react infinite scroll](https://www.npmjs.com/package/react-infinite-scroll-component)
+- [react toastify](https://www.npmjs.com/package/react-toastify)
+- [axios](https://www.npmjs.com/package/axios)
+- [JS Hint](https://jshint.com/)
+- [CSS validator](https://jigsaw.w3.org/css-validator/)
+- [Wave report](https://wave.webaim.org/)
+- [Coolors](https://coolors.co/)
+- [Git](https://git-scm.com/)
+- [Github](https://github.com/)
+- [Heroku](https://dashboard.heroku.com/apps)
+- [Am I Responsive](https://ui.dev/amiresponsive)
+
+
 
 ## Deployment
 
