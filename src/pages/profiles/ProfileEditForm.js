@@ -86,12 +86,17 @@ const ProfileEditForm = () => {
         setLoading(true);
         const formData = new FormData();
         formData.append("bio", bio);
-        formData.append("files", files);
+        
         if (imageInput?.current?.files[0]) {
             formData.append("image", imageInput.current.files[0]);
         }
 
-
+        if (files || !files === null || files === '') {
+            formData.append("files", files)
+        } else {
+            toast.error("Please enter a valid url")
+        }
+            
         try {
             const { data } = await axiosReq.put(`/profiles/${id}/`, formData);
             setCurrentUser((currentUser) => ({
@@ -104,7 +109,6 @@ const ProfileEditForm = () => {
         } catch (err) {
             setErrors(err.response?.data);
             console.log(err.response.data)
-            toast.error(files)
         }
     };
 
@@ -138,7 +142,7 @@ const ProfileEditForm = () => {
                 />
 
             </Form.Group>
-            {errors?.attachments?.map((message, idx) => (
+            {errors?.files?.map((message, idx) => (
                 <Alert variant="warning" key={idx}>
                     {message}
                 </Alert>

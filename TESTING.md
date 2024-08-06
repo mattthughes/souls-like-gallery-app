@@ -15,6 +15,7 @@
 * Fixed Image data bug on the game create form by changing the appended data from a string to the image input current file fixing this issue.
 * Fixed profile edit bug, any user could access the edit form via the url to fix this, I added an if statment which checked if the current user did not match the profile id to redirect the user to the home page which fixed this issue.
 * Fixed Files url bug by adjusting the value to be either the files variable or an empty string which fixed this issue.
+* Fixed null bug with the files variable, to fix this I added an if statement which checked if the files variable was true, or if the files variable was not null and finally checked if the files variable was a string. Which meant the user could submit an empty string as well otherwise the user would be notified via a toast pop up informing them of the error which fixed this issue.
 
 ## Known Bugs
 
