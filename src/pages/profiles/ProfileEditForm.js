@@ -34,24 +34,32 @@ const ProfileEditForm = () => {
         image
     } = profileData;
 
+
+
     useEffect(() => {
         if (currentUser?.profile_id?.toString() !== id) {
-          history.push("/");
+            history.push("/");
         }
-      }, [currentUser, history, id]);
+    }, [currentUser, history, id]);
 
     useEffect(() => {
         const handleMount = async () => {
+            if (currentUser?.profile_id?.toString() === id) {
                 try {
                     const { data } = await axiosReq.get(`/profiles/${id}/`);
-                    const { bio, image, files, is_owner
-                    } = data;
+                    const { bio, files, image, is_owner } = data;
+                    setProfileData({ bio, files, image });
                     is_owner ? setProfileData({ bio, image, files }) : history.push("/gallery");
-                    
                 } catch (err) {
-                    history.push("/gallery");
+                    console.log(err);
+                    history.push("/");
                 }
+            } else {
+                history.push("/");
+            }
+
         };
+
 
         handleMount();
     }, [currentUser, history, id]);
@@ -78,11 +86,11 @@ const ProfileEditForm = () => {
         setLoading(true);
         const formData = new FormData();
         formData.append("bio", bio);
-        formData.append("files", files)
-
+        formData.append("files", files);
         if (imageInput?.current?.files[0]) {
             formData.append("image", imageInput.current.files[0]);
         }
+
 
         try {
             const { data } = await axiosReq.put(`/profiles/${id}/`, formData);
@@ -96,6 +104,7 @@ const ProfileEditForm = () => {
         } catch (err) {
             setErrors(err.response?.data);
             console.log(err.response.data)
+            toast.error(files)
         }
     };
 
@@ -121,10 +130,11 @@ const ProfileEditForm = () => {
                 <Form.Label>Attachments</Form.Label>
                 <Form.Control
                     type='url'
-                    value={files}
+                    value={files || ""}
+                    onChange={handleChange}
                     placeholder="https://example.com"
                     name='files'
-                    onChange={handleChange}
+
                 />
 
             </Form.Group>

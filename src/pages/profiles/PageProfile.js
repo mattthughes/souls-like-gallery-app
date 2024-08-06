@@ -80,11 +80,21 @@ function ProfilePage() {
                                 ) : (
                                     <div></div>
                                 )}
-                                <a className="d-none d-md-block" target='_blank'
+
+                                {profile?.files ? (
+                                    <>
+                                    <a className="d-none d-md-block" target='_blank'
                                     rel='noopener noreferrer' href={profile?.files}>{profile?.files}</a>
                                     <a className="d-block d-md-none" target='_blank'
                                     rel='noopener noreferrer' href={profile?.files}>View files</a>
                                     <p>Account Created {profile?.created_at}</p>
+
+                                    </>
+                                    
+                                ) : (
+                                    <div></div>
+                                )}
+                                
                                     
                             </div>
 

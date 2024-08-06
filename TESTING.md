@@ -14,6 +14,7 @@
 * Fixed like increment crash bug by adding in a temporary fix which uses window.location.reload to reload the page instead of crashing the application will look for further solutions.
 * Fixed Image data bug on the game create form by changing the appended data from a string to the image input current file fixing this issue.
 * Fixed profile edit bug, any user could access the edit form via the url to fix this, I added an if statment which checked if the current user did not match the profile id to redirect the user to the home page which fixed this issue.
+* Fixed Files url bug by adjusting the value to be either the files variable or an empty string which fixed this issue.
 
 ## Known Bugs
 

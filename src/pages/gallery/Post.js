@@ -23,7 +23,7 @@ const Post = (props) => {
   return (
       <Link to={`/posts/${id}`}>
         
-      <Image  className={`col-6 col-lg-3 justify-content-lg-around p-2  border border-dark mb-2 rounded-top ${styles.Image}`}src={image} alt={title} />
+      <Image  className={`col-6 col-lg-4 justify-content-lg-around p-2  border border-dark mb-2 rounded-top ${styles.Image}`}src={image} alt={title} />
     </Link>
     
     
