@@ -94,7 +94,7 @@ const ProfileEditForm = () => {
         if (files || !files === null || files === '') {
             formData.append("files", files)
         } else {
-            toast.error("Please enter a valid url")
+            return <div></div>
         }
             
         try {
