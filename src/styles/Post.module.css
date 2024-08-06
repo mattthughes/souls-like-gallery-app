@@ -15,9 +15,9 @@
     color: #0066ff;
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 500px) {
     .Image {
-        width: 250px;
+        width: 500px;
         height: 200px;
         
     }

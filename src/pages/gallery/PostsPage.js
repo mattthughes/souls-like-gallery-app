@@ -9,7 +9,7 @@ import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
-import PostDetail from "./Post";
+import Post from "./Post";
 
 import { Form } from "react-bootstrap";
 
@@ -66,7 +66,7 @@ function PostsPage({ message, filter = "" }) {
               {posts.length ? (
                 <InfiniteScroll
                   children={posts.map((post) => (
-                    <PostDetail key={post.id} {...post} setPosts={setPosts} />
+                    <Post key={post.id} {...post} setPosts={setPosts} />
                   ))}
                   dataLength={posts.length}
                   loader={<Asset spinner />}
