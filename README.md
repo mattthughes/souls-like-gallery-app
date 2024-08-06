@@ -535,4 +535,7 @@ I Tested this project extensively making sure each element worked as intended an
 
 ### Imagery
 
+- Irithly post image found [here](https://www.reddit.com/r/darksouls3/comments/stoeqv/irithyll_of_the_boreal_valley_appreciation_post/)
+- Ornstein and Smough image found [here](https://www.thegamer.com/dark-souls-ornstein-smough-boss-battle-strategy-tips/)
+
 ## Acknowledgements
