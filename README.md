@@ -124,74 +124,74 @@ I created six Epics which will be turned into User Stories
 
 1. User Profiles
 
-* UserStory [[#12](https://github.com/mattthughes/souls-like-gallery-app/issues/12)]
+* UserStory [[#12](https://github.com/mattthughes/souls-like-gallery-app/issues/12)] - As a site user I can view other users profiles so that I can see all there posts
 
-* UserStory [[[#10](https://github.com/mattthughes/souls-like-gallery-app/issues/10)]]
+* UserStory [[[#10](https://github.com/mattthughes/souls-like-gallery-app/issues/10)]] - As a logged in user I can edit my profile so that I can change my profile picture and bio
 
-* UserStory [[[#25](https://github.com/mattthughes/souls-like-gallery-app/issues/25)]]
+* UserStory [[[#25](https://github.com/mattthughes/souls-like-gallery-app/issues/25)]] - As a site user I can view users avatars so that I can easily identify users of the application
 
-* UserStory [[[#24](https://github.com/mattthughes/souls-like-gallery-app/issues/24)]]
+* UserStory [[[#24](https://github.com/mattthughes/souls-like-gallery-app/issues/24)]] - As a site user I can change my profile image so that I can customize my profile to my needs
 
 2. Authentication
 
-* UserStory [[[#9](https://github.com/mattthughes/souls-like-gallery-app/issues/9)]]
+* UserStory [[[#9](https://github.com/mattthughes/souls-like-gallery-app/issues/9)]] - As a logged in user I can update my username and password so that I can change my account information and keep my profile secure
 
-* UserStory [[[#31](https://github.com/mattthughes/souls-like-gallery-app/issues/31)]]
+* UserStory [[[#31](https://github.com/mattthughes/souls-like-gallery-app/issues/31)]] - As a site user I can sign in to the app so that I can access functionality for logged in users
 
-* UserStory [[[#32](https://github.com/mattthughes/souls-like-gallery-app/issues/32)]]
+* UserStory [[[#32](https://github.com/mattthughes/souls-like-gallery-app/issues/32)]] - As a new user I can create a account so that I can access access functionality for logged in users
 
-* UserStory [[[#29](https://github.com/mattthughes/souls-like-gallery-app/issues/29)]]
+* UserStory [[[#29](https://github.com/mattthughes/souls-like-gallery-app/issues/29)]] - As a site user I can maintain my logged in status until I choose to log out so that my user experience is not compromised
 
 3. Navigation
 
-* UserStory [[[#26](https://github.com/mattthughes/souls-like-gallery-app/issues/26)]]
+* UserStory [[[#26](https://github.com/mattthughes/souls-like-gallery-app/issues/26)]] - As a site user I can navigate through pages quickly so that I can view content seamlessly without page refresh
 
-* User Story [[[#28](https://github.com/mattthughes/souls-like-gallery-app/issues/28)]]
+* User Story [[[#28](https://github.com/mattthughes/souls-like-gallery-app/issues/28)]] - As a site user I can view a navigation bar from every page so that I can navigate easily between pages
 
-* UserStory [[[#27](https://github.com/mattthughes/souls-like-gallery-app/issues/27)]]
+* UserStory [[[#27](https://github.com/mattthughes/souls-like-gallery-app/issues/27)]] - As a logged out user I can see sign in and sign up options so that I can sign in/sign up
 
-* UserStory [[[#8](https://github.com/mattthughes/souls-like-gallery-app/issues/8)]]
+* UserStory [[[#8](https://github.com/mattthughes/souls-like-gallery-app/issues/8)]] - As a site user I can keep scrolling through the posts on the site that are loaded automatically so that I don't need to refresh or click on a next page button with the posts being loaded automatically
 
 
 
 4. Post Interaction
 
-* UserStory [[#21](https://github.com/mattthughes/souls-like-gallery-app/issues/21)]
+* UserStory [[#21](https://github.com/mattthughes/souls-like-gallery-app/issues/21)] - As a site user I can click on any post and see the description comments and likes so that I can join in on the conversation and learn more about the post
 
-* UserStory [[[#11](https://github.com/mattthughes/souls-like-gallery-app/issues/11)]]
+* UserStory [[[#11](https://github.com/mattthughes/souls-like-gallery-app/issues/11)]] - As a site user I can view all the posts by a specific user so that I can catch up on there latest posts
 
-* UserStory [[[#22](https://github.com/mattthughes/souls-like-gallery-app/issues/22)]]
+* UserStory [[[#22](https://github.com/mattthughes/souls-like-gallery-app/issues/22)]] - As a post owner I can edit my post content and image** so that I can make changes to my post after it was created
 
 
-* UserStory [[[#23](https://github.com/mattthughes/souls-like-gallery-app/issues/23)]]
+* UserStory [[[#23](https://github.com/mattthughes/souls-like-gallery-app/issues/23)]] - As a logged in user I can create a post so that I can share my favourite moments via image with others
 
 
 
 5. Comment Interaction
 
-* UserStory [[[#18](https://github.com/mattthughes/souls-like-gallery-app/issues/18)]] - As a **logged in user **I can read comments on posts so that I can what other users think of posts When the post is clicked comments to load Comments to show on specific post
+* UserStory [[[#18](https://github.com/mattthughes/souls-like-gallery-app/issues/18)]] - As a logged in user I can read comments on posts so that I can what other users think of posts When the post is clicked comments to load Comments to show on specific post
 
-* UserStory [[[#16](https://github.com/mattthughes/souls-like-gallery-app/issues/16)]]
+* UserStory [[[#16](https://github.com/mattthughes/souls-like-gallery-app/issues/16)]] - As a comment owner I can edit my comment so that I can fix or update my existing comment
 
-* UserStory [[[#20](https://github.com/mattthughes/souls-like-gallery-app/issues/20)]]
+* UserStory [[[#20](https://github.com/mattthughes/souls-like-gallery-app/issues/20)]] - As a logged in user I can leave a comment for posts I enjoy so that I can share my thoughts with others
 
-* UserStory [[[#17](https://github.com/mattthughes/souls-like-gallery-app/issues/17)]]
+* UserStory [[[#17](https://github.com/mattthughes/souls-like-gallery-app/issues/17)]] - As an owner of a comment I can delete my own comment so that I can delete comments I do not find useful
 
-* UserStory [[[#19](https://github.com/mattthughes/souls-like-gallery-app/issues/19)]]
+* UserStory [[[#19](https://github.com/mattthughes/souls-like-gallery-app/issues/19)]] - As a site user I can see how long ago a comment was made so that I know how old a comment is
 
 
 6. Post Feedback
 
-* UserStory [[[#15](https://github.com/mattthughes/souls-like-gallery-app/issues/15)]] - 
+* UserStory [[[#15](https://github.com/mattthughes/souls-like-gallery-app/issues/15)]] - As a logged in user I can like a post so that I can show support for posts that interests me
 
-* UserStory [[[#14](https://github.com/mattthughes/souls-like-gallery-app/issues/14)]]
+* UserStory [[[#14](https://github.com/mattthughes/souls-like-gallery-app/issues/14)]] - As a logged in user I can unlike a post so that I can remove accidental likes
 
-* UserStory [[[#7](https://github.com/mattthughes/souls-like-gallery-app/issues/7)]]
+* UserStory [[[#7](https://github.com/mattthughes/souls-like-gallery-app/issues/7)]] - As a site user I can like posts so that I can look back on posts that have been memorable and useful
 
 
 7. Trending Posts
 
-* UserStory [[[#13](https://github.com/mattthughes/souls-like-gallery-app/issues/13)]]
+* UserStory [[[#13](https://github.com/mattthughes/souls-like-gallery-app/issues/13)]] - As a logged in user I can view trending posts so that I can view the most popular posts on the application
 
 ### The Scope Plane
 
@@ -201,6 +201,7 @@ I created six Epics which will be turned into User Stories
 * Profile - Users can search for any user and view there posts and attachments such as linkedin link, they can also create, read, update and delete there own profile
 * Likes and Comments - Users can leave likes and comments on posts they find useful providing they are logged in, users can create,read update, delete there own likes and comments
 * Log in and Out - Users can logout of there account to keep there information secure, users can change passwords,
+* Games - Users can view the games list which is shown on the post create page, games can be created, edited and deleted by the admin user only. If another user tries to access this page the not found page will load.
 
 ### The Skeleton Plane
 
@@ -472,9 +473,13 @@ This feature will be updated by the admin user who can create,edit,delete games.
 This feature will allow users to click like on a specific post they find useful or would like to look at again in the future, Once the user clicks on the liked page this page will load all the posts that a user has liked only showing them there posts and not others.
 
 
-##### Mobile Saved Posts page
+##### Mobile Liked Posts page
 
-##### Desktop Saved Posts page
+![Mobile Liked Posts](docs/wireframes/liked-post-mobile.png)
+
+##### Desktop Liked Posts page
+
+![Desktop Liked Posts](docs/wireframes/liked-post-desktop.png)
 
 
 #### Favicon
