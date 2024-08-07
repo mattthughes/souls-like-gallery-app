@@ -15,9 +15,9 @@ import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 
-import styles from '../../styles/SignUpSignIn.module.css'
+import styles from '../../styles/SignUpSignIn.module.css';
 import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css"
+import btnStyles from "../../styles/Button.module.css";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -35,7 +35,7 @@ function SignInForm() {
 
   const [errors, setErrors] = useState({});
 
-  const { username, password } = signInData
+  const { username, password } = signInData;
 
   const handleChange = (event) => {
     setSignInData({

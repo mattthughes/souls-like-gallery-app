@@ -245,6 +245,10 @@ I created six Epics which will be turned into User Stories
 
 ### Color Palette
 
+I have decided to go for this color palette as all the colors flow well together and creates a professional design
+
+![Color Palette](docs/wireframes/color-palette-souls-like.png)
+
 ## Typography
 
 ### Headings
@@ -390,7 +394,11 @@ This Page will showcase many different posts but not in detail showing just the 
 
 ##### Mobile Gallery view
 
+![Mobile Gallery page](docs/wireframes/mobile-gallery.png)
+
 ##### Desktop Gallery view
+
+![Desktop Gallery page](docs/wireframes/desktop-gallery.png)
 
 
 #### Posts
