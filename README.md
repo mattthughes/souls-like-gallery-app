@@ -539,7 +539,20 @@ I Tested this project extensively making sure each element worked as intended an
 
 ### Content
 
+* Dark Souls 1 description found [here](https://en.bandainamcoent.eu/dark-souls/dark-souls#:~:text=Dark%20Souls%20is%20the%20new,encounters%20and%20unique%20online%20interactions.)
+* Dark Souls 2 description found [here](https://en.bandainamcoent.eu/dark-souls/dark-souls-ii#:~:text=Dark%20Souls%20II%20brings%20the,only%20FROM%20SOFTWARE%20can%20deliver.)
+* Dark Souls 3 description found [here](https://en.wikipedia.org/wiki/Dark_Souls_III#:~:text=Dark%20Souls%20III%20is%20a,the%20end%20of%20the%20world.)
+* Bloodborne description found [here](https://www.fromsoftware.jp/ww/detail.html?csm=094#:~:text=Game%20Summary,the%20mysterious%20world%20of%20Bloodborne.)
+* Elden Ring description found [here](https://en.wikipedia.org/wiki/Elden_Ring#:~:text=Elden%20Ring%20takes%20place%20in,tree%20that%20empowers%20the%20inhabitants.)
+* Sekiro shadows die twice description found [here](https://www.sekirothegame.com/#:~:text=In%20Sekiro%3A%20Shadows%20Die%20Twice,including%20the%20dangerous%20Ashina%20clan.)
+* Demon's Souls description found [here](https://en.wikipedia.org/wiki/Demon%27s_Souls#:~:text=Demon's%20Souls%20is%20an%20action,(stats)%20related%20to%20gameplay.)
+* All other content written by Matthew Hughes
+
 ### Code
+
+* Front End application has been influenced by the moments walkthrough project and has been adjusted and customised to fit my projects needs including post create edit and delete functionality. The use redirect hook, user context hook, the comment component which involves full CRUD functionality, the likes component, Drop down component and the profiles page basic structure can be found [here](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+RA101+1/courseware/70a8c55db0504bbdb5bcc3bfcf580080/953cd4e5015f483bb05263db3e740e19/)
+
+
 
 ### Imagery
 
