@@ -23,6 +23,7 @@
 * When clicking the like button more the like button multiple times the like id will show as undefined and refresh the page to stop the application from crashing.
 * When deleting, editing a comment the page refreshes rather than keeping the user on the same page.
 * When creating and deleting a comment the toast notification does not load due to window.location.reload will look for a solution.
+* When submitting the edit profile form a warning is sent to the console regarding an unmounted component with the state not being able to be updated due to this. I tried to create a use effect clean up function to detect the state which did not fix the warning will look for a solution.
 
 
 ### Manual Testing
@@ -82,4 +83,7 @@ Home sign in (via url logged in)|redirect user to home page|Tried to access sign
 Home sign up (via url not logged in)|Load sign up page|Tried to access sign up page via url|Loaded sign up page|Pass
 Home sign up (via url logged in)|redirect user to home page|Tried to access sign up page via url|Redirected user to home page|Pass
 Not found|Load not found page if url incorrect|Typed URL did not exist|Loaded not found page|Pass
+
+
+`Gallery Testing`
 
