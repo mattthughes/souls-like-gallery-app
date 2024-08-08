@@ -68,3 +68,18 @@ Register Form|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A
 Comment Create|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
 Comment Edit|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
 
+
+`Home Testing`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Home sign up link (not logged in)|Load sign up page|Clicked sign up link|Loaded sign up page|Pass
+Home sign up link (logged in)|redirect user to home page|Clicked sign up link|Redirected user to home page|Pass
+Home sign in link (not logged in)|Load sign in page|Clicked sign in link|Loaded sign in page|Pass
+Home sign in link (logged in)|redirect user to home page|Clicked sign in link|Redirected user to home page|Pass
+Home sign in (via url not logged in)|Load sign in page|Tried to access sign in page via url|Loaded sign in page|Pass
+Home sign in (via url logged in)|redirect user to home page|Tried to access sign in page via url|Redirected user to home page|Pass
+Home sign up (via url not logged in)|Load sign up page|Tried to access sign up page via url|Loaded sign up page|Pass
+Home sign up (via url logged in)|redirect user to home page|Tried to access sign up page via url|Redirected user to home page|Pass
+Not found|Load not found page if url incorrect|Typed URL did not exist|Loaded not found page|Pass
+
