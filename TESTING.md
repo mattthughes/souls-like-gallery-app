@@ -23,3 +23,48 @@
 * When clicking the like button more the like button multiple times the like id will show as undefined and refresh the page to stop the application from crashing.
 * When deleting, editing a comment the page refreshes rather than keeping the user on the same page.
 * When creating and deleting a comment the toast notification does not load due to window.location.reload will look for a solution.
+
+
+### Manual Testing
+
+#### Aims
+
+* The aim of testing is to make sure all elements work as intended without any console or server errors on the front end and making sure the application works on all screen sizes.
+
+* This will be done by allowing the user to login, logout, register create, edit and delete there own posts and comments, add and remove likes.
+
+* I will make sure each post goes to the correct ID. 
+
+* When the user tries to view content that does not belong to them the user will be redirected to the not found page if the url does not exist or they do not have permissions to access the content or the user will be redirected to the page they were just on making sure users are unable to view content that does not belong to them.
+
+
+
+### Testing Steps 
+
+* I will test the responsiveness for all screen sizes by firstly clicking on the application and using the inspect tool to open the google chrome developer tools.
+* After this I will click on the laptop display and change the aspect ration to 280px which is the lowest screen size, after this I will begin adjusting the screen sizes to make sure all elements are displaying correctly on all screen sizes.
+* I will make sure all posts go to the correct ID, if a user is logged in they can create posts, comments, if they are the post or comment author they can edit and delete this comment otherwise redirect the user.
+* I will make sure all links open in seperate tabs not taking the user from the pain page.
+* I will make sure the not found page is loaded if the page does not exist or the user does not have the correct permissions to access the page otherwise redirect the user to the previous page they were on.
+* All testing will be completed using Google Chrome, Internet Explorer.
+
+
+`Responsive Tests`
+
+**Responsiveness**|**Home**|**Gallery**|**Liked**|**Trending**|**Login Page**|**Register Page**|**Post Detail**|**Create Form**|**Edit Form**|**Game Detail**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Home text|Pass|N/A|N/A|N/A|N/A|N/A|NA|N/A|N/A|N/A
+Navigation Bar|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass|Pass
+Gallery Images|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A
+Post Create|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Post Edit|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A
+Game Create|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Game Edit|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A
+Drop Down Menu|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|Pass
+Liked Posts|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A|N/A
+Trending Posts|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A|N/A
+Login Form|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A|N/A
+Register Form|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A|N/A
+Comment Create|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
+Comment Edit|N/A|N/A|N/A|N/A|N/A|N/A|Pass|N/A|N/A|N/A
+
