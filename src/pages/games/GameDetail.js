@@ -60,7 +60,7 @@ const GameDetail = (props) => {
       </Card.Body>
       <div>
         <h3 className={`text-center ${appStyles.Headings}`}>{title}</h3>
-        <p className={`text-center ${appStyles.Text}`}>{description}</p>
+        <p className={`text-center p-4 ${appStyles.Text}`}>{description}</p>
         
       </div>
       <Image className="d-none d-md-block col-lg-4 d-flex align-self-center pb-3" src={image} alt={title} />
