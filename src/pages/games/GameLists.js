@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { axiosReq } from "../../api/AxiosDefaults";
 
+import { useRedirect } from "../../hooks/useRedirect";
+
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 import { useEffect } from "react";
 import GameDetail from "./GameDetail";
@@ -17,6 +19,7 @@ import appStyles from '../../App.module.css'
 function GameLists() {
     const [games, setGames] = useState({ results: [] });
     const currentUser = useCurrentUser();
+    useRedirect("loggedOut");
 
     useEffect(() => {
         const fetchGames = async () => {
