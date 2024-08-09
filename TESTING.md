@@ -127,7 +127,6 @@ Game Detail (user)|Load game detail list|Tried to access game detail page via ur
 Game Detail delete button (admin)|Delete game redirect user to previous page informing user of game deletion|Clicked delete button|Game deleted informing user of game deletion|Pass
 Game Detail delete button (user)|Delete game button to be hidden|Loaded game detail|Game delete button hidden|Pass
 
-
 `Post Testing`
 
 **Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
@@ -137,7 +136,7 @@ Create post button (not logged in)|Button to not be visible on navbar|Loaded the
 Create post (via url logged in)|Load create post form|Tried to access create post via url|Loaded create post form|Pass
 Create post (via url not logged in)|Redirect user to home page|Tried to access create post via url|Redirected user to home page|Pass
 Submit form empty|Alert user , title, image, game required|Tried to submit form|Alert informing user title,image, game required|Pass
-Submit form  invalid type image|Alert user invalid type for image|Tried to submit form with AIF|Alert informing user invalid image type|Pass
+Submit form invalid type image|Alert user invalid type for image|Tried to submit form with AIF|Alert informing user invalid image type|Pass
 Submit form empty game|Alert user game required|Tried to submit form with empty game|Alert user informing game required|Pass
 Submit form duplicate game|Alert user game already exists|Tried to submit form with a duplicate game|Alert informing user game already exists|Pass
 Submit form empty title|Alert user title required|Tried to submit form with empty title|Alert informing user title required|Pass
@@ -157,11 +156,21 @@ Post Detail edit duplicate game|Alert user game already exists|Tried to submit f
 Post Detail edit game does not exist|Alert user game does not exist|Tried to submit form with game that did not exist|Alert informing user game does not exist|Pass
 Post Detail edit empty title|Alert user title required|Tried to submit form with empty title|Alert informing user title required|Pass
 Post Detail edit duplicate title|Alert user title already exists|Tried to submit form with a duplicate title|Alert user informing title already exists|Pass
-Post Detail edit  correct data|Form to be submitted includes a pop up stating post edited|Tried to submit form with correct data|Form submit pop up stating post edited appeared|Pass
+Post Detail edit correct data|Form to be submitted includes a pop up stating post edited|Tried to submit form with correct data|Form submit pop up stating post edited appeared|Pass
 Post Detail cancel button|Redirect user to previous page|Clicked cancel button|Redirected user to previous page|Pass
 Post Detail delete button (post author)|Delete post redirect user to previous page informing user of game deletion|Clicked delete button|Post deleted informing user of post deletion|Pass
-Post Detail delete button (user)|Delete post button to be hidden|Loaded post detail|Post delete button hidden|Pass
-
+Post Detail like button (post author)|Tooltip to appear saying you cant like your own post|Tried to like own post|Tooltip appeared saying you cant like your own post|Pass
+Post Detail like button (user)|Like count to increment by 1|Clicked like button|Like count incremented by 1|Pass
+Post Detail like button (not logged in)|Tooltip to appear saying you need to log in to like posts|Tried to like post|Tooltip appeared saying you need to login to like posts|Pass
+Post Detail unlike (user)|Like count to decrease by 1|Clicked like button again|Like count decreased by 1|Pass
+Post Detail Add Comment (user)|Comment to be added without page refreshing|Added post|Page refreshed with comment added being showcased via a pop up message|Fail
+Post Detail Add Comment (not logged in)|Comment form to be hidden|Viewed post detail and tried to comment|Comment form hidden|Pass
+Post Detail Edit Comment (post author)|Comment form to load|Clicked edit comment|Comment edit form loaded|Pass
+Post Detail Edit Comment (user)|Comment edit form button to be hidden|Tried to edit comment|Comment edit form hidden|Pass
+Post Detail Edit Comment (not logged in)|Comment edit form button to be hidden|Tried to edit comment|Comment edit form hidden|Pass
+Post Detail Edit comment save button (comment author)|Comment to be updated without page refreshing showing a pop up message stating comment edited|Clicked save button|Page refreshed with comment edited being showcased via a pop up message|Fail
+Post Detail Delete comment (comment author)|Comment deletion button to show upon deletion show pop up message comment deleted without page refreshing|Clicked comment delete button|Page refreshed with comment deleted showing this via a pop up message|Fail
+Post Detail Delete comment (user)|Comment deletion button to be hidden|Loaded comment detail|Comment delete button hidden|Pass
 
 
 `Trending Testing`
@@ -177,5 +186,7 @@ Trending post (limit)|Posts to be limited to 10 on the trending page|Clicked tre
 Trending post (view post button)|Post detail to load showing the correct post|Clicked view post button|Loaded post detail with correct post|Pass
 
 `Liked Testing`
+
+
 
 `Profile Testing`
