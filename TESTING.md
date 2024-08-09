@@ -87,3 +87,40 @@ Not found|Load not found page if url incorrect|Typed URL did not exist|Loaded no
 
 `Gallery Testing`
 
+
+`Game Testing`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Add game button (admin user)|Load Add game form|Clicked add game button|Loaded add game form|Pass
+Add game button (user)|Button to not be visible on navbar|Logged in as normal user|Add game button hidden|Pass
+Add game button (not logged in)|Button to not be visible on navbar|Loaded the site|Add game button hidden|Pass
+Add game (via url admin)|Load Add game form|Tried to access add game via url|Loaded add game form|Pass
+Add game (via url not logged in)|Redirect user to not found page|Tried to access add game via url|Redirected user to not found page|Pass
+Add game (via url user)|Redirect user to not found page|Tried to access add game via url|Redirected user to not found page|Pass
+Submit form empty|Alert user slug, title, image required|Tried to submit form|Alert informing user slug,title,image required|Pass
+Submit form  invalid type image|Alert user invalid type for image|Tried to submit form with AIF|Alert informing user invalid image type|Pass
+Submit form empty slug|Alert user slug required|Tried to submit form with empty slug|Alert user informing slug required|Pass
+Submit form duplicate slug|Alert user slug already exists|Tried to submit form with a duplicate slug|Alert informing user slug already exists|Pass
+Submit form empty title|Alert user title required|Tried to submit form with empty title|Alert informing user title required|Pass
+Submit form duplicate title|Alert user title already exists|Tried to submit form with a duplicate title|Alert user informing title already exists|Pass
+Submit form correct data|Form to be submitted includes a pop up stating game created|Tried to submit form with correct data|Form submit pop up stating game created appeared|Pass
+Cancel button|Return user to previous page|Clicked the cancel button|Returned user to previous page|Pass
+View existing games dropdown|Show existing games in a list so the user does not try to create an already existing game|Clicked drop down|Loaded existing games in a list|Pass
+Game Detail edit button (admin)|Load edit game form with populated fields|Clicked edit game button|Loaded edit game form|Pass
+Game Detail edit button (user)|Edit game button to be hidden|Accessed game detail form|Edit game button hidden|Pass
+Game Detail (edit via url admin)|Load edit game form with populated fields|Tried to access edit game via url|Loaded edit game form|Pass
+Game Detail edit (via url user)|Redirect user to previous page|Tried to access edit game via url|Redirected user to previous page|Pass
+Game Detail edit (not logged in user via url)|Redirect user to previous page|Tried to access edit game via url|Redirected user to previous page|Pass
+Game Detail edit (invalid image)|Alert user invalid type for image|Tried to save form with invalid type|Alert informing invalid image type|Pass
+Game Detail edit empty slug|Alert user slug required|Tried to submit form with empty slug|Alert user informing slug required|Pass
+Game Detail edit duplicate slug|Alert user slug already exists|Tried to submit form with a duplicate slug|Alert informing user slug already exists|Pass
+Game Detail edit empty title|Alert user title required|Tried to submit form with empty title|Alert informing user title required|Pass
+Game Detail edit duplicate title|Alert user title already exists|Tried to submit form with a duplicate title|Alert user informing title already exists|Pass
+Game Detail edit  correct data|Form to be submitted includes a pop up stating game edited|Tried to submit form with correct data|Form submit pop up stating game edited appeared|Pass
+Game Detail cancel button|Redirect user to previous page|Clicked cancel button|Redirected user to previous page|Pass
+Game Detail edit button (admin)|Load edit game form with populated fields|Clicked edit game button|Loaded edit game form|Pass
+Game Detail edit button (user)|Edit game button to be hidden|Accessed game detail form|Edit game button hidden|Pass
+Game Detail (not logged in via url)|Redirect user to login|Tried to access game detail page via url|Redirected user to login|Pass
+Game Detail (admin)|Load game detail list|Tried to access game detail page via url|Loaded game detail list|Pass
+Game Detail (user)|Load game detail list|Tried to access game detail page via url|Loaded game detail list|Pass
