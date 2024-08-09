@@ -124,3 +124,48 @@ Game Detail edit button (user)|Edit game button to be hidden|Accessed game detai
 Game Detail (not logged in via url)|Redirect user to login|Tried to access game detail page via url|Redirected user to login|Pass
 Game Detail (admin)|Load game detail list|Tried to access game detail page via url|Loaded game detail list|Pass
 Game Detail (user)|Load game detail list|Tried to access game detail page via url|Loaded game detail list|Pass
+Game Detail delete button (admin)|Delete game redirect user to previous page informing user of game deletion|Clicked delete button|Game deleted informing user of game deletion|Pass
+Game Detail delete button (user)|Delete game button to be hidden|Loaded game detail|Game delete button hidden|Pass
+
+
+`Post Testing`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Create post button (logged in)|Load create post form|Clicked create post button|Loaded create posr form|Pass
+Create post button (not logged in)|Button to not be visible on navbar|Loaded the site|Create post button hidden|Pass
+Create post (via url logged in)|Load create post form|Tried to access create post via url|Loaded create post form|Pass
+Create post (via url not logged in)|Redirect user to home page|Tried to access create post via url|Redirected user to home page|Pass
+Submit form empty|Alert user , title, image, game required|Tried to submit form|Alert informing user title,image, game required|Pass
+Submit form  invalid type image|Alert user invalid type for image|Tried to submit form with AIF|Alert informing user invalid image type|Pass
+Submit form empty game|Alert user game required|Tried to submit form with empty game|Alert user informing game required|Pass
+Submit form duplicate game|Alert user game already exists|Tried to submit form with a duplicate game|Alert informing user game already exists|Pass
+Submit form empty title|Alert user title required|Tried to submit form with empty title|Alert informing user title required|Pass
+Submit form duplicate title|Alert user title already exists|Tried to submit form with a duplicate title|Alert user informing title already exists|Pass
+Submit form correct data|Form to be submitted includes a pop up stating post created|Tried to submit form with correct data|Form submit pop up stating post created appeared|Pass
+Cancel button|Return user to previous page|Clicked the cancel button|Returned user to previous page|Pass
+View existing games dropdown|Show existing games in a list so the user does not try to add a game that does not exist|Clicked drop down|Loaded existing games in a list|Pass
+View games detail button|Show games list in detail when clicked|Clicked games detail button|Loaded games detail page|Pass
+Post Detail edit button (post author)|Load edit post form with populated fields|Clicked edit post button|Loaded edit post form|Pass
+Post Detail edit button (user)|Edit post button to be hidden|Accessed post detail form|Edit post button hidden|Pass
+Post Detail (edit via url post author)|Load edit post form with populated fields|Tried to access edit post via url|Loaded edit post form|Pass
+Post Detail edit (via url user)|Redirect user to previous page|Tried to access edit post via url|Redirected user to previous page|Pass
+Post Detail edit (not logged in user via url)|Redirect user to previous page|Tried to access edit post via url|Redirected user to previous page|Pass
+Post Detail edit (invalid image)|Alert user invalid type for image|Tried to save form with invalid type|Alert informing invalid image type|Pass
+Post Detail edit empty game|Alert user game required|Tried to submit form with empty slug|Alert user informing slug required|Pass
+Post Detail edit duplicate game|Alert user game already exists|Tried to submit form with a duplicate game|Alert informing user game already exists|Pass
+Post Detail edit game does not exist|Alert user game does not exist|Tried to submit form with game that did not exist|Alert informing user game does not exist|Pass
+Post Detail edit empty title|Alert user title required|Tried to submit form with empty title|Alert informing user title required|Pass
+Post Detail edit duplicate title|Alert user title already exists|Tried to submit form with a duplicate title|Alert user informing title already exists|Pass
+Post Detail edit  correct data|Form to be submitted includes a pop up stating post edited|Tried to submit form with correct data|Form submit pop up stating post edited appeared|Pass
+Post Detail cancel button|Redirect user to previous page|Clicked cancel button|Redirected user to previous page|Pass
+Post Detail delete button (post author)|Delete post redirect user to previous page informing user of game deletion|Clicked delete button|Post deleted informing user of post deletion|Pass
+Post Detail delete button (user)|Delete post button to be hidden|Loaded post detail|Post delete button hidden|Pass
+
+
+
+`Trending Testing`
+
+`Liked Testing`
+
+`Profile Testing`
