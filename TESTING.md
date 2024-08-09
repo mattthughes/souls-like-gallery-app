@@ -196,3 +196,17 @@ Liked Post (via url not logged in)|Redirect user to home page|Tried to access li
 Likes to only show users posts|Show only the users liked posts|Logged in two different accounts to checked likes|Liked posts shown on specific account depending on the user|Pass
 
 `Profile Testing`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Profile page (user)|Profile page for user to show|Logged in clicked profile icon|Profile page shown|Pass
+Profile page (not logged in)|Profile page button to be hidden|Accessed profile page|Profile page to be hidden|Pass
+Profile page (via url logged in)|Profile page for user to show|Tried to access profile page via url|Profile page shown|Pass
+Profile page (via url not logged in)|Redirect user to home page|Tried to access profile page via url|Redirected user to home page|Pass
+Profile edit page (profile author)|Profile edit form to show|Clicked edit button|Profile edit form shown|Pass
+Profile edit form (user)|Edit button to be hidden|Loaded profile page|Edit buttons hidden|Pass
+Profile edit form files field (not a url)|Alert to show that the field must be a url|Typed random words|Alert informing field must be a url|Pass
+Profile edit form image (invalid format)|Alert user invalid format|Tried to submit form with AIF|Alert informing user of invalid format|Pass
+Profile edit form correct data|Form to submit informing user profile edited|Submitted form|Profile submitted informing user profile edited|Pass
+Profile files(desktop)|Profile files to open in new window|Clicked files|Files opened in new window|Pass
+Profile files (mobile)|Profile files to show view files to open in new window|Loaded profile clicked files|View files appeared link opened in a new window|Pass
