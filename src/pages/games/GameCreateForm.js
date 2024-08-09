@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import Form from "react-bootstrap/Form";
@@ -11,17 +11,25 @@ import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
+import Dropdown from "react-bootstrap/Dropdown";
+
 import { axiosReq } from "../../api/AxiosDefaults";
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css"
 import { toast } from "react-toastify";
 
+import Game from "./Game";
+
+import { useCurrentUser } from "../../contexts/UserCurrentContext";
+
 import { useRef } from "react";
 
 function GameCreateForm() {
   const [errors, setErrors] = useState({});
   const imageInput = useRef(null);
+  const [games, setGames] = useState({ results: [] });
+  const currentUser = useCurrentUser();
 
   const [gameData, setGameData] = useState({
     title: "",
@@ -50,6 +58,22 @@ function GameCreateForm() {
     });
   };
 
+  useEffect(() => {
+    const fetchGames = async () => {
+      try {
+        const { data } = await axiosReq.get(`/games/`);
+        setGames(data);
+        console.log(data)
+      } catch (err) {
+        console.log(err);
+
+      }
+    };
+
+    fetchGames()
+  }, []);
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -66,8 +90,11 @@ function GameCreateForm() {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-        toast.warning("Invalid Data please try again")
         console.log(err.response.data)
+      }
+
+      if (slug === '') {
+        toast.warning("Slug can not be empty")
       }
     }
   };
@@ -182,6 +209,27 @@ function GameCreateForm() {
                   {message}
                 </Alert>
               ))}
+
+<h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+                <Dropdown drop="down">
+                  <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    View Games List
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      {games.length ? (
+                        games.map((game) => (
+                          <Game key={game.id} {...game} />
+                        ))
+                      ) : currentUser ? (
+                        <span>No Games to show</span>
+                      ) : (
+                        <span>No Games ... yet</span>
+                      )}
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
 
 
 
