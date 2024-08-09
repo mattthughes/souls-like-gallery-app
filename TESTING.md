@@ -187,6 +187,12 @@ Trending post (view post button)|Post detail to load showing the correct post|Cl
 
 `Liked Testing`
 
-
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Liked Post button (user)|Liked post page button to be shown|Clicked Liked post button|Loaded Like Post page|Pass
+Liked Post button (not logged in)|Liked post page button hidden|Loaded application|Liked Post page hidden|Pass
+Liked Post (via url logged in)|Liked post page to load|Tried to access like post page via url|Loaded Like Post page|Pass
+Liked Post (via url not logged in)|Redirect user to home page|Tried to access liked post via url|Redirected user to home page|Pass
+Likes to only show users posts|Show only the users liked posts|Logged in two different accounts to checked likes|Liked posts shown on specific account depending on the user|Pass
 
 `Profile Testing`
