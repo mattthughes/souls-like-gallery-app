@@ -166,6 +166,16 @@ Post Detail delete button (user)|Delete post button to be hidden|Loaded post det
 
 `Trending Testing`
 
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Trending post (logged in)|Load trending page|Logged in clicked trending button|Loaded trending page|Pass
+Trending post (not logged in)|Trending post button to be hidden|Loaded the application|Trending post button to be hidden|Pass
+Trending post (via url logged in)|Load trending page|Tried to access trending post via url|Loaded trending page|Pass
+Trending post (via url not logged in)|Redirect user to home page|Tried to access trending post via url|Redirected user to home page|Pass
+Trending post (order by likes)|Posts to be ordered by posts|Clicked trending page|Posts ordered by likes|Pass
+Trending post (limit)|Posts to be limited to 10 on the trending page|Clicked trending page|Posts limited to 10 on trending page|Pass
+Trending post (view post button)|Post detail to load showing the correct post|Clicked view post button|Loaded post detail with correct post|Pass
+
 `Liked Testing`
 
 `Profile Testing`
