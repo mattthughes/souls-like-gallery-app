@@ -1,4 +1,37 @@
-## Solved Bugs
+# Testing
+
+Welcome to testing results of front end part of the advanced front end application known as Souls like gallery in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
+
+## CONTENTS
+
+- [Testing](#testing)
+- [React Validation](#react-validation)
+- [CSS Validation](#css-validation)
+- [Solved Bugs](#solved-bugs)
+- [Known Bugs](#known-bugs)
+- [Lighthouse Testing](#lighthouse-testing)
+    - [Mobile lighthouse testing](#mobile-lighthouse-testing)
+    - [Desktop lighthouse testing](#desktop-lighthouse-testing)
+- [Wave Report](#wave-report)
+- [Manual Testing](#manual-testing)
+    - [Aims](#aims)
+    - [Testing Steps](#testing-steps)
+    - [Testing Results](#testing-results)
+- [Automated Testing](#automated-testing)
+    - [Aims](#automated-testing-aims)
+    - [Testing Logic](#testing-logic)
+    - [Testing Results](#automated-testing-results)
+
+
+## Testing Content 
+
+### React validation
+
+### CSS validation
+
+
+
+### Solved Bugs
 
 * Fixed an error where trying to create an account with the sign up form a 400 post error would appear to fix this I imported the axiosDefaults to the app.js file which fixed this issue.
 * Fixed an error where the navigation bar was not changing once the admin users logged in to fix this checked to see if the current user was the admin user if they were to render the games icon in the navigation bar otherwise hide it this line of code fixed this error.
@@ -25,6 +58,15 @@
 * When creating and deleting a comment the toast notification does not load due to window.location.reload will look for a solution.
 * When submitting the edit profile form a warning is sent to the console regarding an unmounted component with the state not being able to be updated due to this. I tried to create a use effect clean up function to detect the state which did not fix the warning will look for a solution.
 
+### Lighthouse testing
+
+
+#### Mobile lighthouse testing
+
+#### Desktop lighthouse testing
+
+### Wave Report
+
 
 ### Manual Testing
 
@@ -40,7 +82,7 @@
 
 
 
-### Testing Steps 
+#### Testing Steps 
 
 * I will test the responsiveness for all screen sizes by firstly clicking on the application and using the inspect tool to open the google chrome developer tools.
 * After this I will click on the laptop display and change the aspect ration to 280px which is the lowest screen size, after this I will begin adjusting the screen sizes to make sure all elements are displaying correctly on all screen sizes.
@@ -210,3 +252,8 @@ Profile edit form image (invalid format)|Alert user invalid format|Tried to subm
 Profile edit form correct data|Form to submit informing user profile edited|Submitted form|Profile submitted informing user profile edited|Pass
 Profile files(desktop)|Profile files to open in new window|Clicked files|Files opened in new window|Pass
 Profile files (mobile)|Profile files to show view files to open in new window|Loaded profile clicked files|View files appeared link opened in a new window|Pass
+
+
+### Automated Testing
+
+
