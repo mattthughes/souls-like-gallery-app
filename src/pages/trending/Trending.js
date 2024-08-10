@@ -8,7 +8,7 @@ import Avatar from "../../components/Avatar";
 
 import { Link } from "react-router-dom";
 
-import styles from '../../styles/PostDetail.module.css'
+import styles from '../../styles/Trending.module.css'
 import appStyles from '../../App.module.css'
 import btnStyles from "../../styles/Button.module.css";
 
@@ -43,8 +43,8 @@ const Trending = (props) => {
           </Link>
         </Media>
       </Card.Body>
-      <Link to={`/posts/${id}`}>
-        <Card.Img className={`col-12 ${styles.Image}`} src={image} alt={title} />
+      <Link to={`/posts/${id}`} className={styles.Image}>
+        <Card.Img className={`col-12 col-lg-10 ${styles.Image}`} src={image} alt={title} />
       </Link>
       <Card.Body className="text-center">
         {title && <Card.Title className={appStyles.Headings}>{title}</Card.Title>}

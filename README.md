@@ -64,6 +64,9 @@ Souls Like Gallery is a content sharing application built using a frontend libar
                 - [Liked Post](#saved-post)
                     - [Mobile Liked Posts page](#mobile-saved-posts-page)
                     - [Desktop Liked Posts page](#desktop-saved-posts-page)
+                - [Trending](#trending)
+                    - [Mobile Trending page](#mobile-trending-page)
+                    - [Desktop Trending page](#desktop-trending-pages)
                 - [Favicon](#favicon)
                     [Desktop favicon view](#desktop-favicon-view)
     - [Technology](#technology)
@@ -202,6 +205,7 @@ I created six Epics which will be turned into User Stories
 * Likes and Comments - Users can leave likes and comments on posts they find useful providing they are logged in, users can create,read update, delete there own likes and comments
 * Log in and Out - Users can logout of there account to keep there information secure, users can change passwords,
 * Games - Users can view the games list which is shown on the post create page, games can be created, edited and deleted by the admin user only. If another user tries to access this page the not found page will load.
+* Trending - Users can view the trending list which will dynamically change depending on the amount of likes, this page will show a maximum of 10 posts.
 
 ### The Skeleton Plane
 
@@ -270,9 +274,7 @@ I went for the OverPass font family for all other text on the application such a
 
 #### Home Page
 
-This page upon loading will explain to the user how to create an account how to create a post, and a bit of a background around what the
-application is designed for, the user is then able to click either the Sign in or sign up button depending if they have an account
-already.
+This page upon loading will explain to the user how to create an account how to create a post, and a bit of a background around what the application is designed for, the user is then able to click either the Sign in or sign up button depending if they have an account already.
 
 ##### Mobile Home view
 
@@ -488,6 +490,21 @@ This feature will allow users to click like on a specific post they find useful 
 ##### Desktop Liked Posts page
 
 ![Desktop Liked Posts](docs/wireframes/liked-post-desktop.png)
+
+
+#### Trending
+
+This feature will be updated dynamically depending on the post likes the post with the most likes will appear at the top of the page this page will show a maximum of 10 pages
+
+##### Mobile Trending page
+
+![Mobile Trending page](docs/wireframes/trending-mobile.png)
+
+##### Desktop Trending page
+
+![Desktop Trending page part 1](docs/wireframes/desktop-trending-part-1.png)
+
+![Desktop Trending page part 2](docs/wireframes/desktop-trending-part-2.png)
 
 
 #### Favicon

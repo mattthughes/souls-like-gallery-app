@@ -1,10 +1,10 @@
-# Testing
+# Souls Like Gallery Testing
 
 Welcome to testing results of front end part of the advanced front end application known as Souls like gallery in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
 
 ## CONTENTS
 
-- [Testing](#testing)
+- [Souls Like Gallery Testing](#souls-like-gallery-testing)
 - [React Validation](#react-validation)
 - [CSS Validation](#css-validation)
 - [Solved Bugs](#solved-bugs)
