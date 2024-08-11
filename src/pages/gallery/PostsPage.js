@@ -23,6 +23,9 @@ function PostsPage({ message, filter = "" }) {
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
 
+
+  // Using a get request to target the posts by its filter and search query
+  // allowing users to search for posts by game title, the post title, user as well.
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -50,18 +53,22 @@ function PostsPage({ message, filter = "" }) {
         <Form
           onSubmit={(event) => event.preventDefault()}
         >
+          {/* Setting up the search field paramater */}
           <Form.Control
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             type="text"
             className="mr-sm-2 mb-3"
-            placeholder="Search posts"
+            placeholder="Search for posts by game title, username or post title"
           />
         </Form>
 
         {hasLoaded ? (
           <>
             <div className="border">
+              {/* Using a posts infinite scroll to map 
+              over the post component to show all posts on the page
+              so the user does not need to refresh. */}
               {posts.length ? (
                 <InfiniteScroll
                   children={posts.map((post) => (

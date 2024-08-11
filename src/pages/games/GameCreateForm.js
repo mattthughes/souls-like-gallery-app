@@ -64,7 +64,7 @@ function GameCreateForm() {
         const { data } = await axiosReq.get(`/games/`);
         setGames(data);
       } catch (err) {
-  
+
 
       }
     };
@@ -72,7 +72,8 @@ function GameCreateForm() {
     fetchGames()
   }, []);
 
-
+  // On submit append the data the form, if successful inform user via pop up message,
+  // otherwise show the error messages.
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -164,80 +165,80 @@ function GameCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-        <Row>
-          <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-            <Container
-            >
-              <Form.Group className="text-center">
-                {image ? (
-                  <>
-                    <figure>
-                      <Image className={appStyles.Image} src={image} rounded />
-                    </figure>
-                    <div>
-                      <Form.Label
-                        className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                        htmlFor="image-upload"
-                      >
-                        Change the image
-                      </Form.Label>
-                    </div>
-                  </>
-                ) : (
-                  <Form.Label
-                    className="d-flex justify-content-center"
-                    htmlFor="image-upload"
-                  >
-                    <Asset
-                      message="Click or tap to upload an image"
-                    />
-                  </Form.Label>
-                )}
+      <Row>
+        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+          <Container
+          >
+            <Form.Group className="text-center">
+              {image ? (
+                <>
+                  <figure>
+                    <Image className={appStyles.Image} src={image} rounded />
+                  </figure>
+                  <div>
+                    <Form.Label
+                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                      htmlFor="image-upload"
+                    >
+                      Change the image
+                    </Form.Label>
+                  </div>
+                </>
+              ) : (
+                <Form.Label
+                  className="d-flex justify-content-center"
+                  htmlFor="image-upload"
+                >
+                  <Asset
+                    message="Click or tap to upload an image"
+                  />
+                </Form.Label>
+              )}
 
-                <Form.File
-                  id="image-upload"
-                  accept="image/*"
-                  onChange={handleChangeImage}
-                  ref={imageInput}
-                />
-              </Form.Group>
-              {errors?.image?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                  {message}
-                </Alert>
-              ))}
+              <Form.File
+                id="image-upload"
+                accept="image/*"
+                onChange={handleChangeImage}
+                ref={imageInput}
+              />
+            </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
-<h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-                <Dropdown drop="down">
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    View Games List
-                  </Dropdown.Toggle>
+            <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+            <Dropdown drop="down">
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                View Games List
+              </Dropdown.Toggle>
 
-                  <Dropdown.Menu>
-                    <Dropdown.Item>
-                      {games.length ? (
-                        games.map((game) => (
-                          <Game key={game.id} {...game} />
-                        ))
-                      ) : currentUser ? (
-                        <span>No Games to show</span>
-                      ) : (
-                        <span>No Games ... yet</span>
-                      )}
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  {games.length ? (
+                    games.map((game) => (
+                      <Game key={game.id} {...game} />
+                    ))
+                  ) : currentUser ? (
+                    <span>No Games to show</span>
+                  ) : (
+                    <span>No Games ... yet</span>
+                  )}
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
 
 
 
-              <div className="d-md-none">{textFields}</div>
-            </Container>
-          </Col>
-          <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-            <Container className={appStyles.Content}>{textFields}</Container>
-          </Col>
-        </Row>
-      </Form>
+            <div className="d-md-none">{textFields}</div>
+          </Container>
+        </Col>
+        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+          <Container className={appStyles.Content}>{textFields}</Container>
+        </Col>
+      </Row>
+    </Form>
   );
 }
 

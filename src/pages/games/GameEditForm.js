@@ -64,7 +64,8 @@ function GameEditForm() {
         }
     };
 
-
+    // On submit append the data the form, if successful inform user via pop up message,
+    // otherwise show the error messages.
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();

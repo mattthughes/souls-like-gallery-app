@@ -15,6 +15,8 @@ function CommentEditForm(props) {
     setFormContent(event.target.value);
   };
 
+  // On submit append the data the form, if successful inform user via pop up message,
+  // otherwise show the error messages.
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -26,10 +28,10 @@ function CommentEditForm(props) {
         results: prevComments.results.map((comment) => {
           return comment.id === id
             ? {
-                ...comment,
-                content: formContent.trim(),
-                updated_at: "now",
-              }
+              ...comment,
+              content: formContent.trim(),
+              updated_at: "now",
+            }
             : comment;
         }),
       }));

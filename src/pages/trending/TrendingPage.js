@@ -19,6 +19,9 @@ function TrendingPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
+
+  // Using a get request to find the trending url which has the ordering field of likes count
+  // setting the posts to be ordered by there likes.
   useEffect(() => {
     const fetchTrendingPosts = async () => {
       try {
@@ -45,6 +48,8 @@ function TrendingPage() {
         <h2 className={appStyles.Headings}>Trending</h2>
         {hasLoaded ? (
           <>
+          {/* Using an infinite scroll and the slice array method to limit the items in the new array between 0, 10
+          limiting the amount of results on the page. */}
             <div className="border">
               {trendingPost.length ? (
                 <InfiniteScroll

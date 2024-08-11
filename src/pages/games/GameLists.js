@@ -21,6 +21,7 @@ function GameLists() {
     const currentUser = useCurrentUser();
     useRedirect("loggedOut");
 
+     // Fetching the games to help the user changing the game field
     useEffect(() => {
         const fetchGames = async () => {
             try {
@@ -40,6 +41,7 @@ function GameLists() {
         <div>
             <div className="col-12 col-lg-10 border mb-5">
                 <h3 className={`text-center ${appStyles.Headings}`}>Games List</h3>
+                {/* Using an infinite scroll componet to also map over the games in the list and showcase them on the page */}
                 {games.length ? (
                 <InfiniteScroll
                   children={games.map((game) => (

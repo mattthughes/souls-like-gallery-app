@@ -65,6 +65,7 @@ function PostCreateForm() {
     }
   };
 
+  // Fetching the games to help the user changing the game field
   useEffect(() => {
     const fetchGames = async () => {
       try {
@@ -79,6 +80,8 @@ function PostCreateForm() {
     fetchGames()
   }, []);
 
+  // On submit append the data the form, if successful inform user via pop up message,
+    // otherwise show the error messages.
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -231,6 +234,7 @@ function PostCreateForm() {
                 </Alert>
               ))}
               <div>
+                {/* Using a drop down which will show the games list if clicked */}
                 <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
                 <Dropdown drop="down">
                   <Dropdown.Toggle variant="success" id="dropdown-basic">

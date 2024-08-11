@@ -9,7 +9,7 @@ import styles from '../../styles/Post.module.css'
 
 import { Link } from "react-router-dom";
 
-
+// Setting the post props
 const Post = (props) => {
   const {
     id,

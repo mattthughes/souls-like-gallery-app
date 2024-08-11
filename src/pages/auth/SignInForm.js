@@ -23,6 +23,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 
 function SignInForm() {
   const setCurrentUser = useContext(SetCurrentUserContext);
+  // Redirecting the user if logged in
   useRedirect("loggedIn");
   
 
@@ -47,6 +48,7 @@ function SignInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
+    // Setting the current user to the logged in user and redirecting the user to the gallery page if successful
     try {
       const { data } = await axios.post('/dj-rest-auth/login/', signInData)
       setCurrentUser(data.user);

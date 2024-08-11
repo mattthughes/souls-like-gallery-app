@@ -28,6 +28,7 @@ const UsernameForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
+  // If the current user is the profile owner set the username to the current user otherwise redirect them to the home page.
   useEffect(() => {
     if (currentUser?.profile_id?.toString() === id) {
       setUsername(currentUser.username);
@@ -36,6 +37,7 @@ const UsernameForm = () => {
     }
   }, [currentUser, history, id]);
 
+  // Using a put request to change the users name, if the change is successful inform the user username has changed.
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

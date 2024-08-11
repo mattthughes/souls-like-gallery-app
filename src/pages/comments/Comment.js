@@ -9,6 +9,7 @@ import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 import { axiosRes } from "../../api/AxiosDefaults";
 
+// Settings the comment props component
 const Comment = (props) => {
   const {
     profile_id,
@@ -25,6 +26,7 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
+  // Using a delete request to delete the comment id from the previous post, if an error appears refresh the window.
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
@@ -71,6 +73,7 @@ const Comment = (props) => {
             <p>{content}</p>
           )}
         </Media.Body>
+        {/*If the user is the owner and show edit form is false show the drop down component*/ }
         {is_owner && !showEditForm && (
           <DropDown
             handleEdit={() => setShowEditForm(true)}

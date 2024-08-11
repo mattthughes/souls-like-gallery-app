@@ -65,6 +65,8 @@ const PostDetail = (props) => {
     }
   };
 
+  // * Using a post request to access the correct url, using the spread operator to like the correct post
+  // if there is an error reload the window
   const handleLike = async () => {
     try {
       await axiosRes.post("/likes/", { post: id });
@@ -86,6 +88,8 @@ const PostDetail = (props) => {
     }
   };
 
+  // * Using a delete request to access the correct url, using the spread operator to unlike the correct post
+  // if there is an error reload the window
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);
@@ -115,6 +119,7 @@ const PostDetail = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
+          {/* If the user is the owner and this is the post page show the dropdown menu */}
           <div className="d-flex align-items-center">
             {is_owner && postPage && (
               <DropDown handleEdit={handleEdit} handleDelete={handleDelete}
@@ -135,7 +140,9 @@ const PostDetail = (props) => {
 
 
         <div>
-
+          {/* If the user is the owner of the post the user cannot like a post,
+          the next ternary is checking if the like id exists to delete the id,
+          otherwise add a like by using a post request */}
           {is_owner ? (
             <OverlayTrigger
               placement="top"
@@ -143,6 +150,7 @@ const PostDetail = (props) => {
             >
               <i className="fa-solid fa-thumbs-up" />
             </OverlayTrigger>
+            
           ) : like_id ? (
             <span onClick={handleUnlike}>
               <i className={`fa-solid fa-thumbs-up ${styles.Like}`} />

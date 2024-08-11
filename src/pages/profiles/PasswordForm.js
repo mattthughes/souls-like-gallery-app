@@ -35,12 +35,15 @@ const UserPasswordForm = () => {
     });
   };
 
+  // If the current user is not the profile owner redirect them to the home page
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
       history.push("/");
     }
   }, [currentUser, history, id]);
 
+
+  // Using a post request to change the password and informing the user once this has been done
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

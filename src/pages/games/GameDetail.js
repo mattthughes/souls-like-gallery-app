@@ -15,6 +15,7 @@ import Image from "react-bootstrap/Image";
 import appStyles from '../../App.module.css'
 
 
+// Props for game detail component
 const GameDetail = (props) => {
   const {
     id,
@@ -31,6 +32,7 @@ const GameDetail = (props) => {
 
   const history = useHistory();
 
+  // Deleting the game id and redirecting user to the gallery page once deleted
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/games/${id}/`);
@@ -39,6 +41,7 @@ const GameDetail = (props) => {
     } catch (err) {
     }
   };
+
 
   const handleEdit = () => {
     history.push(`/games/${id}/edit`);

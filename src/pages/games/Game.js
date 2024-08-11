@@ -4,10 +4,7 @@ import { Card } from "react-bootstrap";
 
 import styles from '../../styles/Game.module.css'
 
-
-
-
-
+// Setting the props of the game component
 const Game = (props) => {
   const {
     title,

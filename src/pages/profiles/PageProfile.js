@@ -37,7 +37,7 @@ function ProfilePage() {
     const [profilePosts, setProfilePosts] = useState({ results: [] });
 
     
-
+    // Fetching the logged in users profile
     useEffect(() => {
         const fetchProfileData = async () => {
             try {
@@ -56,6 +56,7 @@ function ProfilePage() {
 
     const mainProfile = (
         <>
+        {/* If this is the profile owner show the edit dropdown */}
         {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
             <Row noGutters className="px-3 text-center">
                 <Col lg={3} className="text-lg-left">
@@ -115,6 +116,7 @@ function ProfilePage() {
             <hr />
             <p className="text-center">Profile owner's posts</p>
             <hr />
+            {/* Using an infinite scroll to check the profile owners posts only */}
             {profilePosts.length ? (
                 <InfiniteScroll
                     children={profilePosts.map((post) => (

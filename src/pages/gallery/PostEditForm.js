@@ -39,6 +39,9 @@ function PostEditForm() {
     const history = useHistory();
     const { id } = useParams();
 
+    // Getting the posts id and setting the fields to the post data,
+    // if the post author is logged in populate the edit form or redirect
+    // the user to the home page.
     useEffect(() => {
         const handleMount = async () => {
             try {
@@ -70,6 +73,7 @@ function PostEditForm() {
         }
     };
 
+    // Fetching the games to help the user changing the game field
     useEffect(() => {
         const fetchGames = async () => {
             try {
@@ -82,11 +86,11 @@ function PostEditForm() {
 
         fetchGames()
     }, []);
-
+    // On submit append the data the form, if successful inform user via pop up message,
+    // otherwise show the error messages.
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
-
         formData.append("title", title);
         formData.append("content", content);
         formData.append("game", game);
@@ -109,6 +113,7 @@ function PostEditForm() {
 
     const textFields = (
         <div className="text-center">
+            {/* Setting up the form fields with the correct values */}
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control
@@ -220,12 +225,12 @@ function PostEditForm() {
                                 </Alert>
                             ))}
                             <div>
+                                {/* Using a drop down which will show the games list if clicked */}
                                 <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
                                 <Dropdown drop="right">
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                                         View Games List
                                     </Dropdown.Toggle>
-
                                     <Dropdown.Menu>
                                         <Dropdown.Item>
                                             {games.length ? (

@@ -20,6 +20,7 @@ import Image from "react-bootstrap/Image";
 import axios from "axios";
 
 const SignUpForm = () => {
+  // Redirect user if logged in
   useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
@@ -39,7 +40,8 @@ const SignUpForm = () => {
       [event.target.name]: event.target.value,
     });
   };
-
+  // Adding the user to application if the data is correct direct the user to the sign in page if successful,
+  // showing a pop up message stating account created.
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

@@ -7,6 +7,7 @@ import appStyles from '../../App.module.css'
 
 function Home() {
     return (
+        // Home Page element
         <Row>
             <Col className='d-flex flex-column justify-content-center p-sm-3'>
             <h2 className={appStyles.Headings}>Home</h2>

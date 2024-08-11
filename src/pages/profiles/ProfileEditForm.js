@@ -35,13 +35,16 @@ const ProfileEditForm = () => {
     } = profileData;
 
 
-
+    // If the current user is not the profile owner redirect them to the home page
     useEffect(() => {
         if (currentUser?.profile_id?.toString() !== id) {
             history.push("/");
         }
     }, [currentUser, history, id]);
 
+
+    // If the current user is the profile owner get the profile id and set the profile data as the users profile if they are
+    // the owner otherwise redirect the user to the gallery page.
     useEffect(() => {
         const handleMount = async () => {
             if (currentUser?.profile_id?.toString() === id) {
@@ -90,6 +93,8 @@ const ProfileEditForm = () => {
             formData.append("image", imageInput.current.files[0]);
         }
 
+        // Checking to see the field field is not null or if the file is an empty string, or if the files field is true
+        // append the files to the form otherwise return an empty div.
         if (files || !files === null || files === '') {
             formData.append("files", files)
         } else {

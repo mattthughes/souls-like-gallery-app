@@ -23,6 +23,7 @@ function PostPage() {
   const currentUser = useCurrentUser();
   const [comments, setComments] = useState({ results: [] });
 
+  // Using a get request to access the posts and comments linked by there id
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -45,6 +46,7 @@ function PostPage() {
   return (
     <Row>
       <Col>
+      {/* Using the post detail component to only show one post per page */}
         <PostDetail {...post.results[0]} setPost={setPost} postPage />
         <Container>
           {currentUser ? (
@@ -57,6 +59,7 @@ function PostPage() {
           ) : comments.length ? (
             "Comments"
           ) : null}
+          {/* Using an infinite scroll component meaning a user does not have to refresh to view all the content */}
           {comments.length ? (
                 <InfiniteScroll
                   children={comments.map((comment) => (
