@@ -29,6 +29,60 @@ Welcome to testing results of front end part of the advanced front end applicati
 
 ### CSS validation
 
+`Asset`
+
+![Asset CSS Validator](docs/wireframes/asset-validator.png)
+
+`Avatar`
+
+![Avatar CSS Validator](docs/wireframes/avatar-validator.png)
+
+`Button`
+
+![Button CSS Validator](docs/wireframes/button-validator.png)
+
+`Comment Create and edit form`
+
+![Comment create and edit CSS Validator](docs/wireframes/comment-create-edit-validator.png)
+
+`Game`
+
+![Game CSS Validator](docs/wireframes/game-css-validator.png)
+
+`Game Create and edit form`
+
+![Game create and edit CSS Validator](docs/wireframes/game-create-edit-css-validator.png)
+
+`Home`
+
+![Home CSS Validator](docs/wireframes/home-validator.png)
+
+`Navbar`
+
+![Navbar CSS Validator](docs/wireframes/navbar-validator.png)
+
+`Post`
+
+![Post CSS Validator](docs/wireframes/post-validator.png)
+
+`Post Detail`
+
+![Post Detail CSS Validator](docs/wireframes/post-detail-validator.png)
+
+
+`Profile page`
+
+![Profile Page CSS Validator](docs/wireframes/profile-page-validator.png)
+
+
+`Sign up and sign in`
+
+![Sign up and Sign in CSS Validator](docs/wireframes/sign-up-sign-in-validator.png)
+
+`Trending`
+
+![Trending CSS Validator](docs/wireframes/trending-validator.png)
+
 
 
 ### Solved Bugs
