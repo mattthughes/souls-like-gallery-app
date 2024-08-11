@@ -41,7 +41,6 @@ function GameEditForm() {
 
                 is_owner ? setGameData({ title, slug, image, description }) : history.push("/");
             } catch (err) {
-                console.log(err);
             }
         };
 
@@ -83,7 +82,6 @@ function GameEditForm() {
             history.push(`/games/`);
             toast.success("Game edited")
         } catch (err) {
-            console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
             }

@@ -37,7 +37,6 @@ const GameDetail = (props) => {
       history.push("/gallery");
       toast.success("Game Deleted")
     } catch (err) {
-      console.log(err);
     }
   };
 

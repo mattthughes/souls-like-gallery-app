@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 
@@ -66,8 +67,7 @@ const PostDetail = (props) => {
 
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.post("/likes/", { post: id });
-      console.log(data)
+      await axiosRes.post("/likes/", { post: id });
       setPost((prevPosts) => ({
         ...prevPosts,
 

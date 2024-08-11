@@ -51,7 +51,6 @@ const ProfileEditForm = () => {
                     setProfileData({ bio, files, image });
                     is_owner ? setProfileData({ bio, image, files }) : history.push("/gallery");
                 } catch (err) {
-                    console.log(err);
                     history.push("/");
                 }
             } else {
@@ -108,7 +107,6 @@ const ProfileEditForm = () => {
             setLoading(false)
         } catch (err) {
             setErrors(err.response?.data);
-            console.log(err.response.data)
         }
     };
 

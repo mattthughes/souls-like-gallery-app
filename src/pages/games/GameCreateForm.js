@@ -63,9 +63,8 @@ function GameCreateForm() {
       try {
         const { data } = await axiosReq.get(`/games/`);
         setGames(data);
-        console.log(data)
       } catch (err) {
-        console.log(err);
+  
 
       }
     };
@@ -87,10 +86,8 @@ function GameCreateForm() {
       history.push(`/games/`);
       toast.success("Game Created!")
     } catch (err) {
-      console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-        console.log(err.response.data)
       }
 
       if (slug === '') {

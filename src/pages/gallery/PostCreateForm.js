@@ -70,9 +70,8 @@ function PostCreateForm() {
       try {
         const { data } = await axiosReq.get(`/games/`);
         setGames(data);
-        console.log(data)
       } catch (err) {
-        console.log(err);
+
 
       }
     };
@@ -96,8 +95,7 @@ function PostCreateForm() {
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-        console.log(game[title])
-        console.log(err.response.data)
+
 
       }
     }

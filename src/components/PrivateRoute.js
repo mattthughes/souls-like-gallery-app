@@ -8,11 +8,9 @@ function PrivateRoute({ children }) {
     const currentUser = useCurrentUser();
     const location = useLocation();
     if (currentUser?.username === "admin" && location.pathname === "/game/create") {
-        console.log(location.pathname)
         return currentUser ? children : <NotFound/>;
         
     }
-    
     return <NotFound/>
     
 }

@@ -26,9 +26,7 @@ function GameLists() {
             try {
                 const { data } = await axiosReq.get(`/games/`);
                 setGames(data);
-                console.log(data)
             } catch (err) {
-                console.log(err);
 
             }
         };
