@@ -10,15 +10,11 @@ import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
-import { Dropdown } from "react-bootstrap";
-
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router";
-
-import Game from "../games/Game";
 import { axiosReq } from "../../api/AxiosDefaults";
 
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
@@ -70,18 +66,21 @@ function PostCreateForm() {
     const fetchGames = async () => {
       try {
         const { data } = await axiosReq.get(`/games/`);
+        
         setGames(data);
+        
       } catch (err) {
 
 
       }
     };
+    
 
     fetchGames()
   }, []);
 
   // On submit append the data the form, if successful inform user via pop up message,
-    // otherwise show the error messages.
+  // otherwise show the error messages.
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -141,13 +140,21 @@ function PostCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Game</Form.Label>
-        <Form.Control
-          type="text"
-          name="game"
-          value={game}
-          onChange={handleChange}
-        />
+        <Form.Label className="d-flex flex-column">Game</Form.Label>
+        <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
+          {games.length ? (
+            games.map((game) => (
+              <option  key={game.id}>
+                {game.title}
+              </option>
+            ))
+          ) : currentUser ? (
+            <option>No Games to show</option>
+          ) : (
+            <option>No Games ... yet</option>
+          )}
+
+        </select>
 
       </Form.Group>
       {errors?.game?.map((message, idx) => (
@@ -199,7 +206,7 @@ function PostCreateForm() {
                 {image ? (
                   <>
                     <figure>
-                      <Image className={appStyles.Image}  src={image} rounded />
+                      <Image className={appStyles.Image} src={image} rounded />
                     </figure>
                     <div>
                       <Form.Label
@@ -235,26 +242,7 @@ function PostCreateForm() {
               ))}
               <div>
                 {/* Using a drop down which will show the games list if clicked */}
-                <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-                <Dropdown drop="down">
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    View Games List
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item>
-                      {games.length ? (
-                        games.map((game) => (
-                          <Game key={game.id} {...game} />
-                        ))
-                      ) : currentUser ? (
-                        <span>No Games to show</span>
-                      ) : (
-                        <span>No Games ... yet</span>
-                      )}
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+                
                 <div className="pt-3 pb-2 mr-3">
                   <Link to="/games">
                     <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>

@@ -14,9 +14,6 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 
-import Game from "../games/Game";
-import { Dropdown } from "react-bootstrap";
-
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 import { toast } from "react-toastify";
 
@@ -145,21 +142,29 @@ function PostEditForm() {
                 </Alert>
             ))}
 
-            <Form.Group>
-                <Form.Label>Game</Form.Label>
-                <Form.Control
-                    type="text"
-                    name="game"
-                    value={game}
-                    onChange={handleChange}
-                />
+<Form.Group>
+        <Form.Label className="d-flex flex-column">Game</Form.Label>
+        <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
+          {games.length ? (
+            games.map((game) => (
+              <option  key={game.id}>
+                {game.title}
+              </option>
+            ))
+          ) : currentUser ? (
+            <option>No Games to show</option>
+          ) : (
+            <option>No Games ... yet</option>
+          )}
 
-            </Form.Group>
-            {errors?.game?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                    {message}
-                </Alert>
-            ))}
+        </select>
+
+      </Form.Group>
+      {errors?.game?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
             <Form.Group>
                 <Form.Label>Attachments</Form.Label>
@@ -224,28 +229,6 @@ function PostEditForm() {
                                     {message}
                                 </Alert>
                             ))}
-                            <div>
-                                {/* Using a drop down which will show the games list if clicked */}
-                                <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
-                                <Dropdown drop="right">
-                                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                        View Games List
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item>
-                                            {games.length ? (
-                                                games.map((game) => (
-                                                    <Game key={game.id} {...game} />
-                                                ))
-                                            ) : currentUser ? (
-                                                <span>No Games to show</span>
-                                            ) : (
-                                                <span>No Games ... yet</span>
-                                            )}
-                                        </Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                            </div>
                             <div className="d-md-none">{textFields}
 
                             </div>

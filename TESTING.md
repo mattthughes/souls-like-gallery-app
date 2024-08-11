@@ -103,6 +103,7 @@ Welcome to testing results of front end part of the advanced front end applicati
 * Fixed profile edit bug, any user could access the edit form via the url to fix this, I added an if statment which checked if the current user did not match the profile id to redirect the user to the home page which fixed this issue.
 * Fixed Files url bug by adjusting the value to be either the files variable or an empty string which fixed this issue.
 * Fixed null bug with the files variable, to fix this I added an if statement which checked if the files variable was true, or if the files variable was not null and finally checked if the files variable was a string. Which meant the user could submit an empty string as well otherwise an empty div element will be returned
+* Fixed Post creation bug originally I could not use a select field to show the games in a list as the data was shown as undefined and null. To fix this I checked if games.length was true if this was to map over the games and place these in the option field. To check this was the correct value I used the game id as the key and value as the game which allowed me to target the correct games fixing this issue.
 
 ## Known Bugs
 
