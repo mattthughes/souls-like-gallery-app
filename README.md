@@ -1,5 +1,7 @@
 # Souls Like Gallery
 
+![Am I responsive souls like gallery](docs/wireframes/am-i-responsive-souls-like-gallery.png)
+
 Souls Like Gallery is a content sharing application built using a frontend libary called React along with a backend framework called Djanjo Restframework this application will allow users to share there favourite experiences and moments from the souls like genre users will be able to create, read, update and delete records on the application. This is the Frontend development pipeline which showcases how this application was made.
 
 - [Souls Like Gallery](#souls-like-gallery)
@@ -573,7 +575,25 @@ I Tested this project extensively making sure each element worked as intended an
 
 ### Imagery
 
+- Demons souls game image found [here](https://www.imdb.com/title/tt12507852/)
+- Dark Souls 1 game image found [here](https://darksouls.fandom.com/wiki/Dark_Souls)
+- Dark Souls 2 game image found [here](https://www.twitch.tv/directory/category/dark-souls-ii-scholar-of-the-first-sin)
+- Dark Souls 3 game image found [here](https://www.reddit.com/r/steamgrid/comments/l4kjuz/dark_souls_trilogy_and_sekiro/)
+- Bloodborne game image found [here](https://www.tradeinn.com/techinn/en/playstation-ps4-bloodborne-ps-hits/137522170/p)
+- Sekiro game image found [here](https://www.mobygames.com/game/113492/sekiro-shadows-die-twice/cover/group-186461/
+cover-547410/)
+- Elden Ring game image found [here](https://store.bandainamcoent.eu/)
+- Sekiro post image found [here](https://www.imdb.com/title/tt8558306/)
 - Irithly post image found [here](https://www.reddit.com/r/darksouls3/comments/stoeqv/irithyll_of_the_boreal_valley_appreciation_post/)
 - Ornstein and Smough image found [here](https://www.thegamer.com/dark-souls-ornstein-smough-boss-battle-strategy-tips/)
+- Demons souls post found [here](https://www.youtube.com/watch?v=Xf4wmN0u8S8)
+- Consort Radahn post image found [here](https://www.thegamer.com/elden-ring-new-game-plus-radahn-boss-battle/)
+- Messmer post image found [here](https://www.youtube.com/watch?v=QdRhysTPMy8)
+- Ludwig bl4 post image found [here](https://www.youtube.com/watch?v=BpG6Rz1Nhoc)
+- Firelink shrine post image found [here](https://www.polygon.com/dark-souls-remastered-guide/2018/6/5/17425250/firelink-shrine-map)
+- Majula post image found [here](https://medium.com/@Rain66/how-to-enjoy-gaming-again-3-tips-1c34edff65fe)
+- Slave Knight Gael post image found [here](https://villains.fandom.com/wiki/Knight_Artorias)
+- Malenia RL1 post image found [here](https://www.youtube.com/watch?v=Rt6UlUYPUVI)
+
 
 ## Acknowledgements

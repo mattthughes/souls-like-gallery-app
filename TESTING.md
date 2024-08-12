@@ -1,5 +1,7 @@
 # Souls Like Gallery Testing
 
+![Am I responsive souls like gallery](docs/wireframes/am-i-responsive-souls-like-gallery.png)
+
 Welcome to testing results of front end part of the advanced front end application known as Souls like gallery in this document you will find all the testing resuts such as solved bugs, how they were fixed any known bugs, manual and automated testing as well and how they were tested making sure each element worked as intended.
 
 ## CONTENTS
