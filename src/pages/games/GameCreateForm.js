@@ -224,8 +224,8 @@ function GameCreateForm() {
 
               <Dropdown.Menu>
                 <Dropdown.Item>
-                  {games.length ? (
-                    games.map((game) => (
+                  {games.results.length ? (
+                    games.results.map((game) => (
                       <Game key={game.id} {...game} />
                     ))
                   ) : currentUser ? (
