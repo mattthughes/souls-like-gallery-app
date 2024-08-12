@@ -104,13 +104,11 @@ Welcome to testing results of front end part of the advanced front end applicati
 * Fixed Files url bug by adjusting the value to be either the files variable or an empty string which fixed this issue.
 * Fixed null bug with the files variable, to fix this I added an if statement which checked if the files variable was true, or if the files variable was not null and finally checked if the files variable was a string. Which meant the user could submit an empty string as well otherwise an empty div element will be returned
 * Fixed Post creation bug originally I could not use a select field to show the games in a list as the data was shown as undefined and null. To fix this I checked if games.length was true if this was to map over the games and place these in the option field. To check this was the correct value I used the game id as the key and value as the game which allowed me to target the correct games fixing this issue.
+* Fixed comment creation bug by adjusting the settings py in the backend to target the correct array as this was just targeting an empty object rather than the results array which could then not be mapped over changing the settings fixed this issue for comment creation, edit comment, delete comment
 
 ## Known Bugs
 
-* When creating the comment the page refreshes with rather than keeping the user on the same page.
-* When clicking the like button more the like button multiple times the like id will show as undefined and refresh the page to stop the application from crashing.
-* When deleting, editing a comment the page refreshes rather than keeping the user on the same page.
-* When creating and deleting a comment the toast notification does not load due to window.location.reload will look for a solution.
+* When clicking the like button more the like button multiple times the like id will show as undefined and refresh the page to 
 * When submitting the edit profile form a warning is sent to the console regarding an unmounted component with the state not being able to be updated due to this. I tried to create a use effect clean up function to detect the state which did not fix the warning will look for a solution.
 
 ### Lighthouse testing

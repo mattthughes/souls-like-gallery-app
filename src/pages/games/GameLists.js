@@ -43,12 +43,12 @@ function GameLists() {
             <div className="col-12 col-lg-10 border mb-5">
                 <h3 className={`text-center ${appStyles.Headings}`}>Games List</h3>
                 {/* Using an infinite scroll componet to also map over the games in the list and showcase them on the page */}
-                {games.length ? (
+                {games.results.length ? (
                 <InfiniteScroll
-                  children={games.map((game) => (
+                  children={games.results.map((game) => (
                     <GameDetail key={game.id} {...game} setGames={setGames} gamePage />
                   ))}
-                  dataLength={games.length}
+                  dataLength={games.results.length}
                   loader={<Asset spinner />}
                   hasMore={!!games.next}
                   next={() => fetchMoreData(games, setGames)}

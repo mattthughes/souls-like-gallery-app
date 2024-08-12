@@ -52,13 +52,13 @@ function TrendingPage() {
           {/* Using an infinite scroll and the slice array method to limit the items in the new array between 0, 10
           limiting the amount of results on the page. */}
             <div className="border">
-              {trendingPost.length ? (
+              {trendingPost.results.length ? (
                 <InfiniteScroll
                 
-                  children={trendingPost.slice(0,10).map((trendingPosts) => (
+                  children={trendingPost.results.slice(0,10).map((trendingPosts) => (
                     <Trending key={trendingPosts.id} {...trendingPosts} setPosts={setTrendingPost} />
                   ))}
-                  dataLength={trendingPost.length}
+                  dataLength={trendingPost.results.length}
                   loader={<Asset spinner />}
                   hasMore={!!trendingPost.next}
                   next={() => fetchMoreData(trendingPost, setTrendingPost)}

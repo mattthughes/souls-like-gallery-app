@@ -37,7 +37,7 @@ function PostPage() {
         setComments(comments);
 
       } catch (err) {
-
+        console.log(err.response.data)
       };
 
 
@@ -58,13 +58,13 @@ function PostPage() {
               setPost={setPost}
               setComments={setComments}
             />
-          ) : comments.length ? (
+          ) : comments.results.length ? (
             "Comments"
           ) : null}
           {/* Using an infinite scroll component meaning a user does not have to refresh to view all the content */}
-          {comments.length ? (
+          {comments.results.length ? (
                 <InfiniteScroll
-                  children={comments.map((comment) => (
+                  children={comments.results.map((comment) => (
                     <Comment
                   key={comment.id}
                   {...comment}
@@ -72,7 +72,7 @@ function PostPage() {
                   setComments={setComments}
                 />
               ))}
-              dataLength={comments.length}
+              dataLength={comments.results.length}
               loader={<Asset spinner />}
               hasMore={!!comments.next}
               next={() => fetchMoreData(comments, setComments)}

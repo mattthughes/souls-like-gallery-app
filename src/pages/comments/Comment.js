@@ -44,9 +44,7 @@ const Comment = (props) => {
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {
-      if (err) {
-        window.location.reload()
-      }
+      
     }
   };
 

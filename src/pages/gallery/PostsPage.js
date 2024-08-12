@@ -19,7 +19,7 @@ import { fetchMoreData } from "../../utils/utils";
 
 function PostsPage({ message, filter = "" }) {
   // Setting the posts as an empty array which will be mapped over later
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState({ results: [] });
   // Setting has loaded as false
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -71,12 +71,12 @@ function PostsPage({ message, filter = "" }) {
               {/* Using a posts infinite scroll to map 
               over the post component to show all posts on the page
               so the user does not need to refresh. */}
-              {posts.length ? (
+              {posts.results.length ? (
                 <InfiniteScroll
-                  children={posts.map((post) => (
+                  children={posts.results.map((post) => (
                     <Post key={post.id} {...post} setPosts={setPosts} />
                   ))}
-                  dataLength={posts.length}
+                  dataLength={posts.results.length}
                   loader={<Asset spinner />}
                   hasMore={!!posts.next}
                   next={() => fetchMoreData(posts, setPosts)}

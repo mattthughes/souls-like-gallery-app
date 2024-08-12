@@ -37,7 +37,6 @@ function CommentEditForm(props) {
       }));
       setShowEditForm(false);
     } catch (err) {
-      window.location.reload()
     }
   };
 
