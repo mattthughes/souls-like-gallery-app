@@ -70,22 +70,16 @@ const PostDetail = (props) => {
   // if there is an error reload the window
   const handleLike = async () => {
     try {
-      await axiosRes.post("/likes/", { post: id });
+      const { data } = await axiosRes.post("/likes/", { post: id });
       setPost((prevPosts) => ({
         ...prevPosts,
-
         results: prevPosts.results.map((post) => {
           return post.id === id
-            ? { ...post, likes_count: post.likes_count + 1, like_id: post.id }
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
             : post;
-
         }),
-
       }));
     } catch (err) {
-      if (err.response.data) {
-        window.location.reload();
-      }
     }
   };
 
@@ -103,13 +97,8 @@ const PostDetail = (props) => {
         }),
       }));
     } catch (err) {
-      if (err.response.data) {
-        window.location.reload();
-      }
     }
-
   };
-
 
 
   return (
