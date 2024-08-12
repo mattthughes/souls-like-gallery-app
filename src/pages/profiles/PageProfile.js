@@ -117,12 +117,12 @@ function ProfilePage() {
             <p className="text-center">Profile owner's posts</p>
             <hr />
             {/* Using an infinite scroll to check the profile owners posts only */}
-            {profilePosts.length ? (
+            {profilePosts.results.length ? (
                 <InfiniteScroll
-                    children={profilePosts.map((post) => (
+                    children={profilePosts.results.map((post) => (
                         <PostDetail key={post.id} {...post} setPosts={setProfilePosts} />
                     ))}
-                    dataLength={profilePosts.length}
+                    dataLength={profilePosts.results.length}
                     loader={<Asset spinner />}
                     hasMore={!!profilePosts.next}
                     next={() => fetchMoreData(profilePosts, setProfilePosts)}
