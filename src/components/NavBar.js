@@ -90,7 +90,7 @@ const NavBar = () => {
     <Navbar
       expanded={expanded}
       className={styles.NavBar}
-      expand="md"
+      expand="xl"
       fixed="top"
     ><Container>
         <Navbar.Brand className={styles.Headings}>
