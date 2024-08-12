@@ -2,7 +2,7 @@ import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useHistory } from "react-router";
 
-
+// Setting the style of the drop down menu
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
     <i
         className="fas fa-ellipsis"
@@ -14,6 +14,8 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
+
+// Using the handleEdit, handleDelete functions that will be accessed from the post detail component
 export const DropDown = ({ handleEdit, handleDelete }) => {
     return (
         <Dropdown  className="mt-auto" drop="down">
@@ -40,6 +42,7 @@ export const DropDown = ({ handleEdit, handleDelete }) => {
     );
 };
 
+// Setting the profile edit dropdwon to have the argument of Id which will target the profile based on the users id
 export const ProfileEditDropdown = ({ id }) => {
     const history = useHistory();
     return (

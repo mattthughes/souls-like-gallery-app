@@ -16,6 +16,7 @@ const NavBar = () => {
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
+  // Using a post request to logout and then setting the logged in user to null
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
@@ -25,6 +26,7 @@ const NavBar = () => {
     }
   };
 
+  // Only the admin user is able to view the add game button
   const admin = (
     <>
       <NavLink className={styles.NavLink}
@@ -36,6 +38,7 @@ const NavBar = () => {
 
   )
 
+  // If the user is logged in these icons will be shown meaning a user can not add posts like other posts if they are not logged in
   const loggedInIcons = <>
 
     <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/posts/create">
@@ -62,7 +65,7 @@ const NavBar = () => {
       </NavLink>
   </>;
 
-
+  // If the user is not logged in they were will be shown the following icons which will give them a rough idea of what the application is about
   const loggedOutIcons = (
     <>
       <NavLink
@@ -117,8 +120,10 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-photo-film"></i>Gallery
             </NavLink>
-            
+
+            {/* if the admin user is trying to access the admin page return the admin icons otherwise return an empty div */}
             {currentUser?.username === "admin" ? admin : <div></div>}
+            {/* If the current user is logged in show the logged in icons otherwise show the logged out icons */}
             {currentUser ? loggedInIcons : loggedOutIcons}
 
           </Nav>

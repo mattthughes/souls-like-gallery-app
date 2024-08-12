@@ -17,6 +17,7 @@ import appStyles from '../../App.module.css'
 
 
 function GameLists() {
+    // Setting the games as an empty array called results which will be mapped over later
     const [games, setGames] = useState({ results: [] });
     const currentUser = useCurrentUser();
     useRedirect("loggedOut");

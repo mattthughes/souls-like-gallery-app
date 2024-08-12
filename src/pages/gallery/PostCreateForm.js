@@ -1,3 +1,5 @@
+/* eslint quotes: ["error", "double"] */
+
 import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
@@ -23,14 +25,19 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useRedirect } from "../../hooks/useRedirect";
 
+import { toast } from "react-toastify";
+
 
 
 function PostCreateForm() {
   useRedirect("loggedOut");
+
   const [errors, setErrors] = useState({});
+  // Setting the games as an empty array titled results which will be mapped over
   const [games, setGames] = useState({ results: [] });
   const currentUser = useCurrentUser();
 
+  // Setting the post data to empty strings
   const [postData, setPostData] = useState({
     title: "",
     content: "",
@@ -65,16 +72,16 @@ function PostCreateForm() {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const { data } = await axiosReq.get(`/games/`);
-        
-        setGames(data);
-        
-      } catch (err) {
+        const { data } = await axiosReq.get("/games/");
 
+        setGames(data);
+
+      } catch (err) {
+        toast.error(err)
 
       }
     };
-    
+
 
     fetchGames()
   }, []);
@@ -102,10 +109,7 @@ function PostCreateForm() {
       }
     }
   };
-
-
-
-
+  {/* Setting the text area field so the user can give there post a title */}
   const textFields = (
     <div className="text-center">
       <Form.Group>
@@ -123,6 +127,7 @@ function PostCreateForm() {
         </Alert>
       ))}
 
+      {/* Setting the text area allowing a user to create there text for the post*/}
       <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
@@ -139,12 +144,14 @@ function PostCreateForm() {
         </Alert>
       ))}
 
+      {/* Using a select form field and then mapping over the games array if games.length is true to then show each game as an option in the select field
+      allowing the user to pick a game when creating a post */}
       <Form.Group>
         <Form.Label className="d-flex flex-column">Game</Form.Label>
         <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
           {games.length ? (
             games.map((game) => (
-              <option  key={game.id}>
+              <option key={game.id}>
                 {game.title}
               </option>
             ))
@@ -163,6 +170,7 @@ function PostCreateForm() {
         </Alert>
       ))}
 
+      {/* Attachments form control field specified by its type if a user enters the wrong type an error message will appear. */}
       <Form.Group>
         <Form.Label>Attachments</Form.Label>
         <Form.Control
@@ -178,11 +186,6 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-
-
-
-
-
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
@@ -200,9 +203,9 @@ function PostCreateForm() {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-            <Container
-            >
+            <Container>
               <Form.Group className="text-center">
+                {/* If there is an image show the image allowing the user to change the image if they would like to*/}
                 {image ? (
                   <>
                     <figure>
@@ -217,7 +220,9 @@ function PostCreateForm() {
                       </Form.Label>
                     </div>
                   </>
+                  
                 ) : (
+                  /* If the image does not exist allow the user to upload an image*/
                   <Form.Label
                     className="d-flex justify-content-center"
                     htmlFor="image-upload"
@@ -227,7 +232,7 @@ function PostCreateForm() {
                     />
                   </Form.Label>
                 )}
-
+                
                 <Form.File
                   id="image-upload"
                   accept="image/*"
@@ -241,8 +246,6 @@ function PostCreateForm() {
                 </Alert>
               ))}
               <div>
-                {/* Using a drop down which will show the games list if clicked */}
-                
                 <div className="pt-3 pb-2 mr-3">
                   <Link to="/games">
                     <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>

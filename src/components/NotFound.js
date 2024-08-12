@@ -5,6 +5,7 @@ import btnStyles from '../styles/Button.module.css'
 import appStyles from '../App.module.css'
 
 function NotFound() {
+  // Setting the history variable so a user can return to the previous page they were on
   const history = useHistory();
   return (
     <div>

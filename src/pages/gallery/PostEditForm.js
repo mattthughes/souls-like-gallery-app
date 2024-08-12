@@ -22,6 +22,7 @@ function PostEditForm() {
     const [games, setGames] = useState({ results: [] });
     const currentUser = useCurrentUser();
 
+    // Setting the post data as empty strings
     const [postData, setPostData] = useState({
         title: "",
         content: "",
@@ -125,7 +126,7 @@ function PostEditForm() {
                     {message}
                 </Alert>
             ))}
-
+            {/* Setting the text area allowing a user to edit there text for the post*/}
             <Form.Group>
                 <Form.Label>Content</Form.Label>
                 <Form.Control
@@ -142,30 +143,33 @@ function PostEditForm() {
                 </Alert>
             ))}
 
-<Form.Group>
-        <Form.Label className="d-flex flex-column">Game</Form.Label>
-        <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
-          {games.length ? (
-            games.map((game) => (
-              <option  key={game.id}>
-                {game.title}
-              </option>
-            ))
-          ) : currentUser ? (
-            <option>No Games to show</option>
-          ) : (
-            <option>No Games ... yet</option>
-          )}
+            {/* Using a select form field and then mapping over the games array if games.length is true to then show each game as an option in the select field
+      allowing the user to pick a game when editing a post */}
+            <Form.Group>
+                <Form.Label className="d-flex flex-column">Game</Form.Label>
+                <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
+                    {games.length ? (
+                        games.map((game) => (
+                            <option key={game.id}>
+                                {game.title}
+                            </option>
+                        ))
+                    ) : currentUser ? (
+                        <option>No Games to show</option>
+                    ) : (
+                        <option>No Games ... yet</option>
+                    )}
 
-        </select>
+                </select>
 
-      </Form.Group>
-      {errors?.game?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+            </Form.Group>
+            {errors?.game?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+            ))}
 
+            {/* Attachments form control field specified by its type if a user enters the wrong type an error message will appear. */}
             <Form.Group>
                 <Form.Label>Attachments</Form.Label>
                 <Form.Control
@@ -181,7 +185,6 @@ function PostEditForm() {
                     {message}
                 </Alert>
             ))}
-
 
             <Button
                 className={`${btnStyles.Button} ${btnStyles.Blue}`}
@@ -204,6 +207,7 @@ function PostEditForm() {
                     <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                         <Container
                             className={`${appStyles.Content} d-flex flex-column justify-content-center`}>
+                                {/* Allow the users to change the image while displaying the existing image */}
                             <Form.Group className="text-center">
                                 <figure>
                                     <Image className={appStyles.Image} src={image} rounded />

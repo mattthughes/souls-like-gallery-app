@@ -18,7 +18,9 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
 function PostsPage({ message, filter = "" }) {
+  // Setting the posts as an empty array which will be mapped over later
   const [posts, setPosts] = useState([]);
+  // Setting has loaded as false
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");

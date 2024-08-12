@@ -55,13 +55,14 @@ const PostDetail = (props) => {
     history.push(`/posts/${id}/edit`);
   };
 
+  // Using a delete request to target the post by its id if the deletion is successful show a pop up message informing user the post has been deleted.
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
       toast.success("Post Deleted")
       history.goBack();
     } catch (err) {
-      console.log(err);
+      toast.warning(err)
     }
   };
 

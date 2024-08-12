@@ -28,9 +28,11 @@ import { useRef } from "react";
 function GameCreateForm() {
   const [errors, setErrors] = useState({});
   const imageInput = useRef(null);
+  // Setting the games as an empty array titled results which will be mapped over
   const [games, setGames] = useState({ results: [] });
   const currentUser = useCurrentUser();
 
+  // Setting the games data as empty strings
   const [gameData, setGameData] = useState({
     title: "",
     slug: "",
@@ -38,6 +40,7 @@ function GameCreateForm() {
     description: ""
 
   });
+  // Setting the strings as the game data
   const { title, slug, image, description } = gameData;
   const history = useHistory();
 
@@ -58,6 +61,7 @@ function GameCreateForm() {
     });
   };
 
+  // Fetching the games using a get request to show the games in a list so the admin user does not create a game that already exists
   useEffect(() => {
     const fetchGames = async () => {
       try {
@@ -98,6 +102,7 @@ function GameCreateForm() {
   };
 
   const textFields = (
+    /* Setting the text area field so the user can give there game a title */
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
@@ -113,7 +118,7 @@ function GameCreateForm() {
           {message}
         </Alert>
       ))}
-
+      {/* Creating the slug field that is required*/}
       <Form.Group>
         <Form.Label>Slug</Form.Label>
         <Form.Control
@@ -129,7 +134,7 @@ function GameCreateForm() {
         </Alert>
       ))}
 
-
+      {/* Setting the description field as a text area allowing the admin user to write a detailed game description*/}
       <Form.Group>
         <Form.Label>Description</Form.Label>
         <Form.Control
@@ -170,6 +175,7 @@ function GameCreateForm() {
           <Container
           >
             <Form.Group className="text-center">
+               {/* If there is an image show the image allowing the user to change the image if they would like to*/}
               {image ? (
                 <>
                   <figure>
@@ -185,6 +191,7 @@ function GameCreateForm() {
                   </div>
                 </>
               ) : (
+                 /* If the image does not exist allow the user to upload an image*/
                 <Form.Label
                   className="d-flex justify-content-center"
                   htmlFor="image-upload"
@@ -209,6 +216,7 @@ function GameCreateForm() {
             ))}
 
             <h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+            {/* Using a dropdown menu to show the games in a list so the admin user can view the already created games */}
             <Dropdown drop="down">
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 View Games List

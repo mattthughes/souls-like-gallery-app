@@ -13,7 +13,6 @@ import appStyles from '../../App.module.css'
 import btnStyles from "../../styles/Button.module.css";
 
 
-
 // Trending component props
 const Trending = (props) => {
   const {

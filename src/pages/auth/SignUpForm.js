@@ -22,6 +22,7 @@ import axios from "axios";
 const SignUpForm = () => {
   // Redirect user if logged in
   useRedirect("loggedIn");
+  // Setting the sign up data as empty strings
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -29,9 +30,10 @@ const SignUpForm = () => {
   });
   const { username, password1, password2 } = signUpData;
 
-
+  // Creating the errors state and assigning them to an empty object
   const [errors, setErrors] = useState({});
 
+  // Assigning the history variable
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -54,6 +56,7 @@ const SignUpForm = () => {
   };
 
   return (
+    // Creating the form fields for a new user
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
@@ -76,6 +79,7 @@ const SignUpForm = () => {
               </Alert>
             ))}
 
+            
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
@@ -126,6 +130,7 @@ const SignUpForm = () => {
           </Form>
         </Container>
 
+        {/* If the user already has an account click the below link which will redirect the user to the sign in page*/}
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signin">
             Already have an account? <span>Sign in</span>

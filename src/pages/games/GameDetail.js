@@ -54,6 +54,7 @@ const GameDetail = (props) => {
         <Media>
         
           <div>
+            {/* If the user is the game author and they are on the game page allow the user edit or delete the game */}
             {is_owner && gamePage && (
               <DropDown handleDelete={handleDelete} handleEdit={handleEdit}/>
             )}

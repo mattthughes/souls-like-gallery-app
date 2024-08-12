@@ -39,7 +39,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      window.location.reload()
+
     }
   };
 

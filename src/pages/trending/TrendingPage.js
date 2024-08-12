@@ -28,6 +28,7 @@ function TrendingPage() {
         const { data } = await axiosReq.get(`/trending/?ordering=-likes_count`);
         setTrendingPost(data);
         setHasLoaded(true);
+        
       } catch (err) {
       }
     };

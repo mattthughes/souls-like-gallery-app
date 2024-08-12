@@ -15,6 +15,7 @@ export const CurrentUserProvider = ({ children }) => {
 
   const handleMount = async () => {
     try {
+      // Getting the user and setting them as the current user
       const { data } = await axiosRes.get("dj-rest-auth/user/");
       setCurrentUser(data);
     } catch (err) {
@@ -51,6 +52,7 @@ export const CurrentUserProvider = ({ children }) => {
       (response) => response,
       async (err) => {
         if (err.response?.status === 401) {
+          // If the error code is 401 refresh the token sign the previous user in
           try {
             await axios.post("/dj-rest-auth/token/refresh/");
           } catch (err) {

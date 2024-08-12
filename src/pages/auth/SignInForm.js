@@ -27,13 +27,16 @@ function SignInForm() {
   useRedirect("loggedIn");
   
 
+  // Assigning the history variable
   const history = useHistory();
 
+  // Setting the sign in data as empty strings
   const [signInData, setSignInData] = useState({
     username: "",
     password: "",
   })
 
+  // Creating the errors state and assigning them to an empty object
   const [errors, setErrors] = useState({});
 
   const { username, password } = signInData;
@@ -61,6 +64,7 @@ function SignInForm() {
   }
 
   return (
+    // Creating the form fields for an existing user
     <Row className={styles.Row}>
       <Col className="my-auto p-0 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
@@ -118,6 +122,8 @@ function SignInForm() {
 
 
         </Container>
+
+        {/* If the user does not have an account click the below link which will redirect the user to the sign up page to create an account*/}
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signup">
             Don't have an account? <span>Sign up now!</span>

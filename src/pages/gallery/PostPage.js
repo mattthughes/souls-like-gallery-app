@@ -19,8 +19,10 @@ import Container from 'react-bootstrap/Container';
 
 function PostPage() {
   const { id } = useParams();
+  // Setting the posts as an empty array called results which will be mapped over later
   const [post, setPost] = useState({ results: [] });
   const currentUser = useCurrentUser();
+  // Setting the comments as an empty array called results which will be mapped over later
   const [comments, setComments] = useState({ results: [] });
 
   // Using a get request to access the posts and comments linked by there id
