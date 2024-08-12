@@ -96,16 +96,19 @@ function PostCreateForm() {
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
     formData.append("game", game);
-    formData.append("attachments", attachments)
+    formData.append("attachments", attachments);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
+      toast.success("Post Created")
       history.push(`/posts/${data.id}`);
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
 
-
+        if (!game) {
+          toast.warning("Please select a game")
+        } 
       }
     }
   };
@@ -150,6 +153,7 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label className="d-flex flex-column">Game</Form.Label>
         <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
+        <option>Select a game</option>
           {games.results.length ? (
             games.results.map((game) => (
               <option key={game.id}>
@@ -165,11 +169,6 @@ function PostCreateForm() {
         </select>
 
       </Form.Group>
-      {errors?.game?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
 
       {/* Attachments form control field specified by its type if a user enters the wrong type an error message will appear. */}
       <Form.Group>
