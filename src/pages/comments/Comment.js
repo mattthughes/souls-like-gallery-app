@@ -8,6 +8,7 @@ import Avatar from "../../components/Avatar";
 
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
 import { axiosRes } from "../../api/AxiosDefaults";
+import { toast } from "react-toastify";
 
 // Settings the comment props component
 const Comment = (props) => {
@@ -30,6 +31,7 @@ const Comment = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
+      toast.success("Comment deleted")
       setPost((prevPost) => ({
         results: [
           {

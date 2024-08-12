@@ -14,11 +14,17 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 
+import { useCurrentUser } from "../../contexts/UserCurrentContext";
+import Game from "./Game";
+import { Dropdown } from "react-bootstrap";
+
 import { toast } from "react-toastify";
 
 function GameEditForm() {
   const [errors, setErrors] = useState({});
-
+  const currentUser = useCurrentUser();
+  // Setting the games as an empty array titled results which will be mapped over
+  const [games, setGames] = useState({ results: [] });
   const [gameData, setGameData] = useState({
     title: "",
     slug: "",
@@ -46,6 +52,23 @@ function GameEditForm() {
 
     handleMount();
   }, [history, id]);
+
+
+  // Fetching the games using a get request to show the games in a list so the admin user does not create a game that already exists
+  useEffect(() => {
+    const fetchGames = async () => {
+      try {
+        const { data } = await axiosReq.get(`/games/`);
+        setGames(data);
+      } catch (err) {
+
+
+      }
+    };
+
+    fetchGames()
+  }, []);
+
 
   const handleChange = (event) => {
     setGameData({
@@ -193,6 +216,28 @@ function GameEditForm() {
                   {message}
                 </Alert>
               ))}
+
+<h3 className={`pb-2 pt-2 ${appStyles.Headings}`}>Games List</h3>
+            {/* Using a dropdown menu to show the games in a list so the admin user can view the already created games */}
+            <Dropdown drop="down">
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                View Games List
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  {games.results.length ? (
+                    games.results.map((game) => (
+                      <Game key={game.id} {...game} />
+                    ))
+                  ) : currentUser ? (
+                    <span>No Games to show</span>
+                  ) : (
+                    <span>No Games ... yet</span>
+                  )}
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
 
               <div className="d-md-none">{textFields}</div>
             </Container>

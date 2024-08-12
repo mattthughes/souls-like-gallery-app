@@ -7,6 +7,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { axiosRes } from "../../api/AxiosDefaults";
 
 import btnStyles from '../../styles/Button.module.css'
+import { toast } from "react-toastify";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments } = props;
@@ -25,6 +26,7 @@ function CommentCreateForm(props) {
         content,
         post,
       });
+      toast.success("Comment created")
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],

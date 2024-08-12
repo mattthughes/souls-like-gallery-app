@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/AxiosDefaults";
 
 import btnStyles from '../../styles/Button.module.css'
+import { toast } from "react-toastify";
 
 
 function CommentEditForm(props) {
@@ -23,6 +24,7 @@ function CommentEditForm(props) {
       await axiosRes.put(`/comments/${id}/`, {
         content: formContent.trim(),
       });
+      toast.success("Comment edited")
       setComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.map((comment) => {
