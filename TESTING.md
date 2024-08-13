@@ -239,22 +239,23 @@ Game Detail delete button (user)|Delete game button to be hidden|Loaded game det
 
 `Post Testing`
 
-Element	Expected Outcome	Testing Performed	Result	Pass/Fail
-Post A peaceful place	Show post detail when clicked	Clicked post image	Post a peaceful place loaded	Pass
-Post Peaceful setting	Show post detail when clicked	Clicked post image	Post peaceful setting loaded	Pass
-Post My favourite boss in the whole series	Show post detail when clicked	Clicked post image	Post my favourite boss in the whole series loaded	Pass
-Post I finally did it	Show post detail when clicked	Clicked post image	Post I finally did it loaded	Pass
-Post Messmer Rune level 1 complete	Show post detail when clicked	Clicked post image	Post Messmer Rune Level 1 complete loaded	Pass
-Post Beautiful Location	Show post detail when clicked	Clicked post image	Post Beautiful location loaded	Pass
-Post O & S are Legendary	Show post detail when clicked	Clicked post image	Post O & S are legendary loaded	Pass
-Post What a beautiful game	Show post detail when clicked	Clicked post image	Post What a beautiful game loaded	Pass
-Post I remember where I was when this trailer dropped	Show post detail when clicked	Clicked post image	Post I remember where I was when this trailer dropped loaded	Pass
-Post Is this the hardest boss in souls history	Show post detail when clicked	Clicked post image	Post Is this the hardest boss in souls history loaded	Pass
-Post Malenia RL1 Complete	Show post detail when clicked	Clicked post image	Post Malenia RL1 Complete	Pass
-Posts infinite scroll	Posts to load not refreshing the page	Scrolled down the gallery page	Posts loaded without page refreshing loading new posts as the user scrolls	Pass
-Post Search game title	Games from that specific title to show only	Typed game title	Games from specific title showed	Pass
-Post Search post title	Posts with specific title to load	Typed post title	Posts from specific title loaded	Pass
-Post Search username	Posts from specific users to show	Typed users profile name	Posts from specific user loaded	Pass
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Post A peaceful place|Show post detail when clicked|Clicked post image|Post a peaceful place loaded|Pass
+Post Peaceful setting|Show post detail when clicked|Clicked post image|Post peaceful setting loaded|Pass
+Post My favourite boss in the whole series|Show post detail when clicked|Clicked post image|Post my favourite boss in the whole series loaded|Pass
+Post I finally did it|Show post detail when clicked|Clicked post image|Post I finally did it loaded|Pass
+Post Messmer Rune level 1 complete|Show post detail when clicked|Clicked post image|Post Messmer Rune Level 1 complete loaded|Pass
+Post Beautiful Location|Show post detail when clicked|Clicked post image|Post Beautiful location loaded|Pass
+Post O & S are Legendary|Show post detail when clicked|Clicked post image|Post O & S are legendary loaded|Pass
+Post What a beautiful game|Show post detail when clicked|Clicked post image|Post What a beautiful game loaded|Pass
+Post I remember where I was when this trailer dropped|Show post detail when clicked|Clicked post image|Post I remember where I was when this trailer dropped loaded|Pass
+Post Is this the hardest boss in souls history|Show post detail when clicked|Clicked post image|Post Is this the hardest boss in souls history loaded|Pass
+Post Malenia RL1 Complete|Show post detail when clicked|Clicked post image|Post Malenia RL1 Complete|Pass
+Posts infinite scroll|Posts to load not refreshing the page|Scrolled down the gallery page|Posts loaded without page refreshing loading new posts as the user scrolls|Pass
+Post Search game title|Games from that specific title to show only|Typed game title|Games from specific title showed|Pass
+Post Search post title|Posts with specific title to load|Typed post title|Posts from specific title loaded|Pass
+Post Search username|Posts from specific users to show|Typed users profile name|Posts from specific user loaded|Pass
 
 `Trending Testing`
 
