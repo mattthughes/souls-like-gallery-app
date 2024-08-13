@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { DropDown } from "../../components/DropDown";
 import CommentEditForm from "./CommentEditForm";
 
+import styles from '../../styles/Comment.module.css'
+
 import Avatar from "../../components/Avatar";
 
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
@@ -58,7 +60,7 @@ const Comment = (props) => {
         <Avatar src={profile_image}/>
         </Link>
         <Media.Body className="align-self-center ml-2">
-          <span>{owner}</span>
+          <span className={styles.Owner}>{owner}</span>
           <span>{updated_at}</span>
           {showEditForm ? (
             <CommentEditForm
