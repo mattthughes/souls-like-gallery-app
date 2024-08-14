@@ -49,6 +49,7 @@ function ProfilePage() {
                 setProfileData(pageProfile);
                 setHasLoaded(true);
             } catch (err) {
+                Window.location.reload()
             }
         };
         fetchProfileData();

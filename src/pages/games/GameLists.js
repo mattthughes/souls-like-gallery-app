@@ -29,7 +29,7 @@ function GameLists() {
                 const { data } = await axiosReq.get(`/games/`);
                 setGames(data);
             } catch (err) {
-
+                window.location.reload()
             }
         };
 

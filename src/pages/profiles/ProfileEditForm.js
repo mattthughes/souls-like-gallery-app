@@ -95,7 +95,7 @@ const ProfileEditForm = () => {
 
         // Checking to see the field field is not null or if the file is an empty string, or if the files field is true
         // append the files to the form otherwise return an empty div.
-        if (files || !files === null || files === '') {
+        if (files || files === '') {
             formData.append("files", files)
         } else {
             return <div></div>

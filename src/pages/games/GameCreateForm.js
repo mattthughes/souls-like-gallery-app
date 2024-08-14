@@ -68,8 +68,7 @@ function GameCreateForm() {
         const { data } = await axiosReq.get(`/games/`);
         setGames(data);
       } catch (err) {
-
-
+        setErrors(err.response.data)
       }
     };
 

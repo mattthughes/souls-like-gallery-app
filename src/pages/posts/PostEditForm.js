@@ -48,6 +48,7 @@ function PostEditForm() {
 
                 is_owner ? setPostData({ title, content, game, image, attachments }) : history.push("/");
             } catch (err) {
+                setErrors(err.response.data)
             }
         };
 
@@ -78,7 +79,7 @@ function PostEditForm() {
                 const { data } = await axiosReq.get(`/games/`);
                 setGames(data);
             } catch (err) {
-
+                setErrors(err.response.data)
             }
         };
 

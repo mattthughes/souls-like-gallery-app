@@ -30,6 +30,7 @@ function TrendingPage() {
         setHasLoaded(true);
         
       } catch (err) {
+        window.location.reload()
       }
     };
 

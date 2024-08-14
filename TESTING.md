@@ -34,7 +34,13 @@ Welcome to testing results of front end part of the advanced front end applicati
 ![ESLint React validation](docs/wireframes/compile-react.png)
 
 
-`JSHint`
+`ESLint Playground`
+
+These are the settings I used to validate the react, jsx code every single page has no unused vars errors which is just part of the validation software. 
+
+![ESLint Settings](docs/wireframes/eslint-settings.png)
+
+![ESLint Playground validation](docs/wireframes/eslint-validation-no-unused-vars.png)
 
 
 ### CSS validation
@@ -116,6 +122,7 @@ Welcome to testing results of front end part of the advanced front end applicati
 * Fixed Post creation bug originally I could not use a select field to show the games in a list as the data was shown as undefined and null. To fix this I checked if games.length was true if this was to map over the games and place these in the option field. To check this was the correct value I used the game id as the key and value as the game which allowed me to target the correct games fixing this issue.
 * Fixed comment creation bug by adjusting the settings py in the backend to target the correct array as this was just targeting an empty object rather than the results array which could then not be mapped over changing the settings fixed this issue for comment creation, edit comment, delete comment
 * Fixed like button bug after fixing the pagination results this was also fixed by adjusting post id to data id which fixed this issue.
+* Fixed no-constant-binary-expression bug when trying to append the files form data on the profile page I was using the or expression and checking if files was not equal to null. Which I couldnt do as the file did not exist removing the null check fixed this issue.
 
 ## Known Bugs
 

@@ -48,7 +48,7 @@ const Comment = (props) => {
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {
-      
+      toast.error("Comment could not be deleted please try again")
     }
   };
 

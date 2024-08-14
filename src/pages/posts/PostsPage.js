@@ -16,6 +16,7 @@ import { Form } from "react-bootstrap";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { toast } from "react-toastify";
 
 function PostsPage({ message, filter = "" }) {
   // Setting the posts as an empty array which will be mapped over later
@@ -35,6 +36,7 @@ function PostsPage({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
+        toast.warning("Posts could not be found try again later")
       }
     };
 

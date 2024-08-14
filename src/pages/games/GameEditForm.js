@@ -47,6 +47,7 @@ function GameEditForm() {
 
         is_owner ? setGameData({ title, slug, image, description }) : history.push("/");
       } catch (err) {
+        setErrors(err.response.data)
       }
     };
 
@@ -61,8 +62,7 @@ function GameEditForm() {
         const { data } = await axiosReq.get(`/games/`);
         setGames(data);
       } catch (err) {
-
-
+        setErrors(err.response.data)
       }
     };
 

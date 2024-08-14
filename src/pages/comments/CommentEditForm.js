@@ -39,6 +39,7 @@ function CommentEditForm(props) {
       }));
       setShowEditForm(false);
     } catch (err) {
+      toast.error("Comment could not be edited please try again")
     }
   };
 

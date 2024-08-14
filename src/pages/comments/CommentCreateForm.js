@@ -41,7 +41,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      window.location.reload()
+      toast.error("Comment could not be created please try again")
 
     }
   };

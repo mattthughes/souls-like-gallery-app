@@ -80,6 +80,7 @@ const PostDetail = (props) => {
         }),
       }));
     } catch (err) {
+      toast.error("Like could not be added please try again")
     }
   };
 
@@ -97,6 +98,7 @@ const PostDetail = (props) => {
         }),
       }));
     } catch (err) {
+      toast.error("Like could not be removed please try again")
     }
   };
 

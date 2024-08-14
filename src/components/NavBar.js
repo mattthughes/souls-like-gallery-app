@@ -9,6 +9,7 @@ import Avatar from './Avatar';
 
 
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -22,7 +23,7 @@ const NavBar = () => {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
     } catch (err) {
-
+      toast.error("Error logging out try again")
     }
   };
 
