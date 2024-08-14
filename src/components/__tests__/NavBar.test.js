@@ -45,3 +45,53 @@ test("renders Sign in and Sign up buttons again on log out", async () => {
   expect(signInLink).toBeInTheDocument();
   expect(signUpLink).toBeInTheDocument();
 });
+
+
+test("renders create post button if signed in", async () => {
+    render(
+      <Router>
+        <CurrentUserProvider>
+          <NavBar />
+        </CurrentUserProvider>
+      </Router>
+    );
+  
+  
+    const createPostLink = await screen.findByRole("link", { name: "Create Post" });
+    
+  
+    expect(createPostLink).toBeInTheDocument()
+  });
+
+
+  test("renders trending button if signed in", async () => {
+    render(
+      <Router>
+        <CurrentUserProvider>
+          <NavBar />
+        </CurrentUserProvider>
+      </Router>
+    );
+  
+  
+    const trendingLink = await screen.findByRole("link", { name: "Trending" });
+    
+  
+    expect(trendingLink).toBeInTheDocument()
+  });
+
+  test("renders Liked button if signed in", async () => {
+    render(
+      <Router>
+        <CurrentUserProvider>
+          <NavBar />
+        </CurrentUserProvider>
+      </Router>
+    );
+  
+  
+    const likedLink = await screen.findByRole("link", { name: "Liked" });
+    
+  
+    expect(likedLink).toBeInTheDocument()
+  });
