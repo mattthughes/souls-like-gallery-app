@@ -609,7 +609,7 @@ I Tested this project extensively making sure each element worked as intended an
 
 ### Code
 
-* Front End application has been influenced by the moments walkthrough project and has been adjusted and customised to fit my projects needs including post create edit and delete functionality. The use redirect hook, user context hook, the comment component which involves full CRUD functionality, the likes component, Drop down component and the profiles page basic structure can be found [here](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+RA101+1/courseware/70a8c55db0504bbdb5bcc3bfcf580080/953cd4e5015f483bb05263db3e740e19/)
+* Front End application has been influenced by the moments walkthrough project and has been adjusted and customised to fit my projects needs including post create edit and delete functionality. The use redirect hook, user context hook, the comment component which involves full CRUD functionality, the likes component, Drop down component and the profiles page basic structure can be found [here](https://github.com/mr-fibonacci/moments)
 
 
 

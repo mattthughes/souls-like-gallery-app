@@ -82,7 +82,7 @@ function App() {
           <PrivateRoute>
             <Route exact path="/game/create" render={() => <GameCreateForm />} />
           </PrivateRoute>
-          
+
           <Route render={() => <NotFound />} />
 
 
