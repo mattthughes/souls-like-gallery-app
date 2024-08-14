@@ -545,9 +545,22 @@ This feature will be present alongside the title of the application I decided wi
 
 ### Heroku Deployment
 
-### Running Application locally
+### Running Application Locally
+
+Navigated to the GitHub Repository:
+
+1. Click on the code drop down and click on HTTPS
+2. Copy the Repository link to the clipboard
+3. Open your IDE such as GitPod, CodeAnywhere or any of your choosing making sure git is also installed
+4. Type git clone alongside the repository link you have just copied into the IDE terminal, the project will now be cloned for use.
 
 ### Fork Project
+
+### Fork Project
+
+1. Log in or sign u to GitHub.
+2. Go to the repository for this project [mattthughes/souls-like-gallery-app](https://github.com/mattthughes/souls-like-gallery-app)
+3. Click the Fork button on the right corner to fork the project.
 
 
 ## Testing

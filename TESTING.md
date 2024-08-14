@@ -29,6 +29,14 @@ Welcome to testing results of front end part of the advanced front end applicati
 
 ### React validation
 
+`ESLint`
+
+![ESLint React validation](docs/wireframes/compile-react.png)
+
+
+`JSHint`
+
+
 ### CSS validation
 
 `Asset`
@@ -114,7 +122,6 @@ Welcome to testing results of front end part of the advanced front end applicati
 * When submitting the edit profile form a warning is sent to the console regarding an unmounted component with the state not being able to be updated due to this. I tried to create a use effect clean up function to detect the state which did not fix the warning will look for a solution.
 
 ### Lighthouse testing
-
 
 #### Mobile lighthouse testing
 
