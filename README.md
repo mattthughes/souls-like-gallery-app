@@ -543,7 +543,34 @@ This feature will be present alongside the title of the application I decided wi
 
 ## Deployment
 
+This application was created using GitPod and was then pushed to GitHub to the respository called [souls-like-gallery-app]((https://github.com/mattthughes/souls-like-gallery-app))
+
+To make sure I was able to keep updated with the changes I used the following git commands:
+
+git add- This command was used to add the changes to the staging area before changes are commited.
+
+git commit -m "message"- This command was used to add the changes to the repository queue.
+
+git push - This command pushes all the commited code in the repository queue to Github.
+
 ### Heroku Deployment
+
+`Creating the react app`
+
+* Use the command npx create-react-app . --use-npm
+* Once this is done use the npm start command to start the app where the compliler will launch depending if there are any errors
+
+`Heroku Deployment`
+
+1. Log in to heroku or set up an account
+2. From the dashboard click create new app
+3. Give the app a unique name
+4. Select the region closest to you and select create app
+5. Once the app is created connect your github repository to ensure your changes on the development server is up to date with the deployed project
+6. Click deploy and wait for the project to build
+7. Once built click the open app button which will load the deployed app
+
+
 
 ### Running Application Locally
 
