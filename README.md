@@ -635,7 +635,8 @@ cover-547410/)
 - Slave Knight Gael post image found [here](https://villains.fandom.com/wiki/Knight_Artorias)
 - Malenia RL1 post image found [here](https://www.youtube.com/watch?v=Rt6UlUYPUVI)
 
-
-
-
 ## Acknowledgements
+
+
+* I would like to thank my mentor dick which helped me with the project, the code institute tutors were incredibly helpful with understanding errors and why they were happening
+* I would like to thank my family and friends which helped test key features during development which assisted me with bug fixes
