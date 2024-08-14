@@ -10,15 +10,15 @@ import Home from './pages/home/Home';
 import GameCreateForm from './pages/games/GameCreateForm';
 import PrivateRoute from './components/PrivateRoute';
 
-import PostCreateForm from './pages/gallery/PostCreateForm';
+import PostCreateForm from './pages/posts/PostCreateForm';
 
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import NotFound from './components/NotFound';
-import PostPage from './pages/gallery/PostPage';
-import PostsPage from './pages/gallery/PostsPage';
+import PostPage from './pages/posts/PostPage';
+import PostsPage from './pages/posts/PostsPage';
 import GameLists from './pages/games/GameLists';
-import PostEditForm from "./pages/gallery/PostEditForm";
+import PostEditForm from "./pages/posts/PostEditForm";
 import GameEditForm from './pages/games/GameEditForm';
 import ProfilePage from './pages/profiles/PageProfile';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';

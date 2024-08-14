@@ -23,7 +23,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import btnStyles from '../../styles/Button.module.css'
 
-import PostDetail from "../gallery/PostDetail";
+import PostDetail from "../posts/PostDetail";
 import {
     fetchMoreData
 } from "../../utils/utils";
