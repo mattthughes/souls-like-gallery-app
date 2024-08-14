@@ -129,6 +129,42 @@ Welcome to testing results of front end part of the advanced front end applicati
 
 ### Wave Report
 
+`Home`
+
+![Home wave report](docs/wireframes/wave-home-souls-like.png)
+
+`Gallery`
+
+![Gallery wave report](docs/wireframes/wave-gallery-souls-like.png)
+
+`Create Post`
+
+![Create post wave report](docs/wireframes/wave-create-post.png)
+
+`Add Game`
+
+![Add game wave report](docs/wireframes/wave-add-game.png)
+
+`Trending`
+
+![Trending wave report](docs/wireframes/wave-trending.png)
+
+`Liked`
+
+![Liked wave report](docs/wireframes/wave-liked.png)
+
+`Sign in`
+
+![Sign in wave report](docs/wireframes/wave-sign-in.png)
+
+`Sign up`
+
+![Sign up wave report](docs/wireframes/wave-sign-up.png)
+
+`Profile`
+
+![Profile wave report](docs/wireframes/wave-profile.png)
+
 
 ### Manual Testing
 
