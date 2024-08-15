@@ -7,6 +7,7 @@ Welcome to testing results of front end part of the advanced front end applicati
 ## CONTENTS
 
 - [Souls Like Gallery Testing](#souls-like-gallery-testing)
+- [HTML Validation](#html-validation)
 - [React Validation](#react-validation)
 - [CSS Validation](#css-validation)
 - [Solved Bugs](#solved-bugs)
@@ -25,7 +26,11 @@ Welcome to testing results of front end part of the advanced front end applicati
     - [Testing Results](#automated-testing-results)
 
 
-## Testing Content 
+## Testing Content
+
+### HTML Validation
+
+![HTML Validation](docs/wireframes/html-souls-like-validation.png)
 
 ### React validation
 
