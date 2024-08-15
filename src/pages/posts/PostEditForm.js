@@ -149,8 +149,8 @@ function PostEditForm() {
             <Form.Group>
                 <Form.Label className="d-flex flex-column">Game</Form.Label>
                 <select name="game" value={game} onChange={handleChange} className="Form-Control p-1">
-                    {games.length ? (
-                        games.map((game) => (
+                    {games.results.length ? (
+                        games.results.map((game) => (
                             <option key={game.id}>
                                 {game.title}
                             </option>
