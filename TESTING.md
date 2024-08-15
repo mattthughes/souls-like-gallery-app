@@ -130,9 +130,27 @@ These are the settings I used to validate the react, jsx code every single page 
 
 ### Lighthouse testing
 
+From the following results I aimed to improve performance by trying to resize image and change specific colours, this is the resulting performance on the home and gallery page lighthouse tests were performed for all other pages.
+
 #### Mobile lighthouse testing
 
+`Home`
+
+![Home Mobile lighthouse](docs/wireframes/home-lighthouse-mobile.png)
+
+`Gallery`
+
+![Gallery Mobile lighthouse](docs/wireframes/gallery-mobile-lighthouse.png)
+
 #### Desktop lighthouse testing
+
+`Home`
+
+![Home Desktop lighthouse](docs/wireframes/home-lighthouse-desktop.png)
+
+`Gallery`
+
+![Gallery Desktop lighthouse](docs/wireframes/gallery-desktop-lighthouse.png)
 
 ### Wave Report
 

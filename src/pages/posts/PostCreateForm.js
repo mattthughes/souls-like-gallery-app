@@ -248,7 +248,7 @@ function PostCreateForm() {
               <div>
                 <div className="pt-3 pb-2 mr-3">
                   <Link to="/games">
-                    <Button className={`${btnStyles.Blue}`}>View Games Detail here</Button>
+                    <Button className={`${btnStyles.Button} ${btnStyles.Blue}`}>View Games Detail here</Button>
                   </Link>
                 </div>
               </div>

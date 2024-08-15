@@ -65,6 +65,7 @@ function ProfilePage() {
                         className={styles.ProfileImage}
                         roundedCircle
                         src={profile?.image}
+                        alt="profile-image"
                     />
                 </Col>
                 <Col lg={6}>
@@ -84,12 +85,9 @@ function ProfilePage() {
 
                                 {profile?.files ? (
                                     <>
-                                    <a className="d-none d-md-block" target='_blank'
-                                    rel='noopener noreferrer' href={profile?.files}>{profile?.files}</a>
-                                    <a className="d-block d-md-none" target='_blank'
+                                    <a className="d-block" target='_blank'
                                     rel='noopener noreferrer' href={profile?.files}>View files</a>
                                     <p>Account Created {profile?.created_at}</p>
-
                                     </>
                                     
                                 ) : (

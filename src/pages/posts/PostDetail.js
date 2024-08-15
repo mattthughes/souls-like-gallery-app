@@ -127,8 +127,8 @@ const PostDetail = (props) => {
         {title && <Card.Title className={appStyles.Headings}>{title}</Card.Title>}
         {content && <Card.Text className={appStyles.Text}>{content}</Card.Text>}
         {game && <Card.Text className={appStyles.Text}>{game}</Card.Text>}
-        <a target='_blank'
-          rel='noopener noreferrer' href={attachments}>{attachments}</a>
+        <a target='_blank' className="font-weight-bold"
+          rel='noopener noreferrer' href={attachments}>View Link</a>
 
 
         <div>
@@ -168,7 +168,7 @@ const PostDetail = (props) => {
         Post Created {updated_at}
         <div className="pt-2">
           <Link to="/gallery">
-            <Button className={`${btnStyles.Blue}`}>Back to Gallery</Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`}>Back to Gallery</Button>
           </Link>
         </div>
 
