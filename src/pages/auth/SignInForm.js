@@ -20,6 +20,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
+import { setTokenTimestamp } from "../../utils/utils";
 
 function SignInForm() {
   const setCurrentUser = useContext(SetCurrentUserContext);
@@ -57,6 +58,7 @@ function SignInForm() {
       setCurrentUser(data.user);
       history.push("/gallery")
       toast.success("Successfully logged in")
+      setTokenTimestamp(data);
 
     } catch (err) {
       setErrors(err.response?.data);

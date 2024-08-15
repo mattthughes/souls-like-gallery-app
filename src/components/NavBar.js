@@ -6,6 +6,7 @@ import { useCurrentUser, useSetCurrentUser } from '../contexts/UserCurrentContex
 import styles from '../styles/NavBar.module.css'
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import Avatar from './Avatar';
+import { removeTokenTimestamp } from '../utils/utils';
 
 
 import axios from 'axios';
@@ -22,6 +23,7 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch (err) {
       toast.error("Error logging out try again")
     }
