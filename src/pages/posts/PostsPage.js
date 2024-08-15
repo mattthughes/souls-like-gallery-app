@@ -13,6 +13,8 @@ import Post from "./Post";
 
 import { Form } from "react-bootstrap";
 
+import { useCurrentUser } from "../../contexts/UserCurrentContext";
+
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
@@ -25,6 +27,7 @@ function PostsPage({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
+  const currentUser = useCurrentUser();
 
 
   // Using a get request to target the posts by its filter and search query
@@ -48,7 +51,7 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  }, [filter, query, pathname, currentUser]);
 
 
   return (
