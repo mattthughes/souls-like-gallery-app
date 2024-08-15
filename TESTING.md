@@ -327,7 +327,7 @@ Post Detail like button (post author)|Tooltip to appear saying you cant like you
 Post Detail like button (user)|Like count to increment by 1|Clicked like button|Like count incremented by 1|Pass
 Post Detail like button (not logged in)|Tooltip to appear saying you need to log in to like posts|Tried to like post|Tooltip appeared saying you need to login to like posts|Pass
 Post Detail unlike (user)|Like count to decrease by 1|Clicked like button again|Like count decreased by 1|Pass
-Post Detail Add Comment (user)|Comment to be added without page refreshing|Added post| comment added being showcased via a pop up message|Pass
+Post Detail Add Comment (user)|Comment to be added without page refreshing|Added post|comment added being showcased via a pop up message|Pass
 Post Detail Add Comment (not logged in)|Comment form to be hidden|Viewed post detail and tried to comment|Comment form hidden|Pass
 Post Detail Edit Comment (post author)|Comment form to load|Clicked edit comment|Comment edit form loaded|Pass
 Post Detail Edit Comment (user)|Comment edit form button to be hidden|Tried to edit comment|Comment edit form hidden|Pass
@@ -335,6 +335,7 @@ Post Detail Edit Comment (not logged in)|Comment edit form button to be hidden|T
 Post Detail Edit comment save button (comment author)|Comment to be updated without page refreshing showing a pop up message stating comment edited|Clicked save button|Comment edited being showcased via a pop up message|Pass
 Post Detail Delete comment (comment author)|Comment deletion button to show upon deletion show pop up message comment deleted without page refreshing|Clicked comment delete button|Comment deleted pop up message appeared page did not refresh|Pass
 Post Detail Delete comment (user)|Comment deletion button to be hidden|Loaded comment detail|Comment delete button hidden|Pass
+Post Detail Attachments|Post Detail Attachments to open in new window|Clicked Attachments|Attachments opened in new window|Pass
 
 `Trending Testing`
 
