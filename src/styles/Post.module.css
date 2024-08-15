@@ -1,8 +1,10 @@
+/* Post image styling */
 .Image {
   height: 150px;
   width: 200px;
 }
 
+/* Post likes styling */
 .Like {
     color: #0059ff;
   }
@@ -15,6 +17,7 @@
     color: #0066ff;
   }
 
+  /* Image for smaller devices styling */
   @media screen and (min-width: 500px) {
     .Image {
         width: 500px;

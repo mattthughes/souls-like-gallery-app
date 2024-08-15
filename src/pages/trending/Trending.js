@@ -1,14 +1,9 @@
 import React from "react";
-
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
 import Button from "react-bootstrap/Button";
-
-
 import Avatar from "../../components/Avatar";
-
 import { Link } from "react-router-dom";
-
 import styles from '../../styles/Trending.module.css'
 import appStyles from '../../App.module.css'
 import btnStyles from "../../styles/Button.module.css";
@@ -30,7 +25,6 @@ const Trending = (props) => {
     updated_at,
 
   } = props
-
 
 
   return (
