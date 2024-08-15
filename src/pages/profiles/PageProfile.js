@@ -76,12 +76,13 @@ function ProfilePage() {
                                     <>
                                     <a className="d-block" target='_blank'
                                     rel='noopener noreferrer' href={profile?.files}>View files</a>
-                                    <p>Account Created {profile?.created_at}</p>
                                     </>
                                     
                                 ) : (
                                     <div></div>
-                                )}       
+                                )}
+                                <p>Account Created</p>
+                                {profile?.created_at}
                             </div>
                         </Col>
                     </Row>
