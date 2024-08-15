@@ -26,6 +26,9 @@ Welcome to testing results of front end part of the advanced front end applicati
     - [Testing Results](#automated-testing-results)
 
 
+View API Readme [here](https://github.com/mattthughes/souls-like-api)
+
+
 ## Testing Content
 
 ### HTML Validation
