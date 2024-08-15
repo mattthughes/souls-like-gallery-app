@@ -69,6 +69,9 @@ Souls Like Gallery is a content sharing application built using a frontend libar
                 - [Trending](#trending)
                     - [Mobile Trending page](#mobile-trending-page)
                     - [Desktop Trending page](#desktop-trending-pages)
+                - [Not found](#not-found)
+                    - [Mobile Not found page](#mobile-not-found-page)
+                    - [Desktop Not found page](#desktop-not-found-page)
                 - [Favicon](#favicon)
                     [Desktop favicon view](#desktop-favicon-view)
     - [Technology](#technology)
@@ -507,6 +510,19 @@ This feature will be updated dynamically depending on the post likes the post wi
 ![Desktop Trending page part 1](docs/wireframes/desktop-trending-part-1.png)
 
 ![Desktop Trending page part 2](docs/wireframes/desktop-trending-part-2.png)
+
+
+#### Not Found
+
+This feature will be shown if the user tries to visit a page that does not exist or if they do not have the required permissions to access the requested page
+
+##### Mobile Not found page
+
+![Mobile not found page](docs/wireframes/not-found-mobile.png)
+
+##### Desktop Not found page
+
+![Desktop not found page](docs/wireframes/not-found-desktop.png)
 
 
 #### Favicon
