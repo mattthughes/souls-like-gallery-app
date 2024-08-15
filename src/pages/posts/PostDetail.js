@@ -104,7 +104,7 @@ const PostDetail = (props) => {
     <Card>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
-        <Link to={`/profiles/${profile_id}`}>
+          <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
@@ -124,10 +124,12 @@ const PostDetail = (props) => {
         {title && <Card.Title className={appStyles.Headings}>{title}</Card.Title>}
         {content && <Card.Text className={appStyles.Text}>{content}</Card.Text>}
         {game && <Card.Text className={appStyles.Text}>{game}</Card.Text>}
-        <a target='_blank' className="font-weight-bold"
+        {attachments ? (
+          <a target='_blank' className="font-weight-bold"
           rel='noopener noreferrer' href={attachments}>View Link</a>
-
-
+        ) : (
+          <div></div>
+        )}
         <div>
           {/* If the user is the owner of the post the user cannot like a post,
           the next ternary is checking if the like id exists to delete the id,
@@ -139,7 +141,7 @@ const PostDetail = (props) => {
             >
               <i className="fa-solid fa-thumbs-up" />
             </OverlayTrigger>
-            
+
           ) : like_id ? (
             <span onClick={handleUnlike}>
               <i className={`fa-solid fa-thumbs-up ${styles.Like}`} />
