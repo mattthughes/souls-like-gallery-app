@@ -349,3 +349,33 @@ Profile files (mobile)|Profile files to show view files to open in new window|Lo
 ### Automated Testing
 
 
+#### Automated Testing Aims
+
+* To make sure all components return the correct component as intended.
+* To make sure there are not any errors during testing.
+
+
+#### Testing Logic
+
+`NavBar Tests`
+
+![NavBar tests part 1](docs/wireframes/nav-bar-tests-part-1.png)
+
+![NavBar tests part 2](docs/wireframes/nav-bar-tests-part-2.png)
+
+![NavBar tests part 3](docs/wireframes/nav-bar-tests-part-3.png)
+
+`Posts Tests`
+
+![Posts tests](docs/wireframes/post-tests.png)
+
+`Trending Tests`
+
+![Trending test](docs/wireframes/trending-test.png)
+
+
+##### Testing Results
+
+![Automated test results](docs/wireframes/automated-tests-souls-like.png)
+
+
