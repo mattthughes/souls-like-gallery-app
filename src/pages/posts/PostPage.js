@@ -32,7 +32,7 @@ function PostPage() {
         setComments(comments);
 
       } catch (err) {
-        console.log(err.response.data)
+        window.location.reload()
       };
 
     }
