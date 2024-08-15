@@ -132,6 +132,7 @@ These are the settings I used to validate the react, jsx code every single page 
 ## Known Bugs
 
 * When submitting the edit profile form a warning is sent to the console regarding an unmounted component with the state not being able to be updated due to this. I tried to create a use effect clean up function to detect the state which did not fix the warning will look for a solution.
+* While testing on safari I came across a bug where once a user signs in they were be redirected to the sign in page with the sign in token not being added is a known issue could not find fix.
 
 ### Lighthouse testing
 
