@@ -1,28 +1,18 @@
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
 import Asset from "../../components/Asset";
-
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
-
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 import { Image } from "react-bootstrap";
-
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
-
 import { ProfileEditDropdown } from "../../components/DropDown";
-
 import InfiniteScroll from "react-infinite-scroll-component";
-
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
 import btnStyles from '../../styles/Button.module.css'
-
 import PostDetail from "../posts/PostDetail";
 import {
     fetchMoreData
@@ -36,7 +26,6 @@ function ProfilePage() {
     const is_owner = currentUser?.username === profile?.owner;
     const [profilePosts, setProfilePosts] = useState({ results: [] });
 
-    
     // Fetching the logged in users profile
     useEffect(() => {
         const fetchProfileData = async () => {
@@ -92,11 +81,8 @@ function ProfilePage() {
                                     
                                 ) : (
                                     <div></div>
-                                )}
-                                
-                                    
+                                )}       
                             </div>
-
                         </Col>
                     </Row>
                     {is_owner && (

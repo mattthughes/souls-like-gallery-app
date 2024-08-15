@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
-
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-import { Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { axiosReq } from '../../api/AxiosDefaults'
 import PostDetail from './PostDetail';
 import CommentCreateForm from "../comments/CommentCreateForm"
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
-
 import Comment from '../comments/Comment';
-
-
 import Container from 'react-bootstrap/Container';
-
 
 function PostPage() {
   const { id } = useParams();
@@ -39,7 +34,6 @@ function PostPage() {
       } catch (err) {
         console.log(err.response.data)
       };
-
 
     }
     handleMount();

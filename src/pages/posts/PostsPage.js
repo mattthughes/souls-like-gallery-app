@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
 import Asset from "../../components/Asset";
-
 import appStyles from "../../App.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/AxiosDefaults";
 import Post from "./Post";
-
 import { Form } from "react-bootstrap";
-
 import { useCurrentUser } from "../../contexts/UserCurrentContext";
-
-
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import { toast } from "react-toastify";
@@ -28,7 +21,6 @@ function PostsPage({ message, filter = "" }) {
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
   const currentUser = useCurrentUser();
-
 
   // Using a get request to target the posts by its filter and search query
   // allowing users to search for posts by game title, the post title, user as well.
@@ -52,7 +44,6 @@ function PostsPage({ message, filter = "" }) {
       clearTimeout(timer);
     };
   }, [filter, query, pathname, currentUser]);
-
 
   return (
     <Row>

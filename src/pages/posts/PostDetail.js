@@ -49,8 +49,6 @@ const PostDetail = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner
   const history = useHistory()
-
-
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
@@ -101,7 +99,6 @@ const PostDetail = (props) => {
       toast.error("Like could not be removed please try again")
     }
   };
-
 
   return (
     <Card>
@@ -171,8 +168,6 @@ const PostDetail = (props) => {
             <Button className={`${btnStyles.Button} ${btnStyles.Blue}`}>Back to Gallery</Button>
           </Link>
         </div>
-
-
       </Card.Body>
     </Card>
   );

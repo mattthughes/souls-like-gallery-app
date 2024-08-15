@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import btnStyles from '../styles/Button.module.css'
 import appStyles from '../App.module.css'
 

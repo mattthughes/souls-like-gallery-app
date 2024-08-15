@@ -201,8 +201,6 @@ function PostEditForm() {
 
     return (
         <div>
-
-
             <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
@@ -221,7 +219,6 @@ function PostEditForm() {
                                         Change the image
                                     </Form.Label>
                                 </div>
-
                                 <Form.File
                                     id="image-upload"
                                     accept="image/*"
@@ -235,7 +232,6 @@ function PostEditForm() {
                                 </Alert>
                             ))}
                             <div className="d-md-none">{textFields}
-
                             </div>
                         </Container>
                     </Col>

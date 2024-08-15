@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react'
-
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import appStyles from '../../App.module.css'
 import { fetchMoreData } from "../../utils/utils";
-import { Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { axiosReq } from '../../api/AxiosDefaults'
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
-
 import Container from 'react-bootstrap/Container';
-
-
 import Trending from './Trending';
 
 function TrendingPage() {

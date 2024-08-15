@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Card, Media } from "react-bootstrap";
+import Card from "react-bootstrap";
+import Media from "react-bootstrap/Media";
 import Button from "react-bootstrap/Button";
 
 

@@ -8,7 +8,7 @@ import { axiosReq } from '../../api/AxiosDefaults';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/UserCurrentContext'
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { toast } from 'react-toastify';
-import { Form } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 import btnStyles from '../../styles/Button.module.css'
 import appStyles from '../../App.module.css'
 import Alert from 'react-bootstrap/Alert';
@@ -61,7 +61,6 @@ const ProfileEditForm = () => {
             }
 
         };
-
 
         handleMount();
     }, [currentUser, history, id]);
@@ -186,8 +185,6 @@ const ProfileEditForm = () => {
                     {message}
                 </Alert>
             ))}
-
-
         </Form>
     )
 }
