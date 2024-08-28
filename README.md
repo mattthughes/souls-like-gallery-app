@@ -91,9 +91,6 @@ Souls Like Gallery is a content sharing application built using a frontend libar
 [To view the deployed project click here](https://souls-like-gallery-03103574fc28.herokuapp.com/)
 
 
-    
-
-
 ## UX
 
 ### Strategy Plane
@@ -279,7 +276,7 @@ I went for the OverPass font family for all other text on the application such a
 
 #### Home Page
 
-This page upon loading will explain to the user how to create an account how to create a post, and a bit of a background around what the application is designed for, the user is then able to click either the Sign in or sign up button depending if they have an account already.
+This page upon loading will explain to the user how to create an account how to create a post, and a bit of a background around what the application is designed for, the user is then able to click either the Sign in or sign up button depending if they have an account already. The navigation bar component was reused to have the same navigation bar on all pages.
 
 ##### Mobile Home view
 
@@ -293,7 +290,7 @@ This page upon loading will explain to the user how to create an account how to 
 
 #### Navigation Bar
 
-This page will use conditional rendering to determine which pages are displayed in the navigation bar for users that are not logged in, The home page, sign up and sign pages will be visible locking certain features away from users that aren't logged in. Once the user logs in, the Navigation bar will change now highlighting the following pages, Home, Gallery, Profile, Trending, Saved, Sign out, Add Post. This feature will collapse on mobile and stretch for desktops as well.
+This page will use conditional rendering to determine which pages are displayed in the navigation bar for users that are not logged in, The home page, sign up and sign pages will be visible locking certain features away from users that aren't logged in. Once the user logs in, the Navigation bar will change now highlighting the following pages, Home, Gallery, Profile, Trending, Saved, Sign out, Add Post. This feature will collapse on mobile and stretch for desktops as well. I did not reuse a component for this feature.
 
 ##### Mobile Navigation Bar view
 
@@ -332,7 +329,7 @@ This page will use conditional rendering to determine which pages are displayed 
 
 #### Profile Page
 
-This page will showcase the users avatar image there username and also there posts each user will have a profile page which will be clickable, allowing users to view all the posts a specific user has posted
+This page will showcase the users avatar image there username and also there posts each user will have a profile page which will be clickable, allowing users to view all the posts a specific user has posted. The post detail component was reused on this page to match the post detail view on all other pages to make sure each dataset matched. I reused the profile edit form component which would dynamically update depending on what was edited allowing the user to be notified in real time rather than waiting for the page to refresh with the new data. The navigation bar component was reused to have the same navigation bar on all pages.
 
 ##### Mobile Profile view
 
@@ -373,7 +370,7 @@ This page will showcase the users avatar image there username and also there pos
 
 #### Sign in Page
 
-This feature will allow users to log in to an existing account to gain access to the applications features  such as creating posts, leaving comments and likes.
+This feature will allow users to log in to an existing account to gain access to the applications features such as creating posts, leaving comments and likes. The navigation bar component was reused to have the same navigation bar on all pages.
 
 ##### Mobile Sign in view
 
@@ -385,7 +382,7 @@ This feature will allow users to log in to an existing account to gain access to
 
 #### Sign up page
 
-This feature will highlight three features username password and confirm password upon a user entering these details providing the data entered is correct the user will be redirected to the login page with a message stating account created
+This feature will highlight three features username password and confirm password upon a user entering these details providing the data entered is correct the user will be redirected to the login page with a message stating account created. The navigation bar component was reused to have the same navigation bar on all pages.
 
 ##### Mobile Sign up page
 
@@ -397,7 +394,7 @@ This feature will highlight three features username password and confirm passwor
 
 #### Gallery
 
-This Page will showcase many different posts but not in detail showing just the image or video of the post if a user wishes to find out more information regarding a post then the user can just click on the post image or video which will load the post detail.
+This Page will showcase many different posts but not in detail showing just the image or video of the post if a user wishes to find out more information regarding a post then the user can just click on the post image or video which will load the post detail. I reused the post component which would show the post image, the user could view the post detail upon clicking on the image which would reuse the post detail component, this was done to make sure the user could simultaneously go from the gallery page to the post detail view there is a button stating back to gallery if the user wishes to redirect improving the user experience. The navigation bar component was also reused to have the same navigation bar on all pages.
 
 ##### Mobile Gallery view
 
@@ -410,7 +407,7 @@ This Page will showcase many different posts but not in detail showing just the 
 
 #### Posts
 
-This feature will be the primary feature of the application allowing users full creative control to create read update and delete there own posts, users are able to create a post attach either a video or image depending on what suits there needs. Users will be able to edit there own posts and delete posts while also being able to read other user posts they find useful.
+This feature will be the primary feature of the application allowing users full creative control to create read update and delete there own posts, users are able to create a post attach either a video or image depending on what suits there needs. Users will be able to edit there own posts and delete posts while also being able to read other user posts they find useful. The navigation bar component was reused to have the same navigation bar on all pages. The post detail component was reused on the specific posts id which will be dynamically changed depending on which post is selected, this will save time in development meaning each dataset matches from the post create and edit form. I also reused the comments component here which would be using the comment create and edit form which would update in real time without refreshing the page providing a better user experience for the user. The comments would be linked to the specific post upon deletion informing the user that there comment had been deleted.
 
 ##### Mobile Post Detail view
 
@@ -448,7 +445,7 @@ This feature will be the primary feature of the application allowing users full 
 
 #### Games
 
-This feature will be updated by the admin user who can create,edit,delete games. These will be linked to the post as well allowing a user to search for a specific game.
+This feature will be updated by the admin user who can create,edit,delete games. These will be linked to the post as well allowing a user to search for a specific game. I reused the game component for the game create and edit form which would showcase the games list so this could be updated dynamically and the two datasets linked together, The navigation bar component was reused to have the same navigation bar on all pages. I also reused the game detail component on the games detail view which will allow a user to keep updated about a game, this was reused as this will keep track of the game dataset which will dynamically update after using the game create, edit form.
 
 ##### Mobile Games List
 
@@ -485,7 +482,7 @@ This feature will be updated by the admin user who can create,edit,delete games.
 
 #### Liked Post
 
-This feature will allow users to click like on a specific post they find useful or would like to look at again in the future, Once the user clicks on the liked page this page will load all the posts that a user has liked only showing them there posts and not others.
+This feature will allow users to click like on a specific post they find useful or would like to look at again in the future, Once the user clicks on the liked page this page will load all the posts that a user has liked only showing them there posts and not others. I reused the post component which is using the gallery view I did this as the overall design was very simplistic again allowing a user to click on the post to view the detailed post, if they would like to as I was keeping the same design as the gallery page which is why I reused the post component rather than the post detail component. The navigation bar component was reused to have the same navigation bar on all pages.
 
 
 ##### Mobile Liked Posts page
@@ -499,7 +496,7 @@ This feature will allow users to click like on a specific post they find useful 
 
 #### Trending
 
-This feature will be updated dynamically depending on the post likes the post with the most likes will appear at the top of the page this page will show a maximum of 10 pages
+This feature will be updated dynamically depending on the post likes the post with the most likes will appear at the top of the page this page will show a maximum of 10 pages. I did not reuse a component for this as the get requests were different than the standard gallery page. The navigation bar component was reused to have the same navigation bar on all pages.
 
 ##### Mobile Trending page
 
@@ -514,7 +511,8 @@ This feature will be updated dynamically depending on the post likes the post wi
 
 #### Not Found
 
-This feature will be shown if the user tries to visit a page that does not exist or if they do not have the required permissions to access the requested page
+This feature will be shown if the user tries to visit a page that does not exist or if they do not have the required permissions to access the requested page. The navigation bar component was reused to have the same navigation bar on all pages.
+
 
 ##### Mobile Not found page
 
